@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 89894084a044739458d34e6377ab33bf
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Collections/PriorityQueue.unity
+  uploadId: 605151

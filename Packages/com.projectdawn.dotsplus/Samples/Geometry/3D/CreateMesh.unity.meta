@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cf2495e83b567454bbd39c34f9560a1a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Geometry/3D/CreateMesh.unity
+  uploadId: 605151

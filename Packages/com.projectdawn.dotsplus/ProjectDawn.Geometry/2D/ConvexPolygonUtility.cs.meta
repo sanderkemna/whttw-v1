@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 553f444366f63f74281a86f831ef5abb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/ProjectDawn.Geometry/2D/ConvexPolygonUtility.cs
+  uploadId: 605151

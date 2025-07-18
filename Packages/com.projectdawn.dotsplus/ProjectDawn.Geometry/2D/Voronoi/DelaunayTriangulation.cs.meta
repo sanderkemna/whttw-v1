@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: af563bac7f7c2cb458545f71ffca9639
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/ProjectDawn.Geometry/2D/Voronoi/DelaunayTriangulation.cs
+  uploadId: 605151

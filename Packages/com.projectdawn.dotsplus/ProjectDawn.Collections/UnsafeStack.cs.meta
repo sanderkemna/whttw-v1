@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6f49e305dedda384984b17e4f8254bdd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/ProjectDawn.Collections/UnsafeStack.cs
+  uploadId: 605151

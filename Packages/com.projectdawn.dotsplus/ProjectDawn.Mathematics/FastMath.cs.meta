@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 60f1a493c41b7de41a9911283060d441
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/ProjectDawn.Mathematics/FastMath.cs
+  uploadId: 605151

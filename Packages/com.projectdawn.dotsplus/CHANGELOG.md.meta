@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a422e9204a2860044a3fb169447ff031
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/CHANGELOG.md
+  uploadId: 605151

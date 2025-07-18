@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 55f323e044423cc4297dba551adacbb7
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Geometry/2D/Voronoi.unity
+  uploadId: 605151

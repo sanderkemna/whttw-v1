@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7fba8f5c7b6c569478b7bb53620873bb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Tests/UnsafeAABBTreeTests.cs
+  uploadId: 605151

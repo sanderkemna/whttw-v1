@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dd89c7d5ac6e5ec4c9d15c0ad7b04a45
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/ProjectDawn.Mathematics/Math.Interpolation.cs
+  uploadId: 605151

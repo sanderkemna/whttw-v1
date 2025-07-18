@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b68b1c9d17a3e142ac4e874202cbe51
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Geometry/3D/Triangle.unity
+  uploadId: 605151

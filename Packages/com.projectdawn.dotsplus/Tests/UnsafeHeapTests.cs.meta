@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9d68316cc17d69d49ad6086d16b2f85b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Tests/UnsafeHeapTests.cs
+  uploadId: 605151

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 14a685d07118bf244aa41c6f6b4093dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Geometry/2D/DrawShape.cs
+  uploadId: 605151

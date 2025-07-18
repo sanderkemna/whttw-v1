@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 48e15bdbad0bd174db0a8e1ae50c0a3f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Collections/DrawAABBTree.cs
+  uploadId: 605151

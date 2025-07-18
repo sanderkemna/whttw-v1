@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cb837bedb50b4d948bd7cbb316141c4d
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Geometry/ProjectDawn.Samples.Shapes.asmdef
+  uploadId: 605151

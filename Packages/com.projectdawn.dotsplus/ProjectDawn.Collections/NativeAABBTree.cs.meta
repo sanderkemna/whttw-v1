@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c39fb8f7a37cbe4479c1707bc76f7ca3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/ProjectDawn.Collections/NativeAABBTree.cs
+  uploadId: 605151

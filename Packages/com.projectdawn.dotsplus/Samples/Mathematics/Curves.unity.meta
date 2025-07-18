@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5f9c74985bbebb04f8c1ad8cbb9ddf52
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Mathematics/Curves.unity
+  uploadId: 605151

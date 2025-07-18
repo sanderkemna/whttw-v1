@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 952215f09ce2a254d9fae6e046b5cf22
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 31900000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298480
+  packageName: Rukhanka Animation System 2
+  packageVersion: 2.2.1
+  assetPath: Packages/com.rukhanka.animation/Samples~/Samples/SampleAssets/Cuboid/CuboidECS_Rig.mask
+  uploadId: 754107

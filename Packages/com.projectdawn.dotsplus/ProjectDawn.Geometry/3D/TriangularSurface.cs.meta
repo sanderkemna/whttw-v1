@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3e569e121e62d6042aa0f42d3bc08101
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/ProjectDawn.Geometry/3D/TriangularSurface.cs
+  uploadId: 605151

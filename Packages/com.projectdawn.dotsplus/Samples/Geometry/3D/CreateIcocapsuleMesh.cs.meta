@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a8c5f56a66894e94c8d175a4fe99a7f4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Geometry/3D/CreateIcocapsuleMesh.cs
+  uploadId: 605151

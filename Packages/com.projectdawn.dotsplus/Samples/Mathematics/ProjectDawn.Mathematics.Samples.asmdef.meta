@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0d355862058d2494aa92f95756afaea3
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227492
+  packageName: Dots Plus
+  packageVersion: 1.8.1
+  assetPath: Packages/com.projectdawn.dotsplus/Samples/Mathematics/ProjectDawn.Mathematics.Samples.asmdef
+  uploadId: 605151
