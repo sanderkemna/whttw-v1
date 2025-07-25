@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 079d8ee02b3d597478531f710943a2ab
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Category
+    Item View Set For Grid.asset
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5408807b8cc45fd44b3ceaa55d224604
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Animations/Scene/Gate/GateDoor.controller
+  uploadId: 768216

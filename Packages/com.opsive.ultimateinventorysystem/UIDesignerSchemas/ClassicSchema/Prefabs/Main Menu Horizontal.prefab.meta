@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97263cac386bbe9469f7bd781ff17f1f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Main
+    Menu Horizontal.prefab
+  uploadId: 768216

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 16587ca0bc744bb3bf1a179789dd929a
+timeCreated: 1596027868
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/ItemViewSlotContainers/GridFilterSorters/InventoryGridSorters/InventoryGridSorterDropDown.cs
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7619e5b878a77146bbc399f2195289f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/Menus/Main
+    Menu.prefab
+  uploadId: 768216

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c2d71fbf62b38b342ab6ef4a7be6b654
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ItemActionButton.prefab
+  uploadId: 768216

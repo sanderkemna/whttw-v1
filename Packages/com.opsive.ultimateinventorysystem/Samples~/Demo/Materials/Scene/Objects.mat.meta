@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 34ca2235244cdcb438c034a6c615a406
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Scene/Objects.mat
+  uploadId: 768216

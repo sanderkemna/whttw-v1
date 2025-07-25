@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bbb15c76beca87041af309d0035105a2
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.shared/Editor/Opsive.Shared.Editor.asmdef
+  uploadId: 768216

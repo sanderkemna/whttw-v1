@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3fd0ec0079150964e951e2fed123339a
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/Opsive.UltimateInventorySystem.Samples.asmdef
+  uploadId: 768216

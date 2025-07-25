@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b69ada3aa835d4d4fa211f7959232da0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/QuantityPicker.prefab
+  uploadId: 768216

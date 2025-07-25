@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2a0baaf86fcaaa94cb5f5dec7fd6221f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/5
+    Item Transaction Collection/ItemTransactionCollectionItemRestrictionSetFeatureShowcase.asset
+  uploadId: 768216

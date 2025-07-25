@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aaacd8fb77c116a4ab5ac680312ab28f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Scene/Vegetation.mat
+  uploadId: 768216

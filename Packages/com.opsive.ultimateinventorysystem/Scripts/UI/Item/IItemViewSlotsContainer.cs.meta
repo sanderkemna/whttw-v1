@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9b0d9a12af8fc9840989530a901a193e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/IItemViewSlotsContainer.cs
+  uploadId: 768216

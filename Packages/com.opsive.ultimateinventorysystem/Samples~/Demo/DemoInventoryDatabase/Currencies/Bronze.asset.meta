@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 48404f8843544c44cbdae0504f985eeb
+labels:
+- DemoInventoryDatabase
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/Currencies/Bronze.asset
+  uploadId: 768216

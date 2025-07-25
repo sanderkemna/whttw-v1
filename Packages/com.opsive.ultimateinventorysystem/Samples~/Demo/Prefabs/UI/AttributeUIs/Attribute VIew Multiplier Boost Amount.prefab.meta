@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 33f5e3a186cf15844a2f507dee7c107c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/AttributeUIs/Attribute
+    VIew Multiplier Boost Amount.prefab
+  uploadId: 768216

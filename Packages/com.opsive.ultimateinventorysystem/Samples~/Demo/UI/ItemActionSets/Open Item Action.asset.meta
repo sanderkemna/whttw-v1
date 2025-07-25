@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 38a2a725e8b1aba4aa55518164d0738e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/UI/ItemActionSets/Open
+    Item Action.asset
+  uploadId: 768216

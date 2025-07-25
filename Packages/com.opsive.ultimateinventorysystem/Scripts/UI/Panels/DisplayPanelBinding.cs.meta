@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: c435997042654716999b82fc008c8718
+timeCreated: 1577806779
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/DisplayPanelBinding.cs
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c18d47b7c00fb444988c7feddbf35a6a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Terrain/Layers/Grass.terrainlayer
+  uploadId: 768216

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cf1d541af9d133c47868446e05ba40a6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/6
+    Hotbar/HotbarSlotSet.asset
+  uploadId: 768216

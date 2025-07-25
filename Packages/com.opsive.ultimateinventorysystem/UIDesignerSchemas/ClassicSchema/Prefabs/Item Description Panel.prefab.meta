@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eeba5aed41063ee4cb861e272879eb95
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Item
+    Description Panel.prefab
+  uploadId: 768216

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c04c60620f1a5d2479cc014da321fc36
+labels:
+- DemoInventoryDatabase
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemCategories/Pickupable.asset
+  uploadId: 768216

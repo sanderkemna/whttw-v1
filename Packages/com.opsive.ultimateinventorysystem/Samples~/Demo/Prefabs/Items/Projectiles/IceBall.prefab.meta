@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5a9500fd541e2c1428cd387a082ab826
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Projectiles/IceBall.prefab
+  uploadId: 768216

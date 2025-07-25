@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 25954fe52e8ada749b3e92a27fa3d341
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/ItemUI/ItemViews/Equipment
+    Item View Slots Container.prefab
+  uploadId: 768216

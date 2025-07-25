@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0e5eae77f863d1842a3cd14a83228c54
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -160
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/15
+    Custom Inventory System Manager/SampleCustomInventorySystemManager.cs
+  uploadId: 768216

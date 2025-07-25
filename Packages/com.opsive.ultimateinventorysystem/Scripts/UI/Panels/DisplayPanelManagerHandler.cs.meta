@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: c5f9b6da283f43369d709f4730fa59de
+timeCreated: 1612973292
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/DisplayPanelManagerHandler.cs
+  uploadId: 768216

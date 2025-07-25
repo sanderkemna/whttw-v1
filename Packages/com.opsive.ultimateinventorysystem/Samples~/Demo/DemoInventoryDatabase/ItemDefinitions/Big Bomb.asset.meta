@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 90dc5d8e3de1e2346b5c6263f4b4204e
+labels:
+- DemoInventoryDatabase
+- Uncategorized
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemDefinitions/Big
+    Bomb.asset
+  uploadId: 768216

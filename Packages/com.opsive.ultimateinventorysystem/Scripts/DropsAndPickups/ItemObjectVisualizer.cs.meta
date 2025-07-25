@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 2ce023a631714115a69fbc9c3288b791
+timeCreated: 1584462817
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/DropsAndPickups/ItemObjectVisualizer.cs
+  uploadId: 768216

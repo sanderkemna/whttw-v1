@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8d8e2518051deff468c5edd1477c1235
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Save
+    Menu.prefab
+  uploadId: 768216

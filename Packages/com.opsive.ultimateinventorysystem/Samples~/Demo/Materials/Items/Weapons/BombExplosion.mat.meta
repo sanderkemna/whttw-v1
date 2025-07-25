@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8436969155ca5574d8e985ddac9e17b1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Items/Weapons/BombExplosion.mat
+  uploadId: 768216

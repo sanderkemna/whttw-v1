@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b50b4ff0527684b44be5067d50355acd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Interactables/Pickups/PickupCanvas.prefab
+  uploadId: 768216

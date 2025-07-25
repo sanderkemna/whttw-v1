@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 95d63624713e449418afcb0cb32a9401
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/UI/ItemActionSets/Quantity
+    Drop Item Action.asset
+  uploadId: 768216

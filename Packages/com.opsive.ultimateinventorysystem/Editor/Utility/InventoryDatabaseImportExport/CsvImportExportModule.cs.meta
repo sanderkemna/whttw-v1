@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 9bb3d2ee7a59433ca7f3b7b7bb6a53d2
+timeCreated: 1632835488
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/Utility/InventoryDatabaseImportExport/CsvImportExportModule.cs
+  uploadId: 768216

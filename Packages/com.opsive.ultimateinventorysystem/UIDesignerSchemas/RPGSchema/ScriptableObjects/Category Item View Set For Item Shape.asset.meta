@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3527bcb4633eda643ae60e6e1c6108af
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/ScriptableObjects/Category
+    Item View Set For Item Shape.asset
+  uploadId: 768216

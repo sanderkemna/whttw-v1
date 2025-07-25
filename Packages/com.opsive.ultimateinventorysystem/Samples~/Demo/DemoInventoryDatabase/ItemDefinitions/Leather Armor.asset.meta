@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0d9ec11759d6e464a87e9ca5cfec6c83
+labels:
+- DemoInventoryDatabase
+- Uncategorized
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemDefinitions/Leather
+    Armor.asset
+  uploadId: 768216

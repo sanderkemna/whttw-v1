@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 34aa3bdebc86413e99c9f631effa760d
+timeCreated: 1576065189
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Scripts/CharacterControl/Equipping/DemoCharacterEquipper.cs
+  uploadId: 768216

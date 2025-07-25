@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7c99474bffae54e408f7694915d777e2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Audio/Fail
+    Pickup.asset
+  uploadId: 768216

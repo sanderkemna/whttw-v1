@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e441deedd613d4458d035f5eee3cf7c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Recipe
+    View.prefab
+  uploadId: 768216

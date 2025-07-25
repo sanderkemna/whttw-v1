@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7cce1d30d21c9a5478e9ada151d5225e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/1
+    Inventory Grid/1_6_CategoryItemActionSet.asset
+  uploadId: 768216

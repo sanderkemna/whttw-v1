@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 7a8343ec72d84956942d1219a270c9cd
+timeCreated: 1587047373
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/ItemViewModules/FirstOutputRecipeView.cs
+  uploadId: 768216

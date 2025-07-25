@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 46cea9247d3b99044b1ea29e580fa63d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/URP Settings/DemoUniversalRenderPipelineAsset.asset
+  uploadId: 768216

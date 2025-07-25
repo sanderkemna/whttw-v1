@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3d14ceaf72ce9ff45b82e77bc1c4cfe5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Tab
+    Toggle.prefab
+  uploadId: 768216

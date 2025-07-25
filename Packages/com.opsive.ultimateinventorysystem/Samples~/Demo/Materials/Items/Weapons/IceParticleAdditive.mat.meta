@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b3bd91e733d7e544cb9760d9519b866d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Items/Weapons/IceParticleAdditive.mat
+  uploadId: 768216

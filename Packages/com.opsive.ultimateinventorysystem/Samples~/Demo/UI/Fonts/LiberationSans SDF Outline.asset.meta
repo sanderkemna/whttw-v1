@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1338fea177222bb40baad12b6e92286d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/UI/Fonts/LiberationSans
+    SDF Outline.asset
+  uploadId: 768216

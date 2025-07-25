@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 34e3aa32ae7c417c8966804a6bd5b7d7
+timeCreated: 1573114888
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/Exchange/CurrencyExchangeRate.cs
+  uploadId: 768216

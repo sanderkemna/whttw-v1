@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: a0c4c0ea331d4d1688380857bbd96de8
+timeCreated: 1606302580
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/Managers/UIDesigner/ChestDesigner.cs
+  uploadId: 768216

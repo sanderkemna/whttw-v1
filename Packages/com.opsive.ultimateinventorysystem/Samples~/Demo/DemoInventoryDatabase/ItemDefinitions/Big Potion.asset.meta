@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 80f38e8f2453b80418b7fa22be720dba
+labels:
+- Consumable
+- DemoInventoryDatabase
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemDefinitions/Big
+    Potion.asset
+  uploadId: 768216

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eff2695223ea6ce408d5bee0ce8abdbb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Armor/KnightBoots.prefab
+  uploadId: 768216

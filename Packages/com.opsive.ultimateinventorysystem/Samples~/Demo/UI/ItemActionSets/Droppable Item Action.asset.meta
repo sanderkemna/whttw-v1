@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eff41f64404a9744daf1a87ecefa740e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/UI/ItemActionSets/Droppable
+    Item Action.asset
+  uploadId: 768216

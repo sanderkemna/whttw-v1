@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3f879dcc93e1c6f488f3609a7537e0cb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Armor/Hood.prefab
+  uploadId: 768216

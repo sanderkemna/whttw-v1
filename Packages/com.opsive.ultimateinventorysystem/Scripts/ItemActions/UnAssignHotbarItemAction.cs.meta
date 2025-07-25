@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: bbeec575b6004b63975065c3b6234783
+timeCreated: 1689583555
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/ItemActions/UnAssignHotbarItemAction.cs
+  uploadId: 768216

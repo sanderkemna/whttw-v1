@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 24bc50d556e85824e8c3c2974c7092cc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Terrain/Layers/Dirt.terrainlayer
+  uploadId: 768216

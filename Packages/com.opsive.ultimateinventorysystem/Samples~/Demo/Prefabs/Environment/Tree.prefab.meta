@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0ccd64ced0180334d85318ad1994b6f6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Environment/Tree.prefab
+  uploadId: 768216

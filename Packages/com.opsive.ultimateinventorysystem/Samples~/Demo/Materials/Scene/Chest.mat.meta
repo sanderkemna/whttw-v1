@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1615ba2b1665ea748b422b0d447feb59
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Scene/Chest.mat
+  uploadId: 768216

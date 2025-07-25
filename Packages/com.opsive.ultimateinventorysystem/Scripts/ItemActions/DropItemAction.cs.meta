@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 251cb601f641405cb91f2bb9694facac
+timeCreated: 1586347431
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/ItemActions/DropItemAction.cs
+  uploadId: 768216

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9d3a4f88c9a2fb14f8502f10dc986c8f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/DamagePopup/HealPopup.prefab
+  uploadId: 768216

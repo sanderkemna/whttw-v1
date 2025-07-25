@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: fa478854d63a555449491f2f322b28a3
+labels:
+- DemoInventoryDatabase
+- Uncategorized
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemDefinitions/Iron
+    Sword.asset
+  uploadId: 768216

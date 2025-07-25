@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 731fdb2e391ed47489838ec3b718a95a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Chest
+    Menu.prefab
+  uploadId: 768216

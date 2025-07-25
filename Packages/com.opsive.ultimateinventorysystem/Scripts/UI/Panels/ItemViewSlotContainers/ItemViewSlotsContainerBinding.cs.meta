@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5e89810e8a884b099a8095c068ca4d8c
+timeCreated: 1599131499
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/ItemViewSlotContainers/ItemViewSlotsContainerBinding.cs
+  uploadId: 768216

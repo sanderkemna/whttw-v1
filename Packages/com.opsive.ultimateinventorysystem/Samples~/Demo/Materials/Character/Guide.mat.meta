@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a0c00faa8a6ccc419c25c425d25e9a2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Character/Guide.mat
+  uploadId: 768216

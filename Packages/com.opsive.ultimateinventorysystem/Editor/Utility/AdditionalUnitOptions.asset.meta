@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2a2cef0dba69d574aa4e0e3aa530a161
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/Utility/AdditionalUnitOptions.asset
+  uploadId: 768216

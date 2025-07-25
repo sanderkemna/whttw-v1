@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a80bb4b0d7bb71c40bdf07b12aa5fd98
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/Menus/CraftingMenu/Upgradable
+    Crafting Item View.prefab
+  uploadId: 768216

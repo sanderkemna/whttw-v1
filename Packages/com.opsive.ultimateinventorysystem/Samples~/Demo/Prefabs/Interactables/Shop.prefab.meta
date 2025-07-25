@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fba8753040b59bd45b2cf3095427f5db
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Interactables/Shop.prefab
+  uploadId: 768216

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c36607c06fe4c364c82a5311bc0b7846
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Environment/InventoryPickupBag.prefab
+  uploadId: 768216

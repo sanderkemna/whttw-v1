@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c34d01f762b74694f980aae575cbb4f4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Profiles/PostEffectsVillage.asset
+  uploadId: 768216

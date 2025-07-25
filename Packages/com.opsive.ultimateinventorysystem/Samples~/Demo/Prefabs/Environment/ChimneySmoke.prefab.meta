@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5dbb89854feb4854b815edefacd32c0d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Environment/ChimneySmoke.prefab
+  uploadId: 768216

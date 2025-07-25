@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 44406a94285b498b8554fbcbd7c59eb4
+timeCreated: 1595942647
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/ItemViewSlotContainers/GridFilterSorters/InventoryGridSorters/ItemInfoNameSorter.cs
+  uploadId: 768216

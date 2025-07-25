@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 83afb7e726e3e834abca55c8417e46be
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Character/ShopKeeperEyes.mat
+  uploadId: 768216

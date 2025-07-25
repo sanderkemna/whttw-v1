@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bcf86a5f5c5987f42b6d0b8124f94297
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/1_2
+    Inventory Scroll View.unity
+  uploadId: 768216

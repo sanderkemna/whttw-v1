@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bf1de670a9dbe254abb7e2bb53b02c0b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Scene/Underneath.mat
+  uploadId: 768216

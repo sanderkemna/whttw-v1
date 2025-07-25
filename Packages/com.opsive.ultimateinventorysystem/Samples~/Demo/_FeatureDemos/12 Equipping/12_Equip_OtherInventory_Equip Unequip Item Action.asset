@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1775bda1c0fed14478e41147acda094e, type: 3}
+  m_Name: 12_Equip_OtherInventory_Equip Unequip Item Action
+  m_EditorClassIdentifier: 
+  m_ItemCategory:
+    m_Name: Equippable Item
+    m_ItemCategory: {fileID: 11400000, guid: 2ca825f13c5ecf744973b049b8e24149, type: 2}
+  m_ExceptionCategories:
+    m_ItemCategories: []
+  m_ItemActionCollection:
+    m_ItemActionsData:
+    - m_ObjectType: Opsive.UltimateInventorySystem.ItemActions.MoveToInventoryItemAction
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b293e619bab49bc9bae0a67e8ac440b21088fca8c01cff425b235a3b639439d4964aad957838ac8349c
+      m_ValuePositions: 000000000500000009000000090000000900000009000000
+      m_Values: 45717569700100000003000000
+      m_UnityObjects: []
+      m_Version: 3.2

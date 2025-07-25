@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d887734fdd915b44690fced25e0ad799
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Grid
+    Sorter Dropdown.prefab
+  uploadId: 768216

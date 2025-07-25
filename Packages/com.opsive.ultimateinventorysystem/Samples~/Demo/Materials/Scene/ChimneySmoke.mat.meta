@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f43ea36560c3d454ca7ec83df024bfbe
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Scene/ChimneySmoke.mat
+  uploadId: 768216

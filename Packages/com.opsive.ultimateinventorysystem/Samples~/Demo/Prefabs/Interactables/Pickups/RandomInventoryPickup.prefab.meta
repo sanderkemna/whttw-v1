@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8f4d240bf3844994c84322d911550cd3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Interactables/Pickups/RandomInventoryPickup.prefab
+  uploadId: 768216

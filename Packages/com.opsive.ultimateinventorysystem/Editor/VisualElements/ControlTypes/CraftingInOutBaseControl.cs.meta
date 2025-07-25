@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: f00c9a110dcc46acbbc1921dfd0d4b1b
+timeCreated: 1580310747
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/VisualElements/ControlTypes/CraftingInOutBaseControl.cs
+  uploadId: 768216

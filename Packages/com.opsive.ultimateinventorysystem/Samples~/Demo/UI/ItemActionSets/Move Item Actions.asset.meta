@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a87e477bb6634e7438b07c6ca6786b3e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/UI/ItemActionSets/Move
+    Item Actions.asset
+  uploadId: 768216

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 07b32a48b0c04fca9d042f606f9b3b57
+timeCreated: 1586770128
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/Interactions/LayerMaskExtension.cs
+  uploadId: 768216

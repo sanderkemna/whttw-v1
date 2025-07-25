@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: c135993b4ebe44b8a3e1de858d220fca
+timeCreated: 1579192392
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/Managers/PopupWindow.cs
+  uploadId: 768216

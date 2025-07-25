@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: df738d9b931f42b8b21842ff2757d004
+timeCreated: 1585058006
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/DropsAndPickups/CurrencyDropper.cs
+  uploadId: 768216

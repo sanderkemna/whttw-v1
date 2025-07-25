@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 016bf8e67a0e445b9daf3eecca2cbfc7
+timeCreated: 1594213231
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/ItemActions/ItemActionWithQuantityPickerPanel.cs
+  uploadId: 768216

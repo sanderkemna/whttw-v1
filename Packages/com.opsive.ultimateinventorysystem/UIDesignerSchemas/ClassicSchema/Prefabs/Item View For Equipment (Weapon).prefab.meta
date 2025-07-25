@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e1d238dc76c13ee44954d1b1bf80170a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Item
+    View For Equipment (Weapon).prefab
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b3a30ab8de6c2824e8a351715646a21d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Currency
+    Owner Monitor.prefab
+  uploadId: 768216

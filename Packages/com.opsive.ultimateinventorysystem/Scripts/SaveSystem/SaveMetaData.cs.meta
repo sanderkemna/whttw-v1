@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 283c8741a79b40e48b4ed8a3112d6a7d
+timeCreated: 1626715349
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/SaveSystem/SaveMetaData.cs
+  uploadId: 768216

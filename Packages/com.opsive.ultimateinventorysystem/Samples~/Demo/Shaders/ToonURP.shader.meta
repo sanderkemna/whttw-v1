@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c7f80f5edb0d84d4a95951c398059e55
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Shaders/ToonURP.shader
+  uploadId: 768216

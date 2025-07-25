@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 06bbb6b2ac266514a9a7d767769f1ccd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -200
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.shared/Runtime/Utility/GlobalDictionary.cs
+  uploadId: 768216

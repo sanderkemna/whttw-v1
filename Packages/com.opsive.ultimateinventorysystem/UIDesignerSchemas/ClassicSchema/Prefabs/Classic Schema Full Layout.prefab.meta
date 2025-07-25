@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 17ecb2cb3671d154084f3509695a6429
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Classic
+    Schema Full Layout.prefab
+  uploadId: 768216

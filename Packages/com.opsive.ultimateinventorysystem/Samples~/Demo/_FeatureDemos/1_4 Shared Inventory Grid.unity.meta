@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dbb7ef06d30dd454a8e7870a88d0d7f3
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/1_4
+    Shared Inventory Grid.unity
+  uploadId: 768216

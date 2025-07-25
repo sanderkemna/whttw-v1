@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a32fc32429ad54444b6f7d720ac4b8db
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/AsyncFuncActionPanelInt.prefab
+  uploadId: 768216

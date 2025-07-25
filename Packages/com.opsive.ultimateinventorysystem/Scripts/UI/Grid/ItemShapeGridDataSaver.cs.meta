@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: fa65bf618544418d80f1a92d738c0063
+timeCreated: 1612876398
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Grid/ItemShapeGridDataSaver.cs
+  uploadId: 768216

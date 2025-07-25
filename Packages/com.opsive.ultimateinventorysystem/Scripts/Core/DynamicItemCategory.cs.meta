@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 348dd3505cba45a59bf8f4e36577bcfe
+timeCreated: 1598972766
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/Core/DynamicItemCategory.cs
+  uploadId: 768216

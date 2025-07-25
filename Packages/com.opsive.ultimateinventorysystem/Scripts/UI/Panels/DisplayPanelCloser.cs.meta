@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 665f40b9aeae40f6a9b14a657a0d1df6
+timeCreated: 1588839946
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/DisplayPanelCloser.cs
+  uploadId: 768216

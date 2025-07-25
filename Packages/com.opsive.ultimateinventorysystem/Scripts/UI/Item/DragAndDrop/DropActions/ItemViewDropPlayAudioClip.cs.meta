@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: f2869d1d52134b858362c527b2ebfbab
+timeCreated: 1685263538
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/DragAndDrop/DropActions/ItemViewDropPlayAudioClip.cs
+  uploadId: 768216

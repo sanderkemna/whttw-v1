@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2455e5b7068808c4191221797fc898b8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Character/DemoEnemyCharacterItemSlotSet.asset
+  uploadId: 768216

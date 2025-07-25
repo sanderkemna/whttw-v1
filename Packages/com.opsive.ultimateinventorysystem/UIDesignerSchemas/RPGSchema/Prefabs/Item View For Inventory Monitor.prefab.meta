@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a6c2b53f3144eaa48baca5c85b81e1da
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Item
+    View For Inventory Monitor.prefab
+  uploadId: 768216

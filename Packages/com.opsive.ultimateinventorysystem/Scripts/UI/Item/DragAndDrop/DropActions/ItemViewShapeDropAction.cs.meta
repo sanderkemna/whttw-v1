@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 69a8beae71f04b4898ff8239e690937f
+timeCreated: 1609236405
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/DragAndDrop/DropActions/ItemViewShapeDropAction.cs
+  uploadId: 768216

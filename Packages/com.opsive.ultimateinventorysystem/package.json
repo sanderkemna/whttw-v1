@@ -1,0 +1,22 @@
+{
+  "name": "com.opsive.ultimateinventorysystem",
+  "version": "1.3.3",
+  "displayName": "Opsive Ultimate Inventory System",
+  "description": "The Ultimate Inventory System is a robust and fully featured inventory system for Unity.",
+  "documentationUrl": "https://opsive.com/support/documentation/ultimate-inventory-system/",
+  "author": {
+    "name": "Opsive",
+    "email": "support@opsive.com",
+    "url": "https://opsive.com"
+  },
+  "samples": [
+    {
+      "displayName": "Demo",
+      "description": "Demo scene using the universal render pipeline",
+      "path": "Samples~/Demo"
+    }
+  ],
+  "dependencies": {
+    "com.opsive.shared": "2.0.0"
+  }
+}

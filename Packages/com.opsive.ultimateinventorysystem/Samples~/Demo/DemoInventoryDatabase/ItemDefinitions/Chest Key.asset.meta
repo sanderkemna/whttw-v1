@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: aa666163806f1bf47b288ede03d91fe7
+labels:
+- DemoInventoryDatabase
+- Uncategorized
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemDefinitions/Chest
+    Key.asset
+  uploadId: 768216

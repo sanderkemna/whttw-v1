@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: b57cfe1a2f854d8e88ac67257101dbeb
+timeCreated: 1603109765
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Grid/GridPanel.cs
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 91fd726fe71bbb441a167566be34de11
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Save
+    View.prefab
+  uploadId: 768216

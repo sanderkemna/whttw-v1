@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 56432fbc40496b441897621e90f3713c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Item
+    View For Item Shape Grid.prefab
+  uploadId: 768216

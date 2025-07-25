@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 86e8d4f64cc262c4bb416929ebe2e4fa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Weapons/WoodenSword
+    (ColliderVariant).prefab
+  uploadId: 768216

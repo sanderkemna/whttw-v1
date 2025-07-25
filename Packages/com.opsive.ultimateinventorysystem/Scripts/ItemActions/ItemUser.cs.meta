@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: f05d9b00a10345299e7d28cf4896ce37
+timeCreated: 1588240789
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/ItemActions/ItemUser.cs
+  uploadId: 768216

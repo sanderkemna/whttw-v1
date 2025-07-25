@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc90621c6412b2c4c9f857f838fb0bee
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/CraftingUI/Recipe
+    View.prefab
+  uploadId: 768216

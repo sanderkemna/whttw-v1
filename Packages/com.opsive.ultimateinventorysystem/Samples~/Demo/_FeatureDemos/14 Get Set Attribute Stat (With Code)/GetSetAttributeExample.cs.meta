@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e0d8d72e82547ec439d2dd647825bb5e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/14
+    Get Set Attribute Stat (With Code)/GetSetAttributeExample.cs
+  uploadId: 768216

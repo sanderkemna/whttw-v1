@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2373c0d40e58adb4084eaef614e0c7dc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/DamagePopup/DamagePopup.prefab
+  uploadId: 768216

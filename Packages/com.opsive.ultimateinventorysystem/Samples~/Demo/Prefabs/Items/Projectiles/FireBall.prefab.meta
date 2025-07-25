@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bf4a15ceeae5ae74990e220e85d7a8be
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Projectiles/FireBall.prefab
+  uploadId: 768216

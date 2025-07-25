@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3c14536e3994df34ebc30cc88f0d3a7b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/Menus/CraftingMenu/Ingredients
+    Item Description.prefab
+  uploadId: 768216

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 86fd0a57461369f43b9ceba95409e80a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/ScriptableObjects/Category
+    Item View Set For Hotbar.asset
+  uploadId: 768216

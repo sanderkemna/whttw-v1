@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cbebaef0a79771847ac96adbbd86c0e0
+labels:
+- DemoInventoryDatabase
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemCategories/Upgradable.asset
+  uploadId: 768216

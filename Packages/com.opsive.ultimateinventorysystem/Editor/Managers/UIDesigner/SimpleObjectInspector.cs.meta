@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 425e11ed600c4478b44876f0aab41d9b
+timeCreated: 1632833676
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/Managers/UIDesigner/SimpleObjectInspector.cs
+  uploadId: 768216

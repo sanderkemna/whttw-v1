@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e19acb6b1c1aa5c418efccdd76cbe054
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Currency/BronzeCoin.prefab
+  uploadId: 768216

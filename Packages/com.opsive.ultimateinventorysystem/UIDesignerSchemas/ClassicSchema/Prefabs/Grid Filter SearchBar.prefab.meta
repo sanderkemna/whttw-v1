@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c46860b3a2513374fb4fb9f797319e3d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Grid
+    Filter SearchBar.prefab
+  uploadId: 768216

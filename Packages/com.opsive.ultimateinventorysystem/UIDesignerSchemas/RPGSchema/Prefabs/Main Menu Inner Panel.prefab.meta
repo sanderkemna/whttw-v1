@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5756373d32cda5c49819caf913b3ea81
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Main
+    Menu Inner Panel.prefab
+  uploadId: 768216

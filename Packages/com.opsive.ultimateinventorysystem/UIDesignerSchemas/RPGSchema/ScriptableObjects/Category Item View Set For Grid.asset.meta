@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 82937a05492747244a797e43015133d8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/ScriptableObjects/Category
+    Item View Set For Grid.asset
+  uploadId: 768216

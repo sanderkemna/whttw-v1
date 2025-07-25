@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: da97199c46f977f42b08b6390169d43c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/UI/Demo Crafting
+    Ingredients Category Item View Set.asset
+  uploadId: 768216

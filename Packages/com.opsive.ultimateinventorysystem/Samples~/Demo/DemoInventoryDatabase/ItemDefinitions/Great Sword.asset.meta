@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ef3877bd48d3a61449ea521c6fb29f33
+labels:
+- DemoInventoryDatabase
+- Sword
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemDefinitions/Great
+    Sword.asset
+  uploadId: 768216

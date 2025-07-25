@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5edec7a7a01d714418a8bd70d6d83935
+labels:
+- Demo Recipes With Currency
+- DemoInventoryDatabase
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/CraftingRecipes/Wizard
+    Wand.asset
+  uploadId: 768216

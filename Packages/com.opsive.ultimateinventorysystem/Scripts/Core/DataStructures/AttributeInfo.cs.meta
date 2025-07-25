@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 2537ec0478fd4603b2d4bdbd9f83096d
+timeCreated: 1590046426
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/Core/DataStructures/AttributeInfo.cs
+  uploadId: 768216

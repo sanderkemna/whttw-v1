@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bb5860fcf472ccc43ab72c5843609742
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Items/Weapons/Fireball.mat
+  uploadId: 768216

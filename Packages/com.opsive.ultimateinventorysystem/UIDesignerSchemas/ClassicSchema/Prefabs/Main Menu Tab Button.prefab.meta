@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7502a2ab68450f142a7e869516cb7fa9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Main
+    Menu Tab Button.prefab
+  uploadId: 768216

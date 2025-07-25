@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: ac900ab683564e6894ecc89fe66db7b7
+timeCreated: 1704835643
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/ItemViewSlotContainers/PreventEmptySelectItemViewSlotsContainerBinding.cs
+  uploadId: 768216

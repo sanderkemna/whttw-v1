@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 0da2665727984ebe9db623003ac24659
+timeCreated: 1696924345
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/AttributeViewModules/ShowHideAttributeView.cs
+  uploadId: 768216

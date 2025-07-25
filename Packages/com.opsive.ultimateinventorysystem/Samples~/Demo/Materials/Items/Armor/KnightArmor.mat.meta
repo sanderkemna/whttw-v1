@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3a8f9354bad45554a9173aaba4b1fbc7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Items/Armor/KnightArmor.mat
+  uploadId: 768216

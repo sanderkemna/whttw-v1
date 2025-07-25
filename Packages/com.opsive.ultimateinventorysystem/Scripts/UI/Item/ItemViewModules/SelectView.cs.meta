@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 8c136819872044699be842ecd53f6e44
+timeCreated: 1651649560
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/ItemViewModules/SelectView.cs
+  uploadId: 768216

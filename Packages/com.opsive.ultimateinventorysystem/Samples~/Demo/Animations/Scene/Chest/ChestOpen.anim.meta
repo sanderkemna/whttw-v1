@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6fab3bf24d87b9247a5a3292316e6cae
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Animations/Scene/Chest/ChestOpen.anim
+  uploadId: 768216

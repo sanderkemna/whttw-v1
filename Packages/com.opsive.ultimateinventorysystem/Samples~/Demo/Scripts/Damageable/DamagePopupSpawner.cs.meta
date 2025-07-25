@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: cac574f8cfa64ab4a5738ee7669cd78a
+timeCreated: 1574693473
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Scripts/Damageable/DamagePopupSpawner.cs
+  uploadId: 768216

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 225476be944e4d4bb133badbde223202
+timeCreated: 1585238020
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/ActionPanels/AsyncFuncAction.cs
+  uploadId: 768216

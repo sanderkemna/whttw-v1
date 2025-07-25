@@ -1,5 +1,27 @@
 {
   "dependencies": {
+    "com.opsive.shared": {
+      "version": "file:com.opsive.shared",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.opsive.ultimatecharactercontroller": {
+      "version": "file:com.opsive.ultimatecharactercontroller",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.opsive.shared": "2.0.0"
+      }
+    },
+    "com.opsive.ultimateinventorysystem": {
+      "version": "file:com.opsive.ultimateinventorysystem",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.opsive.shared": "2.0.0"
+      }
+    },
     "com.projectdawn.dotsplus": {
       "version": "file:com.projectdawn.dotsplus",
       "depth": 0,

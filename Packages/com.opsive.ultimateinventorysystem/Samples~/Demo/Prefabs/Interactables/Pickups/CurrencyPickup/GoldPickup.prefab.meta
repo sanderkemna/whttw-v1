@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f72e39786060e224fb9bb452fa652ed9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Interactables/Pickups/CurrencyPickup/GoldPickup.prefab
+  uploadId: 768216

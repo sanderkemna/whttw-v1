@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: d9f2c548a4e64be593d1e71fd9c6c821
+timeCreated: 1656663833
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/SaveSystem/InventoryGridIndexDataSaver.cs
+  uploadId: 768216

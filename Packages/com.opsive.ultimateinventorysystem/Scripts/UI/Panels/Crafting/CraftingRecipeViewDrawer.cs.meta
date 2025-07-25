@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: f4607ccf83d1413cbb62a3c46e31a242
+timeCreated: 1582895458
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/Crafting/CraftingRecipeViewDrawer.cs
+  uploadId: 768216

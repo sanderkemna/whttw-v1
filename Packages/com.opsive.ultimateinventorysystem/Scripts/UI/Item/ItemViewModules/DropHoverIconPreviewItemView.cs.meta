@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5a43fd8a47794cbaaa3a3972687f168d
+timeCreated: 1597843457
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/ItemViewModules/DropHoverIconPreviewItemView.cs
+  uploadId: 768216

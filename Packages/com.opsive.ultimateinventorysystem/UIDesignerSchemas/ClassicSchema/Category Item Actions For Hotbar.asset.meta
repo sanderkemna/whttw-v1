@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2fd93b53ab7d670458b844a95cb3ce5a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Category
+    Item Actions For Hotbar.asset
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0dd393a4dabc5d0408c7bae16d574043
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Main
+    Menu Vertical.prefab
+  uploadId: 768216

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: b20bd720e7a54534bd027cc621f861c8
+timeCreated: 1612976850
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/Hotbar/ItemHotbarHandler.cs
+  uploadId: 768216

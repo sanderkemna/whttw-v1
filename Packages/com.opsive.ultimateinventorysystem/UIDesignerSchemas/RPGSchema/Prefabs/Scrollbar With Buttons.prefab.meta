@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0913125bb1b26bf4ca7a8f7767970bcd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Scrollbar
+    With Buttons.prefab
+  uploadId: 768216

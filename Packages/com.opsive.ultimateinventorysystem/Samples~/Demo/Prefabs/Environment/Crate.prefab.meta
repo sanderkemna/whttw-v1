@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8394cea5bb142cf42afb4d28878b9717
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Environment/Crate.prefab
+  uploadId: 768216

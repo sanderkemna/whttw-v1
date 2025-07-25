@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e952778d3b7ffb84b94ab1e760fafe52
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/Utility/InventoryDatabaseImportExport/ImportExportUtility.cs
+  uploadId: 768216

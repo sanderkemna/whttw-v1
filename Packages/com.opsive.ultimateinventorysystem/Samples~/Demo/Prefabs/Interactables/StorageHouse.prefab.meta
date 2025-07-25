@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3611a35bf86afb44ba10d8457d80d347
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Interactables/StorageHouse.prefab
+  uploadId: 768216

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 3f540fc2a43942ee9dd455cac06cbe9d
+timeCreated: 1597917729
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/ItemViewSlotRestrictions/ItemViewSlotRestriction.cs
+  uploadId: 768216

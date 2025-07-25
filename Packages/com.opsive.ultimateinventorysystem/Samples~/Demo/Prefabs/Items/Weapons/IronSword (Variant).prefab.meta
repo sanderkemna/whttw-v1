@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dd3db128bc0baf24b8289fc40db1f33f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Weapons/IronSword
+    (Variant).prefab
+  uploadId: 768216

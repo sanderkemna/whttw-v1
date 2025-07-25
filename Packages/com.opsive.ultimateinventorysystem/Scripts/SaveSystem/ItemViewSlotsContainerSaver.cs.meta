@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 9b1966513a764f2da9c842d91150c07f
+timeCreated: 1676281911
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/SaveSystem/ItemViewSlotsContainerSaver.cs
+  uploadId: 768216

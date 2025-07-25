@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: ea6008d8820a41efa277cc31bc47bc59
+timeCreated: 1577366440
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Menus/StorageMenuOpener.cs
+  uploadId: 768216

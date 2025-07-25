@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 63ffba073b256d04ab6e8c4ba0c203d1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/ScriptableObjects/Item
+    View Slot Drop Action Set.asset
+  uploadId: 768216

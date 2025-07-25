@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f3625b9ef84c8594a90ff891f762e56d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/6
+    Hotbar/SceneBackgroundItemViewSlotDropActionSet.asset
+  uploadId: 768216

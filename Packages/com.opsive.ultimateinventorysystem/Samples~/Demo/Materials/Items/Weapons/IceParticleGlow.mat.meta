@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 412e8ac17f97a5b408f291e8ba0484b1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Materials/Items/Weapons/IceParticleGlow.mat
+  uploadId: 768216

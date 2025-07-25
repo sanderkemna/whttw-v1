@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2808a4b1baac42d4da429574b556cb3d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ConfirmCancel.prefab
+  uploadId: 768216

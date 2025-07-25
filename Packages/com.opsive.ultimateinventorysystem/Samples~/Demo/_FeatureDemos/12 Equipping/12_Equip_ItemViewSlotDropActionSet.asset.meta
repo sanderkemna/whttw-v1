@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 08cef522cf2d9e7488b21576933dd5ba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/_FeatureDemos/12
+    Equipping/12_Equip_ItemViewSlotDropActionSet.asset
+  uploadId: 768216

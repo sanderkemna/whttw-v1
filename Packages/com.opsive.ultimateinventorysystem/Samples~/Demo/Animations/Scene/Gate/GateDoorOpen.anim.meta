@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9202299c972b407498d737323a508009
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Animations/Scene/Gate/GateDoorOpen.anim
+  uploadId: 768216

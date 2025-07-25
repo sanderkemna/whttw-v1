@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 134b49bca9ea343418b9fae66fe41f4d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Interactables/GateDoor.prefab
+  uploadId: 768216

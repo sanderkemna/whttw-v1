@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b73c965dfba38d9448d19d731b18a02c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Item
+    Shape View Slot.prefab
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4441dff65b5b6d44a03a833ca4187c6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/Menus/Gameplay
+    Panel.prefab
+  uploadId: 768216

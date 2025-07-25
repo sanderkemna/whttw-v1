@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 15f980085d19dc94a8ae9b585a741633
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/UI/Demo Equipment
+    Category Item View Set.asset
+  uploadId: 768216

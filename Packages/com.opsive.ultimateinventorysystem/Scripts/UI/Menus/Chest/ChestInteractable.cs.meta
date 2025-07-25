@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 8ead3494cef54d15a774ad5ba7f296ec
+timeCreated: 1577975652
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Menus/Chest/ChestInteractable.cs
+  uploadId: 768216

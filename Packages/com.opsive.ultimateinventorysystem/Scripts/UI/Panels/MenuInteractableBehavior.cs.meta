@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 2de19a5ab9624bae80654a8f4aa1974b
+timeCreated: 1576579864
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/MenuInteractableBehavior.cs
+  uploadId: 768216

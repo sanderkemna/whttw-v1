@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a08c770a8314ab249b5fa7c9b9c99353
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Stubs/GeneratedStubTypes.asset
+  uploadId: 768216

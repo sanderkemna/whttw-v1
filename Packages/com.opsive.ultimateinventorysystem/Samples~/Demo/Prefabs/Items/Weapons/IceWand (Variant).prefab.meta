@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5c210db23fbae0f4f941e62b32fcadf9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Weapons/IceWand
+    (Variant).prefab
+  uploadId: 768216

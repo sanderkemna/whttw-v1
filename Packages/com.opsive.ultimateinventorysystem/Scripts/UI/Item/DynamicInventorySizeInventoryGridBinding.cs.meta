@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 839cd9eb203442dc84cba3f4df4a2076
+timeCreated: 1648714100
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Item/DynamicInventorySizeInventoryGridBinding.cs
+  uploadId: 768216

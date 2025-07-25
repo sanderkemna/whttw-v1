@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ce4e000e44387954895153f13e8022a3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Interactables/Pickups/BigBomb.prefab
+  uploadId: 768216

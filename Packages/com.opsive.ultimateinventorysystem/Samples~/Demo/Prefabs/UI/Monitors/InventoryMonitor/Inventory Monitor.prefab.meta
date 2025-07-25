@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cfce43af394a0e5438c7f0ab51abf06c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/Monitors/InventoryMonitor/Inventory
+    Monitor.prefab
+  uploadId: 768216

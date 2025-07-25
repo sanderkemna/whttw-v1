@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 50dd88cad8c38fb4b8d70263445d8672
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/HotKeys/Hotbar
+    Item View Slot.prefab
+  uploadId: 768216

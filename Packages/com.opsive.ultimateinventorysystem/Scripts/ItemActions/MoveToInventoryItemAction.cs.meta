@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 52bef4ba191a4a48b85e9c3bb33f0358
+timeCreated: 1705655477
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/ItemActions/MoveToInventoryItemAction.cs
+  uploadId: 768216

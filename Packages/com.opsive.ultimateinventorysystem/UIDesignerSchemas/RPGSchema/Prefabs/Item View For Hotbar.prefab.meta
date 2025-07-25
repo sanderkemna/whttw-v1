@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 340615a30de5d584fbd0e6dd7762231c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/RPGSchema/Prefabs/Item
+    View For Hotbar.prefab
+  uploadId: 768216

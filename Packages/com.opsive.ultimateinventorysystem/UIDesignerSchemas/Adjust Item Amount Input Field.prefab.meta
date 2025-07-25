@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d65f0760bf73f66459916429533e8d76
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/Adjust
+    Item Amount Input Field.prefab
+  uploadId: 768216

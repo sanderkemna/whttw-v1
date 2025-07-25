@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 99c5da5b52722b14c8697805629d067e
+labels:
+- DemoInventoryDatabase
+- LegWear
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/DemoInventoryDatabase/ItemDefinitions/Knight
+    Boots.asset
+  uploadId: 768216

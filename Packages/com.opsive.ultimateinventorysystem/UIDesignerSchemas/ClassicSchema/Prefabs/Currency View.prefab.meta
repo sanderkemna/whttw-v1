@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a42dd4d1882a17f4695648adaa756fa0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Prefabs/Currency
+    View.prefab
+  uploadId: 768216

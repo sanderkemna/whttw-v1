@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: adbbe99ee0784aad846cd0829d4e0d53
+timeCreated: 1602849008
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Editor/Inspectors/ItemSlotCollectionViewInspector.cs
+  uploadId: 768216

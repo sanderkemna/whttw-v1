@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 4caf4b7721b54d72b0bfbe63ba454e87
+timeCreated: 1574588874
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/Equipping/IEquipper.cs
+  uploadId: 768216

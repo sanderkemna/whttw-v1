@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 456ebe034f22f8040b1d70e0cb081b8c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/UIDesignerSchemas/ClassicSchema/Category
+    Attribute View Set.asset
+  uploadId: 768216

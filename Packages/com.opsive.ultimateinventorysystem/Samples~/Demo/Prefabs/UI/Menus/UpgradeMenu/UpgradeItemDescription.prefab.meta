@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07678b64f60c7004096087d43b4d8a3a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/UI/Menus/UpgradeMenu/UpgradeItemDescription.prefab
+  uploadId: 768216

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dfc0a592cdd637c47b6c7d63723a0a49
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Samples~/Demo/Prefabs/Items/Weapons/FireWand
+    (Variant).prefab
+  uploadId: 768216

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cd5036dbda0a419a9cce2a63da507b63
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -158
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/Core/InventoryCollections/InventoryIdentifier.cs
+  uploadId: 768216

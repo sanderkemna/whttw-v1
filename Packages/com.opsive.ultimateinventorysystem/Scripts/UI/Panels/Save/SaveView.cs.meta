@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5965856976ae416bb18fd0625746681e
+timeCreated: 1582627673
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166053
+  packageName: Ultimate Inventory System
+  packageVersion: 1.3.2
+  assetPath: Packages/com.opsive.ultimateinventorysystem/Scripts/UI/Panels/Save/SaveView.cs
+  uploadId: 768216
