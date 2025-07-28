@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FragGrenadeUnEquip
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 952e0d3d63a5b074fb0ec710fe7a64f8, type: 3}
+  - {fileID: 8300000, guid: 8b84e04dcb19e2d4c9c797a6813cb4e4, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1
