@@ -26,11 +26,12 @@ MonoBehaviour:
     m_ObjectType: 'Opsive.Shared.Utility.ResizableArray`1[[Opsive.UltimateInventorySystem.Core.ItemCategory,
       Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
     m_ValueHashes: 
-    m_LongValueHashes: 4c1e4f8e62aa191aedcfa32778e3fda65d5b81463bc45586
-    m_ValuePositions: 000000000400000008000000
-    m_Values: 010000000100000000000000
+    m_LongValueHashes: 4c1e4f8e62aa191aedcfa32778e3fda65d5b81463bc45586e85a81463bc45586
+    m_ValuePositions: 0000000004000000080000000c000000
+    m_Values: 02000000020000000000000001000000
     m_UnityObjects:
     - {fileID: 11400000, guid: 21c0252944db61644b4de906ee01e90f, type: 2}
+    - {fileID: 11400000, guid: 5960954ef54114a4d861fdb0cb50957c, type: 2}
     m_Version: 3.4
   m_ElementsData:
     m_ObjectType: 'Opsive.Shared.Utility.ResizableArray`1[[Opsive.UltimateInventorySystem.Core.ItemDefinition,

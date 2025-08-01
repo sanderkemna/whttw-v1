@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ac5fa5da8102b468a92c21620db0d0, type: 3}
+  m_Name: Bullet 5.45x39mm
+  m_EditorClassIdentifier: 
+  m_ID: 2411405808
+  m_Category: {fileID: 11400000, guid: 5960954ef54114a4d861fdb0cb50957c, type: 2}
+  m_Parent: {fileID: 0}
+  m_ChildrenData:
+    m_ObjectType: 'Opsive.Shared.Utility.ResizableArray`1[[Opsive.UltimateInventorySystem.Core.ItemDefinition,
+      Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+    m_ValueHashes: 
+    m_LongValueHashes: 4c1e4f8e62aa191ac2330064f10375df
+    m_ValuePositions: 0000000004000000
+    m_Values: 0000000000000000
+    m_UnityObjects: []
+    m_Version: 3.4
+  m_ItemDefinitionAttributeCollection:
+    m_AttributeCollectionData:
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
+      m_ValuePositions: 0000000004000000050000000500000009000000090000000d00000011000000
+      m_Values: 49636f6e00000000001ed21ed2ffffffffffffffff
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa65195fdf7a7e477b768d9cf911486f57b1d
+      m_ValuePositions: 000000000b0000000c0000000c00000010000000100000001400000014000000
+      m_Values: 4465736372697074696f6e00000000008206223f54686973206465736372697074696f6e206973206e6f74207365742e
+      m_UnityObjects: []
+      m_Version: 3.4
+  m_DefaultItem:
+    m_ID: 4226144920
+    m_Name: Bullet 5.45x39mm
+    m_ItemDefinitionID: 2411405808
+    m_ItemDefinition: {fileID: 11400000}
+    m_ItemAttributeCollection:
+      m_AttributeCollectionData:
+      - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.Single,
+          mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+        m_ValueHashes: 
+        m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651cc215ba7e477b76810f4f41386f57b1d
+        m_ValuePositions: 000000000c0000000d0000000d00000011000000110000001500000019000000
+        m_Values: 44616d616765416d6f756e740101000000c021f21a0000a8410000a841
+        m_UnityObjects: []
+        m_Version: 3.4
+  m_EditorIcon: {fileID: 0}

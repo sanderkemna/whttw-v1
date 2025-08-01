@@ -922,9 +922,3 @@ MonoBehaviour:
         m_AttributeBindingDataArray:
         - m_AttributeName: DamageAmount
           m_PropertyPath: DamageAmount
-        - m_AttributeName: Prefabs
-          m_PropertyPath: 
-        - m_AttributeName: Icon
-          m_PropertyPath: 
-        - m_AttributeName: Description
-          m_PropertyPath: 

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2d29bda368ada499ad37e3d0781339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InitializeOnEnable: 0
+  m_InitializeOnEnable: 1
   m_Mass: 1
   m_StartVelocityMultiplier: 1
   m_GravityMagnitude: 9.8
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_ImpactLayers:
     serializedVersion: 2
     m_Bits: 2348810275
-  m_SurfaceImpact: {fileID: 0}
+  m_SurfaceImpact: {fileID: 11400000, guid: 278249160c1c8a845ae483589763a8be, type: 2}
   m_ForceMultiplier: 40
   m_CollisionMode: 1
   m_ReflectMultiplier: 1
@@ -135,7 +135,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424855370011715312}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 16cca56b90205a647bd81f100e238fd9, type: 3}

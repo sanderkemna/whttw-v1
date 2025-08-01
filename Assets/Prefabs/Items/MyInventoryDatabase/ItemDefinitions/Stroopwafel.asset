@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ac5fa5da8102b468a92c21620db0d0, type: 3}
+  m_Name: Stroopwafel
+  m_EditorClassIdentifier: 
+  m_ID: 727345089
+  m_Category: {fileID: 11400000, guid: dc4139e9616520140a78b290db4c1a1f, type: 2}
+  m_Parent: {fileID: 0}
+  m_ChildrenData:
+    m_ObjectType: 'Opsive.Shared.Utility.ResizableArray`1[[Opsive.UltimateInventorySystem.Core.ItemDefinition,
+      Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+    m_ValueHashes: 
+    m_LongValueHashes: 4c1e4f8e62aa191ac2330064f10375df
+    m_ValuePositions: 0000000004000000
+    m_Values: 0000000000000000
+    m_UnityObjects: []
+    m_Version: 3.4
+  m_ItemDefinitionAttributeCollection:
+    m_AttributeCollectionData:
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
+      m_ValuePositions: 0000000004000000050000000500000009000000090000000d00000011000000
+      m_Values: 49636f6e01010000001ed21ed20000000001000000
+      m_UnityObjects:
+      - {fileID: 1088446489, guid: c571eff686e39de4cbc09c6e461d2c22, type: 3}
+      - {fileID: 1088446489, guid: c571eff686e39de4cbc09c6e461d2c22, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa65195fdf7a7e477b768d9cf911486f57b1d
+      m_ValuePositions: 000000000b0000000c0000000c00000010000000100000001400000033000000
+      m_Values: 4465736372697074696f6e01010000008206223f4973206974207265616c6c792061207374726f6f70776166656c2074686f3f4973206974207265616c6c792061207374726f6f70776166656c2074686f3f
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651424b280f5394b559861dc27bf4117a0e
+      m_ValuePositions: 000000000b0000000c0000000c00000010000000100000001400000018000000
+      m_Values: 4865616c20416d6f756e7401000000008c37f7d30000000000000000
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651424b280f5394b559861dc27bf4117a0e
+      m_ValuePositions: 000000000d0000000e0000000e0000001200000012000000160000001a000000
+      m_Values: 48756e67657220416d6f756e740101000000c67c329f1e0000001e000000
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651424b280f5394b559861dc27bf4117a0e
+      m_ValuePositions: 000000000d0000000e0000000e0000001200000012000000160000001a000000
+      m_Values: 54686972737420416d6f756e7401000000008da911040000000000000000
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651bbc6d22cc378a73fff986c9964f66bf4
+      m_ValuePositions: 000000000c0000000d0000000d00000011000000110000001500000019000000
+      m_Values: 5069636b75705072656661620101000000a430c7950000000001000000
+      m_UnityObjects:
+      - {fileID: 1157336068269296416, guid: 4d2ce2b8765280e43aa57749c847520f, type: 3}
+      - {fileID: 1157336068269296416, guid: 4d2ce2b8765280e43aa57749c847520f, type: 3}
+      m_Version: 3.4
+  m_DefaultItem:
+    m_ID: 688667609
+    m_Name: Stroopwafel
+    m_ItemDefinitionID: 727345089
+    m_ItemDefinition: {fileID: 11400000}
+    m_ItemAttributeCollection:
+      m_AttributeCollectionData: []
+  m_EditorIcon: {fileID: 0}
