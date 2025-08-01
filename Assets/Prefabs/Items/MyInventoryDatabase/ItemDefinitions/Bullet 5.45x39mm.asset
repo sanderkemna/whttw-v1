@@ -31,8 +31,9 @@ MonoBehaviour:
       m_ValueHashes: 
       m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
       m_ValuePositions: 0000000004000000050000000500000009000000090000000d00000011000000
-      m_Values: 49636f6e00000000001ed21ed2ffffffffffffffff
-      m_UnityObjects: []
+      m_Values: 49636f6e00000000001ed21ed2ffffffff00000000
+      m_UnityObjects:
+      - {fileID: 21300182, guid: 5fb67c614ba76ca45a811c8e1f7be476, type: 3}
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'

@@ -78,6 +78,24 @@ MonoBehaviour:
       - {fileID: 1157336068269296416, guid: 4d2ce2b8765280e43aa57749c847520f, type: 3}
       - {fileID: 1157336068269296416, guid: 4d2ce2b8765280e43aa57749c847520f, type: 3}
       m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
+      m_ValuePositions: 00000000090000000a0000000a0000000e0000000e0000001200000016000000
+      m_Values: 536861706549636f6e010100000076496e970000000001000000
+      m_UnityObjects:
+      - {fileID: 1088446489, guid: c571eff686e39de4cbc09c6e461d2c22, type: 3}
+      - {fileID: 1088446489, guid: c571eff686e39de4cbc09c6e461d2c22, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[Opsive.UltimateInventorySystem.UI.Item.ItemShape,
+        Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651a4e199aea0e72da2ac19994a90cd3c8166c5699552753ffffd5ed8929db1e87938fc6a75703a3d81e8b3331b4265f256300c16a13afeebd5fad0e67ef846e8ab614b577937823f2da4e9e59eda09ead5
+      m_ValuePositions: 000000000500000006000000060000000a0000000a0000000e0000000e00000016000000170000001b00000023000000230000002b0000002c00000030000000
+      m_Values: 53686170650101000000139b7293010000000100000000000000000000000000000000010000000100000000000000000000000000000000
+      m_UnityObjects: []
+      m_Version: 3.4
   m_DefaultItem:
     m_ID: 688667609
     m_Name: Stroopwafel
