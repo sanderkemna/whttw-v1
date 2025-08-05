@@ -466,7 +466,6 @@ MonoBehaviour:
   - {fileID: 6808037572969857468}
   - {fileID: 671020784151506728}
   - {fileID: 1345613566244195296}
-  - {fileID: 0}
 --- !u!114 &6237399002702375956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,14 +702,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ItemInfo:
     m_ItemAmount:
-      m_Amount: 0
+      m_Amount: 1
       m_Item:
-        m_ID: 742829983
-        m_Name: 
-        m_ItemDefinitionID: 0
-        m_ItemDefinition: {fileID: 0}
+        m_ID: 3621566111
+        m_Name: AKS-74U
+        m_ItemDefinitionID: 3740250162
+        m_ItemDefinition: {fileID: 11400000, guid: 2ba2ab44154160141a48d2b125e3dc77, type: 2}
         m_ItemAttributeCollection:
-          m_AttributeCollectionData: []
+          m_AttributeCollectionData:
+          - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem.AmmoData,
+              Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem,
+              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+            m_ValueHashes: 
+            m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651cc217b5306e3b20556502eea42df10255395390c8ab73152218425ca04bfee287cdf23c5403b0dcc9f43a4d8003a640510f414c0a76077bada45a37fa92b5ad81f53d8d59538ceaa6d42c4131b3011d0f0caae50abcf47311356294debce2ef8
+            m_ValuePositions: 000000000800000009000000090000000d0000000d0000001100000011000000110000001100000015000000190000001d0000001d0000001d000000310000003500000039000000
+            m_Values: 416d6d6f446174610000000000febc6c0effffffff000000000000000041737361756c74205269666c652042756c6c6574000000003000000030000000
+            m_UnityObjects:
+            - {fileID: 11400000, guid: b4e2d54fd4929e24ea60d1446e393396, type: 2}
+            m_Version: 3.4
 --- !u!114 &4529105935261935378
 MonoBehaviour:
   m_ObjectHideFlags: 0

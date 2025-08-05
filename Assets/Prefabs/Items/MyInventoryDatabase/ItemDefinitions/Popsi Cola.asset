@@ -96,6 +96,15 @@ MonoBehaviour:
       m_Values: 53686170650101000000139b7293010000000200000000000000000000000000000000010000000200000000000000000000000000000000
       m_UnityObjects: []
       m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651bbc6d22cc378a73fff986c9964f66bf4
+      m_ValuePositions: 000000000a0000000b0000000b0000000f0000000f0000001300000017000000
+      m_Values: 44726f705072656661620100000000563fa7a1ffffffff00000000
+      m_UnityObjects:
+      - {fileID: 1394257913490840763, guid: 427be4eadd7d3fd4e960c2790ba78d6b, type: 3}
+      m_Version: 3.4
   m_DefaultItem:
     m_ID: 4039140339
     m_Name: Popsi Cola

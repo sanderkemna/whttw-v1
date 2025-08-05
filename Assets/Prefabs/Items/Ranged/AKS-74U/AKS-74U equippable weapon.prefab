@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 8819644527429556864}
   - component: {fileID: 5335470367120978123}
   m_Layer: 30
-  m_Name: ThirdPersonMySM_machine_gun
+  m_Name: ThirdPersonAKS-74U equippable weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -669,8 +669,8 @@ MonoBehaviour:
   m_SpawnParent:
     m_ID: -1
     m_Object: {fileID: 0}
-  m_LocalSpawnPosition: {x: 0.1284, y: -0.0012, z: 0.0043}
-  m_LocalSpawnRotation: {x: -1.036, y: 106.161, z: 295.234}
+  m_LocalSpawnPosition: {x: -0.018, y: 0.093, z: 0.044}
+  m_LocalSpawnRotation: {x: -112.5, y: -21.81, z: 51.22}
   m_LocalSpawnScale: {x: 1, y: 1, z: 1}
   m_NonDominantHandIKTarget: {fileID: 0}
   m_NonDominantHandIKTargetHint: {fileID: 0}
