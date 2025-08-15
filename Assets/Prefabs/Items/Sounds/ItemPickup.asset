@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3f22abf9338a54d9c3eacea205e6f5, type: 3}
+  m_Name: ItemPickup
+  m_EditorClassIdentifier: 
+  m_AudioClips:
+  - {fileID: 8300000, guid: d17290745202f7c499a632d8aeaf6a63, type: 3}
+  - {fileID: 8300000, guid: edfbe246bdcfbba4b83f876d154a7d05, type: 3}
+  - {fileID: 8300000, guid: 1c7c5e3d8b84c3b4a894c222f035b49b, type: 3}
+  - {fileID: 8300000, guid: 858835d0a914e3347a17a4db3fa05639, type: 3}
+  - {fileID: 8300000, guid: 534a7e240c2cc9248a881ba67f456c20, type: 3}
+  m_ClipSelection: 0
+  m_AudioSourcePrefab: {fileID: 0}
+  m_ShareAudioSource: 1
+  m_ReplacePreviousAudioSource: 0
+  m_CopyExistingAudioSourceProperties: 1
+  m_AudioModifier:
+    m_OutputOverride: {fileID: 0}
+    m_LoopOverride:
+      m_ValueOverride: 0
+      m_Value: 0
+    m_VolumeOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_PitchOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_StereoPanOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_SpatialBlendOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_ReverbZoneOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_DelayOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
