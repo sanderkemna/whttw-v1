@@ -46,6 +46,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 701553a4cd195f64782e1b3ca32cb6eb, type: 2}
   - {fileID: 11400000, guid: fe70528ea91515a4aa8d8bfbb9bcd1a4, type: 2}
   - {fileID: 11400000, guid: 4342abd2b30e9bd4fb09d86805e7bb8b, type: 2}
+  - {fileID: 11400000, guid: 2855a1fd1bb0ff84392630492f9b8095, type: 2}
   m_Currencies: []
   m_CraftingRecipes: []
   m_CraftingCategories:

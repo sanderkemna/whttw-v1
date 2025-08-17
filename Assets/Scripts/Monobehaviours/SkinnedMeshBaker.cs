@@ -1,6 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Used to bake a skinned mesh renderer into a gameobject
+/// </summary>
 public class SkinnedMeshBaker {
     [MenuItem("Tools/Bake Selected Skinned Mesh")]
     static void BakeSelected() {

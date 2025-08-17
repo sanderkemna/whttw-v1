@@ -3,7 +3,6 @@
 /// Copyright (c) Opsive. All Rights Reserved.
 /// https://www.opsive.com
 /// ---------------------------------------------
-
 namespace Opsive.UltimateInventorySystem.Stubs
 {
 	/// <summary>
@@ -120,6 +119,9 @@ namespace Opsive.UltimateInventorySystem.Stubs
 			new Opsive.UltimateInventorySystem.Core.AttributeBinding<Opsive.UltimateInventorySystem.Core.DataStructures.ItemDefinitionAmountsWithCategory>();
 			new Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute<Opsive.UltimateInventorySystem.Core.DataStructures.ItemDefinitionAmountsWithCategory>();
 			new Opsive.UltimateInventorySystem.Core.GenericAttributeBinding<Opsive.UltimateInventorySystem.Core.DataStructures.ItemDefinitionAmountsWithCategory>();
+			new Opsive.UltimateInventorySystem.Core.AttributeBinding<AdvancedPeopleSystem.CharacterElementType>();
+			new Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute<AdvancedPeopleSystem.CharacterElementType>();
+			new Opsive.UltimateInventorySystem.Core.GenericAttributeBinding<AdvancedPeopleSystem.CharacterElementType>();
 #pragma warning restore 0618
 		}
 	}
