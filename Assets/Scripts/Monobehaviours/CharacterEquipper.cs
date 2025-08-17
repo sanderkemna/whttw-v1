@@ -1,7 +1,7 @@
 using AdvancedPeopleSystem;
-using Opsive.Shared.Events;
 using Opsive.UltimateInventorySystem.Core;
 using Opsive.UltimateInventorySystem.Core.AttributeSystem;
+using Opsive.UltimateInventorySystem.Core.DataStructures;
 using Opsive.UltimateInventorySystem.Equipping;
 using UnityEngine;
 
@@ -19,47 +19,53 @@ public class CharacterEquipper : EquipperBase {
     [Tooltip("Required -> The attribute name as used in the UIS for the index for Advanced People System.")]
     private string AdvancedPeopleSystemIndexAttributeName = "AdvancedPeopleSystem-Index";
 
-    protected override void Awake() {
-        base.Awake();
-    }
+    protected override void Start() {
+        base.Start();
 
-    private void OnEnable() {
-        EventHandler.RegisterEvent<Item, int>(
-            this,
-            EventNames.c_Equipper_OnEquipped_Item_Index,
-            OnEquipmentHasChanged
-        );
-    }
-
-    /// <summary>
-    /// After Equipped has changed, check if it was a wearable, if yes call the ChangeCloths method 
-    /// to physically change the cloths.
-    /// </summary>
-    private void OnEquipmentHasChanged(Item item, int index) {
-        // Check if the item is part of a category
-        var WearableCategory = InventorySystemManager.GetItemCategory("Wearable");
-        if (!WearableCategory.InherentlyContains(item)) {
-            return;
-        } else {
-            ChangeCloths(item, index);
-        }
-    }
-
-    /// <summary>
-    /// Calls the CharacterCustomization API to change the cloths.
-    /// TODO: add fields for the type and index, then make it possible to swap the old cloths to drop
-    /// </summary>
-    private void ChangeCloths(Item item, int index) {
         if (character == null) {
             Debug.LogError("You didnt drag the reference to CharacterCustomization yo...");
             return;
         }
+    }
+
+    protected override void OnAddedItemToInventory(ItemInfo originItemInfo, ItemStack addedItemStack) {
+        if (addedItemStack == null) { return; }
+        if (addedItemStack.ItemCollection == m_EquipmentItemCollection) {
+            if (ItemHasWearablesCategory(addedItemStack.Item)) {
+                SetCloths(addedItemStack.Item);
+            }
+        }
+    }
+
+    protected override void OnRemovedItemFromInventory(ItemInfo removedItemInfo) {
+        base.OnRemovedItemFromInventory(removedItemInfo);
+        if (ItemHasWearablesCategory(removedItemInfo.Item)) {
+            ResetCloths(removedItemInfo.Item);
+        }
+    }
+
+    /// <summary>
+    /// Check if it is a wearable.
+    /// </summary>
+    private bool ItemHasWearablesCategory(Item item) {
+        var WearableCategory = InventorySystemManager.GetItemCategory("Wearable");
+        if (!WearableCategory.InherentlyContains(item)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /// <summary>
+    /// Calls the CharacterCustomization API to set the cloths, depending on type and cloth index.
+    /// </summary>
+    private void SetCloths(Item item) {
         if (!item.HasAttribute(AdvancedPeopleSystemTypeAttributeName)) {
-            Debug.LogError("Couldnt find the attribute for CharacterElementType...");
+            Debug.LogError($"Couldnt find the attribute for CharacterElementType in {item}...");
             return;
         }
         if (!item.HasAttribute(AdvancedPeopleSystemIndexAttributeName)) {
-            Debug.LogError("Couldnt find the attribute for int index...");
+            Debug.LogError($"Couldnt find the attribute for int index in {item}...");
             return;
         }
 
@@ -74,11 +80,35 @@ public class CharacterEquipper : EquipperBase {
         character.SetElementByIndex(characterElementType, itemIndex); //Set shirt element by Id
     }
 
-    private void OnDisable() {
-        EventHandler.UnregisterEvent<Item, int>(
-            this,
-            EventNames.c_Equipper_OnEquipped_Item_Index,
-            OnEquipmentHasChanged
-        );
+    /// <summary>
+    /// Calls the CharacterCustomization API to reset the cloths CharacterElementType.
+    /// </summary>
+    private void ResetCloths(Item item) {
+        if (!item.HasAttribute(AdvancedPeopleSystemTypeAttributeName)) {
+            Debug.LogError($"Couldnt find the attribute for CharacterElementType in {item}...");
+            return;
+        }
+
+        // get the CharacterElementType of the item
+        var characterElementTypeAttribute = item.GetAttribute<Attribute<CharacterElementType>>(AdvancedPeopleSystemTypeAttributeName);
+        CharacterElementType characterElementType = characterElementTypeAttribute.GetValue();
+
+        character.ClearElement(characterElementType); //clear character element
     }
+
+    //private void OnEnable() {
+    //    EventHandler.RegisterEvent<Item, int>(
+    //        this,
+    //        EventNames.c_Equipper_OnEquipped_Item_Index,
+    //        OnEquipmentHasChanged
+    //    );
+    //}
+
+    //private void OnDisable() {
+    //    EventHandler.UnregisterEvent<Item, int>(
+    //        this,
+    //        EventNames.c_Equipper_OnEquipped_Item_Index,
+    //        OnEquipmentHasChanged
+    //    );
+    //}
 }
