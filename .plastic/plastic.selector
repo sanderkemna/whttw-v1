@@ -1,4 +1,0 @@
-repository "WHTTWv1/WHTTWv1@9072256679820@cloud"
-  path "/"
-    br "/main"
-    co "/main"

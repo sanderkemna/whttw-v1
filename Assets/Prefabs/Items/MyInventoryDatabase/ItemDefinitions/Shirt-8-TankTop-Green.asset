@@ -84,10 +84,12 @@ MonoBehaviour:
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject[],
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
       m_ValueHashes: 
-      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa6515d867a59638ffc6aa15814c6040dc11f
-      m_ValuePositions: 000000000700000008000000080000000c0000000c0000001000000014000000
-      m_Values: 50726566616273010000000094bf5cd90000000000000000
-      m_UnityObjects: []
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa6515d867a59638ffc6a7d99d0efd2250dd6a15814c6040dc11fc5ebe1b403c60aca
+      m_ValuePositions: 000000000700000008000000080000000c0000000c0000001000000014000000180000001c000000
+      m_Values: 50726566616273010100000094bf5cd901000000000000000100000001000000
+      m_UnityObjects:
+      - {fileID: 2387418183073678018, guid: 6ab27fb2744359546b2663565076b2f3, type: 3}
+      - {fileID: 2387418183073678018, guid: 6ab27fb2744359546b2663565076b2f3, type: 3}
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[AdvancedPeopleSystem.CharacterElementType,
         AdvancedPeopleSystem2, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'

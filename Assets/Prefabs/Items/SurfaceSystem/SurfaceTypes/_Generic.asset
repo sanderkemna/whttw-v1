@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696b92c305704c84fb3f7a11d0c474fd, type: 3}
+  m_Name: _Generic
+  m_EditorClassIdentifier: 
+  m_ImpactEffects:
+  - m_SurfaceImpact: {fileID: 11400000, guid: a9b0ac0b40f8115458f998bc850793c4, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 51bfa0096af44754594f892e5b0f4165, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 7153689c33f5e3e4197aceed35e9fcee, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 52758c6e064dbfe47ba2994c99d0269e, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 931a23341f69fc3419f175163a30b931, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: d56049d43c1693f44992d4a76d86e577, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 5551980dab70aa444b8cf5e52cb221ce, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: a0504f2a9ee9a3c40abe11a9614dbb07, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: beffeca23a4622b448bb4a96f559f034, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 7543680d9dc2ed94ba94fe57773af26a, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 381fbb8874fb312498824833379c2af0, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 7543680d9dc2ed94ba94fe57773af26a, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 0327b46675e36f34f86cf3f76e0e135a, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: f67045598480c9140a7a89c147406296, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: a128fc4db9146434588b9653cb04bf4e, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: ff24bd9787904b244bdb0e1f721d12c8, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: a552e44ece591a849aed9b0fb70807f2, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 6f2ef3dce6c07e345833e11742e3c417, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: f1f35a8fee1ef5f43a338f7136a2c976, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 0c411223be68e8e4abdd321088fe7a74, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 4c449fda3ab9a8041805dc12550d4bed, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 5bf8df1925a3aed4db89151dde47779e, type: 2}
+  m_AllowFootprints: 1

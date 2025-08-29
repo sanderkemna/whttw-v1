@@ -146,7 +146,7 @@ MonoBehaviour:
     m_ImpactRadius: 0
     m_ImpactStateName: 
     m_ImpactStateDisableTimer: 10
-    m_SurfaceImpact: {fileID: 11400000, guid: f49abdd3bca87e54cb474256211b133e, type: 2}
+    m_SurfaceImpact: {fileID: 11400000, guid: 931a23341f69fc3419f175163a30b931, type: 2}
   m_InternalImpact: 1
   m_ImpactActionGroup:
     m_ImpactActions:
