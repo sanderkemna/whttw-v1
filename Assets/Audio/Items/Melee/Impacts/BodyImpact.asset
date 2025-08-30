@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BodyImpact
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 6c0a6b0cef1fd9f47bd6d614b2bb8d16, type: 3}
+  - {fileID: 8300000, guid: d753f763d390ee14d9afd0a62755c408, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

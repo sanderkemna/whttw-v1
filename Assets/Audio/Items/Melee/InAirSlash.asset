@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: InAirSlash
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: f5e54ede6765f0d42903e26f4202a447, type: 3}
-  - {fileID: 8300000, guid: bd24d61ababc6cf47adfeb4edc730ca6, type: 3}
+  - {fileID: 8300000, guid: 868ba7954982711498a78eb63060cb0c, type: 3}
+  - {fileID: 8300000, guid: 0ebcccc6717b4bb45bda58c222eac8d1, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

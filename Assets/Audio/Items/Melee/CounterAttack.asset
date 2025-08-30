@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CounterAttack
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: ba3c5725e9691fd439d7cb3ead8c7815, type: 3}
-  - {fileID: 8300000, guid: 8ae60a83261f1644fbe1c42d48dfd539, type: 3}
+  - {fileID: 8300000, guid: 66291b57e90c8a1449a327b51ff42099, type: 3}
+  - {fileID: 8300000, guid: 87cb9c6c35ee04849acbd8c7559ab208, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

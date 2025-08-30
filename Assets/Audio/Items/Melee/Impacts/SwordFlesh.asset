@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SwordFlesh
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: d076551602a4e4e4ca56c07d049485a3, type: 3}
-  - {fileID: 8300000, guid: aea3a2e240072164d86503179e95290d, type: 3}
-  - {fileID: 8300000, guid: e36ce3751374bde4ebee13d172d18058, type: 3}
+  - {fileID: 8300000, guid: 882c661d6d684554881d3fb092e537a0, type: 3}
+  - {fileID: 8300000, guid: 49b46f9427f546a4393d05772da7a0a9, type: 3}
+  - {fileID: 8300000, guid: ea3ed903d855f144bb1eb0e701d80a13, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

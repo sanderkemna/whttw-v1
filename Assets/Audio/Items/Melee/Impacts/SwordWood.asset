@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SwordWood
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 6d340f6a6713bf94eba072a691ae1f96, type: 3}
-  - {fileID: 8300000, guid: 06c79934e170f154d978372c2bc92d5f, type: 3}
-  - {fileID: 8300000, guid: 20fb031732059c24aadf56171d731512, type: 3}
-  - {fileID: 8300000, guid: e890ce54873f3b448b55c0782072caf2, type: 3}
+  - {fileID: 8300000, guid: a13d9ca1dd2cf354ca02966389de7f49, type: 3}
+  - {fileID: 8300000, guid: e88cd571cc58d2d468385e8467b52224, type: 3}
+  - {fileID: 8300000, guid: 997682289f4a6ce4d9535487b87f62c0, type: 3}
+  - {fileID: 8300000, guid: d66320566c60a4042945afee69d0b5e6, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

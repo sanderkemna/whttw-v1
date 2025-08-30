@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MeleeUnequip
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 67adc643ac1cbda49a68d1e37d49f309, type: 3}
+  - {fileID: 8300000, guid: 3dd0d282431744c479cafe5249d1ee92, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

@@ -342,7 +342,7 @@ MonoBehaviour:
       m_StateName: 
       m_ItemSubstateIndex: 0
       m_AudioClipSet:
-        m_AudioConfig: {fileID: 11400000, guid: 80106bdc1a87b8049be67a5695486cd3, type: 2}
+        m_AudioConfig: {fileID: 11400000, guid: 76ce0b528b292384db87275de8603d51, type: 2}
         m_AudioClips: []
   m_UnequipEvent:
     m_WaitForAnimationEvent: 1
@@ -367,7 +367,7 @@ MonoBehaviour:
       m_StateName: 
       m_ItemSubstateIndex: 0
       m_AudioClipSet:
-        m_AudioConfig: {fileID: 11400000, guid: 254ba03200548b948b22bd47bf2d7bcf, type: 2}
+        m_AudioConfig: {fileID: 11400000, guid: 0d335e2211dbc3345806dd9ab3cf9a68, type: 2}
         m_AudioClips: []
   m_UIMonitorID: 0
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ MonoBehaviour:
         m_Delay: 0
         m_AllowMultiHits: 0
         m_UseContextData: 1
-        m_SurfaceImpact: {fileID: 11400000, guid: c5ab4290ae28ad645a9e5b3483fc05cb, type: 2}
+        m_SurfaceImpact: {fileID: 11400000, guid: beffeca23a4622b448bb4a96f559f034, type: 2}
     - rid: 2915081423883075756
       type: {class: ImpactEvent, ns: Opsive.UltimateCharacterController.Items.Actions.Impact, asm: Opsive.UltimateCharacterController}
       data:
@@ -781,7 +781,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_Delay: 0
         m_AudioClipSet:
-          m_AudioConfig: {fileID: 11400000, guid: d2f7b488ee8141d4fb94bed547512509, type: 2}
+          m_AudioConfig: {fileID: 11400000, guid: 72a253715f7633446baf54f25ae3e1bd, type: 2}
           m_AudioClips: []
     - rid: 2915081423883075821
       type: {class: ItemObjectBinding, ns: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem, asm: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem}

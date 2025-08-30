@@ -225,7 +225,7 @@ TextureImporter:
         width: 400
         height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,6 +234,28 @@ TextureImporter:
       bones: []
       spriteID: a176d57067e3c644b864b1880ab9b0b7
       internalID: -1785967885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: katana
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 167
+        width: 1000
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c745ef7a771f647beb7960996b0853
+      internalID: 517794842
       vertices: []
       indices: 
       edges: []
@@ -258,6 +280,7 @@ TextureImporter:
       ak47u: 1976976110
       fraggrenade-rgd5: 1934876694
       handaxe: -1504821832
+      katana: 517794842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

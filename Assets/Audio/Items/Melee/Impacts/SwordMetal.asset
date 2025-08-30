@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SwordMetal
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 50018702ade985d4682ce27474b17f82, type: 3}
-  - {fileID: 8300000, guid: 757216a67106c7a49a7851a7e39a591f, type: 3}
-  - {fileID: 8300000, guid: ba90e4be26891c54cb893e74b4fca621, type: 3}
-  - {fileID: 8300000, guid: dc9104f91d264dd44be9ae5284df2111, type: 3}
+  - {fileID: 8300000, guid: 7640b678a59a01e4b81c7388c4dccfc6, type: 3}
+  - {fileID: 8300000, guid: 567a026e2f95e094d9823e3aeab804db, type: 3}
+  - {fileID: 8300000, guid: aec800f8238b66241b941a20694027c3, type: 3}
+  - {fileID: 8300000, guid: 0984b263b6ebf9d4fb353279d33a752f, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

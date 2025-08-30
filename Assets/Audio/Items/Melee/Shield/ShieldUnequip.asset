@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShieldUnequip
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: e91b455069c036a4ca2ab8523e6a15eb, type: 3}
+  - {fileID: 8300000, guid: 620355daef06556488b10c6b912c2b62, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

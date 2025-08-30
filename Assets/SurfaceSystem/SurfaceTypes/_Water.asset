@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696b92c305704c84fb3f7a11d0c474fd, type: 3}
+  m_Name: _Water
+  m_EditorClassIdentifier: 
+  m_ImpactEffects:
+  - m_SurfaceImpact: {fileID: 11400000, guid: a552e44ece591a849aed9b0fb70807f2, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 8c9194060d492f04a99b2ec76c9678d2, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 931a23341f69fc3419f175163a30b931, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: cceaa454cca73f146ab95b6f535504bf, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 5551980dab70aa444b8cf5e52cb221ce, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: cceaa454cca73f146ab95b6f535504bf, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 4c449fda3ab9a8041805dc12550d4bed, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 7412d820249624b4fb0588e7305ccc1c, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: beffeca23a4622b448bb4a96f559f034, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: eed35f6aa33f22042901b2e22ae47918, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 381fbb8874fb312498824833379c2af0, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: eed35f6aa33f22042901b2e22ae47918, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: a9b0ac0b40f8115458f998bc850793c4, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 9416830d770f90e47819b5069b4e2d1d, type: 2}
+  - m_SurfaceImpact: {fileID: 11400000, guid: 7153689c33f5e3e4197aceed35e9fcee, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 3de2297bf50f3104da9af3e115debe94, type: 2}
+  m_AllowFootprints: 1

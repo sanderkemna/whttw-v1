@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpecialAttackSlash
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 9d83f22e15eb3b942a702604f7f97e35, type: 3}
+  - {fileID: 8300000, guid: 61c96254f3fcf724a89af94fc48b03f2, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

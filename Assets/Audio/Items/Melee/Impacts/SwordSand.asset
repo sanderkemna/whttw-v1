@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SwordSand
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 984a0f2682137a7449851a1f9982a1bc, type: 3}
-  - {fileID: 8300000, guid: a32cfac3512cefc458a1f359fb3c6461, type: 3}
-  - {fileID: 8300000, guid: 95971a34ae4576d4eb969b8aa6aa702c, type: 3}
-  - {fileID: 8300000, guid: 6977fa2c6e0f6be488a82bbaac36b7d2, type: 3}
+  - {fileID: 8300000, guid: 7958254141f679c41b26d90fe81b32ed, type: 3}
+  - {fileID: 8300000, guid: a66fb85a51def9545abdcaf4ed8011fa, type: 3}
+  - {fileID: 8300000, guid: a4201893d8bc97f40b2106a2ed5b87d0, type: 3}
+  - {fileID: 8300000, guid: 99aca60b85820be428597f6cf11c6d50, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

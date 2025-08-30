@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MeleeSlash
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: e01eb51db3fd966498eed474de852d3a, type: 3}
-  - {fileID: 8300000, guid: 3a87b6104e3e0e2438d2750034807556, type: 3}
-  - {fileID: 8300000, guid: d8dbc8a2525570f42adb5ce38a21fe74, type: 3}
+  - {fileID: 8300000, guid: e3409220c143c664da51d504b7c4b9c4, type: 3}
+  - {fileID: 8300000, guid: ad25dc6ab33597e48a0e244ba5e6fbd3, type: 3}
+  - {fileID: 8300000, guid: 38964020b85c1a040bbb85b473a3bb3f, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

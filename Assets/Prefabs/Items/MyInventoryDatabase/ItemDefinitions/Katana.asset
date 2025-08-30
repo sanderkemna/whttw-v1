@@ -29,25 +29,29 @@ MonoBehaviour:
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject[],
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
       m_ValueHashes: 
-      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa6515d867a59638ffc6aa15814c6040dc11f
-      m_ValuePositions: 000000000700000008000000080000000c0000000c0000001000000014000000
-      m_Values: 50726566616273010000000045287a050000000000000000
-      m_UnityObjects: []
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa6515d867a59638ffc6a7d99d0efd2250dd6a15814c6040dc11fc5ebe1b403c60aca
+      m_ValuePositions: 000000000700000008000000080000000c0000000c0000001000000014000000180000001c000000
+      m_Values: 50726566616273010100000045287a0501000000000000000100000001000000
+      m_UnityObjects:
+      - {fileID: 7692691096310279509, guid: d262bbd98bc458749ad4381ff3ecb101, type: 3}
+      - {fileID: 7692691096310279509, guid: d262bbd98bc458749ad4381ff3ecb101, type: 3}
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
       m_ValueHashes: 
       m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
       m_ValuePositions: 0000000004000000050000000500000009000000090000000d00000011000000
-      m_Values: 49636f6e01010000001ed21ed2ffffffffffffffff
-      m_UnityObjects: []
+      m_Values: 49636f6e01010000001ed21ed20000000001000000
+      m_UnityObjects:
+      - {fileID: 1693106386, guid: b42ab83bbe6426048a25d6c98bdd4213, type: 3}
+      - {fileID: 1693106386, guid: b42ab83bbe6426048a25d6c98bdd4213, type: 3}
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
       m_ValueHashes: 
       m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa65195fdf7a7e477b768d9cf911486f57b1d
-      m_ValuePositions: 000000000b0000000c0000000c00000010000000100000001400000014000000
-      m_Values: 4465736372697074696f6e01000000008206223f
+      m_ValuePositions: 000000000b0000000c0000000c0000001000000010000000140000003c000000
+      m_Values: 4465736372697074696f6e01010000008206223f596f752063616e20676f2066756c6c204b696c6c2042696c6c20776974682074686973206f6e6521596f752063616e20676f2066756c6c204b696c6c2042696c6c20776974682074686973206f6e6521
       m_UnityObjects: []
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
@@ -55,15 +59,17 @@ MonoBehaviour:
       m_ValueHashes: 
       m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
       m_ValuePositions: 00000000090000000a0000000a0000000e0000000e0000001200000016000000
-      m_Values: 536861706549636f6e010100000076496e97ffffffffffffffff
-      m_UnityObjects: []
+      m_Values: 536861706549636f6e010100000076496e970000000001000000
+      m_UnityObjects:
+      - {fileID: 517794842, guid: 805e7e478c71b68499781d9ebdd438a0, type: 3}
+      - {fileID: 517794842, guid: 805e7e478c71b68499781d9ebdd438a0, type: 3}
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[Opsive.UltimateInventorySystem.UI.Item.ItemShape,
         Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
       m_ValueHashes: 
       m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651a4e199aea0e72da2ac19994a90cd3c8166c5699552753ffffd5ed8929db1e87938fc6a75703a3d81e8b3331b4265f256300c16a13afeebd5fad0e67ef846e8ab614b577937823f2da4e9e59eda09ead5
       m_ValuePositions: 000000000500000006000000060000000a0000000a0000000e0000000e00000016000000170000001b00000023000000230000002b0000002c00000030000000
-      m_Values: 53686170650101000000139b7293010000000300000000000000000000000000000000010000000300000000000000000000000000000000
+      m_Values: 53686170650101000000139b7293050000000100000000000000000000000000000000050000000100000000000000000000000000000000
       m_UnityObjects: []
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject,
@@ -71,8 +77,10 @@ MonoBehaviour:
       m_ValueHashes: 
       m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651bbc6d22cc378a73fff986c9964f66bf4
       m_ValuePositions: 000000000c0000000d0000000d00000011000000110000001500000019000000
-      m_Values: 5069636b75705072656661620100000000a430c795ffffffffffffffff
-      m_UnityObjects: []
+      m_Values: 5069636b75705072656661620101000000a430c7950000000001000000
+      m_UnityObjects:
+      - {fileID: 5778877818030490739, guid: 6d3a471b5295a234f829ae483235d63b, type: 3}
+      - {fileID: 5778877818030490739, guid: 6d3a471b5295a234f829ae483235d63b, type: 3}
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'

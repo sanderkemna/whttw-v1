@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SwordGrass
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: eed1639714a0e4f45a69034c33765bb8, type: 3}
-  - {fileID: 8300000, guid: dc04c397e7e7f9f4f90054f001cced33, type: 3}
-  - {fileID: 8300000, guid: ada841dfe15fd954bb7fe1cee6369fae, type: 3}
-  - {fileID: 8300000, guid: a04bd95e50996694b9b2df634eaad80c, type: 3}
+  - {fileID: 8300000, guid: 68b056a09e3ff3e4588b3b62a92c38de, type: 3}
+  - {fileID: 8300000, guid: 52da76542a98e37498fa3469d033fe05, type: 3}
+  - {fileID: 8300000, guid: 27135b0dd5903fd439525c60a4610d23, type: 3}
+  - {fileID: 8300000, guid: 5f177ff24af564140958689240d60bc5, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

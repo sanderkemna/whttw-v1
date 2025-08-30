@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SwordWater
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: 3679d8d95fd071e4e834b188f8631c11, type: 3}
-  - {fileID: 8300000, guid: 6a33fa4161198b04d98f2b1644a9318f, type: 3}
-  - {fileID: 8300000, guid: 2308474ffb2cb7843807ca8235a33f15, type: 3}
-  - {fileID: 8300000, guid: aa0a7e115583c9f4b9879bb39702116f, type: 3}
+  - {fileID: 8300000, guid: 4bdc6fc40c59b4a4ba7f571e314c2878, type: 3}
+  - {fileID: 8300000, guid: 04cbd594f2690ac46a8ff23a60fac610, type: 3}
+  - {fileID: 8300000, guid: 3a7a13899500a1149a3338042c40c422, type: 3}
+  - {fileID: 8300000, guid: 7bf337c1447fa8640882861269773811, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1

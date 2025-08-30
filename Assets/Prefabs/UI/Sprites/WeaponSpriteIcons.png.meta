@@ -217,7 +217,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M1911
+      name: M1911-icon
       rect:
         serializedVersion: 2
         x: 853
@@ -225,7 +225,7 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,6 +234,28 @@ TextureImporter:
       bones: []
       spriteID: d73fb3ee486e232469a94fb04ac97a1b
       internalID: -1832773689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: katana-icon
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 812
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88206e7abc2e72449aeb43074cb5138f
+      internalID: 1693106386
       vertices: []
       indices: 
       edges: []
@@ -254,10 +276,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      M1911: -1832773689
+      M1911-icon: -1832773689
       ak47u-icon: 1976976110
       fraggrenade-rgd5-icon: -2066169105
       handaxe-icon: -1504821832
+      katana-icon: 1693106386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

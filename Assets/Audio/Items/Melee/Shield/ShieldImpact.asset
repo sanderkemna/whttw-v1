@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ShieldImpact
   m_EditorClassIdentifier: 
   m_AudioClips:
-  - {fileID: 8300000, guid: c7ef457f9ffe9724a952a62add4e1199, type: 3}
-  - {fileID: 8300000, guid: 0ef1c3c7a1677a94481047c7a10f3c2a, type: 3}
+  - {fileID: 8300000, guid: 1cac3ff9304858b47a6defe89e8e2594, type: 3}
+  - {fileID: 8300000, guid: 85e0195109725414a946521f2c8daf98, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1
