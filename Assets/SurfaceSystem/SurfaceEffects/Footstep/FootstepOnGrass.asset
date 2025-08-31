@@ -17,7 +17,7 @@ MonoBehaviour:
   m_MinDecalScale: 1
   m_MaxDecalScale: 1
   m_AllowedDecalEdgeOverlap: 0.25
-  m_AudioConfig: {fileID: 0}
+  m_AudioConfig: {fileID: 11400000, guid: 4a42cad302d502d4a8a4946205757e05, type: 2}
   m_AudioClips:
   - {fileID: 8300000, guid: d94b55567221acf4185e94bc5cd65d74, type: 3}
   - {fileID: 8300000, guid: db3ed16e9b6828b42829ce3f9a7eba16, type: 3}
@@ -28,7 +28,7 @@ MonoBehaviour:
   m_MaxAudioVolume: 1
   m_MinAudioPitch: 1
   m_MaxAudioPitch: 1
-  m_OneClipPerFrame: 0
+  m_MinAudioClipFrameInterval: 10
   m_RandomClipSelection: 1
   m_StateName: 
   m_StateDisableTimer: 10

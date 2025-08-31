@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,18 +13,21 @@ MonoBehaviour:
   m_Name: LandOnWater
   m_EditorClassIdentifier: 
   m_SpawnedObjects:
-  - m_Object: {fileID: 1001947409280332, guid: 76f671737e7f39d4ebde20f36ad8821e, type: 2}
+  - m_Object: {fileID: 1001947409280332, guid: 00483474a0f84dd4abd86bb2b76a8dc4, type: 3}
     m_Probability: 1
     m_RandomSpin: 0
   m_Decals: []
   m_MinDecalScale: 1
   m_MaxDecalScale: 1
   m_AllowedDecalEdgeOverlap: 0.25
+  m_AudioConfig: {fileID: 0}
   m_AudioClips:
   - {fileID: 8300000, guid: 95ed7e9f5d7eb7743a935c0e346a51a5, type: 3}
+  m_MinAudioVolume: 1
+  m_MaxAudioVolume: 1
   m_MinAudioPitch: 1
   m_MaxAudioPitch: 1
-  m_OneClipPerFrame: 0
+  m_MinAudioClipFrameInterval: -1
   m_RandomClipSelection: 1
   m_StateName: 
   m_StateDisableTimer: 10

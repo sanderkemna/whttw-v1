@@ -22,8 +22,9 @@ MonoBehaviour:
   m_ItemActionCollection:
     m_ItemActionsData:
     - m_ObjectType: Opsive.UltimateInventorySystem.ItemActions.DebugItemAction
-      m_ValueHashes: 0d00eb25
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b29
       m_ValuePositions: 00000000
       m_Values: 4465627567
       m_UnityObjects: []
-      m_Version: 3.1
+      m_Version: 3.4

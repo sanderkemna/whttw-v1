@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ImpactEffects:
   - m_SurfaceImpact: {fileID: 11400000, guid: a552e44ece591a849aed9b0fb70807f2, type: 2}
-    m_SurfaceEffect: {fileID: 11400000, guid: f48cb6a3c9a7f2f4787853bc12e438ac, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: e9b946c174888114cbbf549a15d5278c, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: 931a23341f69fc3419f175163a30b931, type: 2}
-    m_SurfaceEffect: {fileID: 11400000, guid: 434e6b098c852b64fbb824462b83e29c, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 8ef152bc02ccd7b47837ad912c61fa2d, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: 5551980dab70aa444b8cf5e52cb221ce, type: 2}
-    m_SurfaceEffect: {fileID: 11400000, guid: 434e6b098c852b64fbb824462b83e29c, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 8ef152bc02ccd7b47837ad912c61fa2d, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: beffeca23a4622b448bb4a96f559f034, type: 2}
     m_SurfaceEffect: {fileID: 11400000, guid: b2f3cac2e126d3146b741bf9225dfd81, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: 381fbb8874fb312498824833379c2af0, type: 2}
     m_SurfaceEffect: {fileID: 11400000, guid: b2f3cac2e126d3146b741bf9225dfd81, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: a9b0ac0b40f8115458f998bc850793c4, type: 2}
-    m_SurfaceEffect: {fileID: 11400000, guid: 2b9449c8638666b40b1f787ed7277d93, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: ee6e2f1972a2d6646af27462e6fd6f04, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: 7153689c33f5e3e4197aceed35e9fcee, type: 2}
-    m_SurfaceEffect: {fileID: 11400000, guid: 25e8e06c68c241943b21d6e63719bf0c, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: ca7400269ea5ac4428ea6b47f7bb0224, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: f1f35a8fee1ef5f43a338f7136a2c976, type: 2}
     m_SurfaceEffect: {fileID: 11400000, guid: 83e44e9e49c79824ab067218d3fe48b7, type: 2}
   m_AllowFootprints: 1

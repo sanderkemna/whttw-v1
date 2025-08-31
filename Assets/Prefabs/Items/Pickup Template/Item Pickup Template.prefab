@@ -740,7 +740,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AudioClip: {fileID: 0}
-  m_AudioConfig: {fileID: 11400000, guid: 0d68864470d9aad42a55f4cb852696e5, type: 2}
+  m_AudioConfig: {fileID: 11400000, guid: 15282f1880b8f0b43925613ed29704e0, type: 2}
   m_OnPickupFail:
     m_PersistentCalls:
       m_Calls: []

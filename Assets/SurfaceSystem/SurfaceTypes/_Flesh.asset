@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ImpactEffects:
   - m_SurfaceImpact: {fileID: 11400000, guid: 931a23341f69fc3419f175163a30b931, type: 2}
-    m_SurfaceEffect: {fileID: 11400000, guid: 8e7144d704fd3fc4696a5def61c69ab8, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 697eee2a7e6d24a4e8d6b3501035bc6d, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: 5551980dab70aa444b8cf5e52cb221ce, type: 2}
-    m_SurfaceEffect: {fileID: 11400000, guid: 8e7144d704fd3fc4696a5def61c69ab8, type: 2}
+    m_SurfaceEffect: {fileID: 11400000, guid: 697eee2a7e6d24a4e8d6b3501035bc6d, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: beffeca23a4622b448bb4a96f559f034, type: 2}
     m_SurfaceEffect: {fileID: 11400000, guid: 822cd3142b071cb49baab56c66e0b70b, type: 2}
   - m_SurfaceImpact: {fileID: 11400000, guid: 381fbb8874fb312498824833379c2af0, type: 2}

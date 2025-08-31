@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: FootstepOnWater
   m_EditorClassIdentifier: 
   m_SpawnedObjects:
-  - m_Object: {fileID: 1001947409280332, guid: 76f671737e7f39d4ebde20f36ad8821e, type: 3}
+  - m_Object: {fileID: 1001947409280332, guid: 00483474a0f84dd4abd86bb2b76a8dc4, type: 3}
     m_Probability: 1
     m_RandomSpin: 0
   m_Decals: []
   m_MinDecalScale: 1
   m_MaxDecalScale: 1
   m_AllowedDecalEdgeOverlap: 0.25
-  m_AudioConfig: {fileID: 0}
+  m_AudioConfig: {fileID: 11400000, guid: 66fcf3026692df946a414a0b11919994, type: 2}
   m_AudioClips:
   - {fileID: 8300000, guid: d50a25c5840d2d340b4e951acea0086d, type: 3}
   - {fileID: 8300000, guid: 2f75b45d5a27be94095b29339bcfede8, type: 3}
@@ -31,7 +31,7 @@ MonoBehaviour:
   m_MaxAudioVolume: 1
   m_MinAudioPitch: 1
   m_MaxAudioPitch: 1
-  m_OneClipPerFrame: 0
+  m_MinAudioClipFrameInterval: 10
   m_RandomClipSelection: 1
   m_StateName: 
   m_StateDisableTimer: 10

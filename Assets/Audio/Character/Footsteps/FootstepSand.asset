@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3f22abf9338a54d9c3eacea205e6f5, type: 3}
+  m_Name: FootstepSand
+  m_EditorClassIdentifier: 
+  m_AudioClips:
+  - {fileID: 8300000, guid: d26bc77477cef4045ada451e9c133681, type: 3}
+  - {fileID: 8300000, guid: 443dcf41a3a01484ea25d83b4baf30a3, type: 3}
+  - {fileID: 8300000, guid: 17211726c94fce547a0637f920324fee, type: 3}
+  - {fileID: 8300000, guid: b2148ff92a5a14f4090ae00f3b5396d8, type: 3}
+  - {fileID: 8300000, guid: 9197d13e7ca36d0459cc2ca42e1cdccf, type: 3}
+  m_ClipSelection: 0
+  m_AudioSourcePrefab: {fileID: 0}
+  m_ShareAudioSource: 1
+  m_ReplacePreviousAudioSource: 0
+  m_CopyExistingAudioSourceProperties: 1
+  m_AudioModifier:
+    m_OutputOverride: {fileID: 0}
+    m_LoopOverride:
+      m_ValueOverride: 0
+      m_Value: 0
+    m_VolumeOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_PitchOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_StereoPanOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_SpatialBlendOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_ReverbZoneOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_DelayOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
