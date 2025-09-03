@@ -281,7 +281,7 @@ MonoBehaviour:
   m_ItemDefinition: {fileID: 11400000, guid: 40f963a2a81fb6f4fb0541f790565cd9, type: 2}
   m_SlotID: 0
   m_AnimatorItemID: 24
-  m_AnimatorMovementSetID: 0
+  m_AnimatorMovementSetID: 1
   m_DominantItem: 1
   m_AllowCameraZoom: 1
   m_DropPrefab: {fileID: 0}

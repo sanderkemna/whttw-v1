@@ -105,6 +105,14 @@ MonoBehaviour:
       m_UnityObjects:
       - {fileID: 5210250371668273714, guid: 38d7931c304b53e47ad263a898702e02, type: 3}
       m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject[],
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa6515d867a59638ffc6aa15814c6040dc11f
+      m_ValuePositions: 000000000700000008000000080000000c0000000c0000001000000014000000
+      m_Values: 50726566616273010000000045287a050000000000000000
+      m_UnityObjects: []
+      m_Version: 3.4
   m_DefaultItem:
     m_ID: 688667609
     m_Name: Stroopwafel
