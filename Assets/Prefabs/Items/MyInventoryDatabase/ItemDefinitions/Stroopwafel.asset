@@ -33,8 +33,8 @@ MonoBehaviour:
       m_ValuePositions: 0000000004000000050000000500000009000000090000000d00000011000000
       m_Values: 49636f6e01010000001ed21ed20000000001000000
       m_UnityObjects:
-      - {fileID: 1088446489, guid: c571eff686e39de4cbc09c6e461d2c22, type: 3}
-      - {fileID: 1088446489, guid: c571eff686e39de4cbc09c6e461d2c22, type: 3}
+      - {fileID: -368602592, guid: b2e63ce1d19a6b3479d9b5f4cd990655, type: 3}
+      - {fileID: -368602592, guid: b2e63ce1d19a6b3479d9b5f4cd990655, type: 3}
       m_Version: 3.4
     - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'

@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AudioClips:
   - {fileID: 8300000, guid: 839135a0f0830634f83a5cc5f7a35eb9, type: 3}
+  - {fileID: 8300000, guid: c27e24a09c9d40e4e9b48f337f586e70, type: 3}
+  - {fileID: 8300000, guid: fce4c9f681663ec42884e858779af78d, type: 3}
+  - {fileID: 8300000, guid: 093af667013f70b43889db468cb47429, type: 3}
+  - {fileID: 8300000, guid: 85967f4bf95c59d4396c2e60a7e72e35, type: 3}
+  - {fileID: 8300000, guid: 4d30891d6917b4640830b705478b9c9b, type: 3}
   m_ClipSelection: 0
   m_AudioSourcePrefab: {fileID: 0}
   m_ShareAudioSource: 1
@@ -45,6 +50,6 @@ MonoBehaviour:
       m_Constant1: 0
       m_Constant2: 0
     m_DelayOverride:
-      m_ValueOverride: 0
-      m_Constant1: 0
-      m_Constant2: 0
+      m_ValueOverride: 2
+      m_Constant1: 0.1
+      m_Constant2: 0.3
