@@ -403,7 +403,7 @@ MonoBehaviour:
   m_DebugLogger:
     m_DebugAction: 0
     m_CharacterItemActionDebugModuleType: 0
-  m_UseRate: 0
+  m_UseRate: 0.1
   m_FaceTarget: 0
   m_StopUseAbilityOnCompleteDelay: 0
   m_UseEvent:
@@ -421,104 +421,15 @@ MonoBehaviour:
     - rid: 8641434761050456406
   m_UsableActionModuleGroup:
     m_Modules:
-    - rid: 8641434747047772784
-    - rid: 8641434701791756466
-    - rid: 8641434747047772517
+    - rid: 8641434833023140132
+    - rid: 8641434833023140133
+    - rid: 8641434833023140134
+    - rid: 8641434833023140135
+    - rid: 8641434833023140163
+    - rid: 8641434833023140165
   references:
     version: 2
     RefIds:
-    - rid: 8641434701791756466
-      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: Drinking
-        m_OnStartUse: 1
-        m_OnUse: 0
-        m_OnUseUpdate: 0
-        m_OnUseComplete: 0
-        m_EffectGroup:
-          m_Effects:
-          - rid: 8641434701791756527
-    - rid: 8641434701791756527
-      type: {class: PlayAudioClip, ns: Opsive.UltimateCharacterController.Items.Actions.Effect, asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_Delay: 0.7
-        m_AudioClipSet:
-          m_AudioConfig: {fileID: 11400000, guid: f2589e616fffd8d42a05d5ff54d4b6d8, type: 2}
-          m_AudioClips: []
-    - rid: 8641434747047772517
-      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: Drinking
-        m_OnStartUse: 1
-        m_OnUse: 0
-        m_OnUseUpdate: 0
-        m_OnUseComplete: 0
-        m_EffectGroup:
-          m_Effects:
-          - rid: 8641434747047772518
-    - rid: 8641434747047772518
-      type: {class: PlayAudioClip, ns: Opsive.UltimateCharacterController.Items.Actions.Effect, asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_Delay: 1.1
-        m_AudioClipSet:
-          m_AudioConfig: {fileID: 11400000, guid: f2589e616fffd8d42a05d5ff54d4b6d8, type: 2}
-          m_AudioClips: []
-    - rid: 8641434747047772784
-      type: {class: UseAttributeModifierToggle, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: Volume
-        m_PreventUseIfAttributeNotValid: 1
-        m_UseModifier:
-          m_AttributeName: Volume
-          m_Amount: -33
-          m_AutoUpdate: 0
-          m_AutoUpdateStartDelay: 0.1
-          m_AutoUpdateInterval: 0.1
-          m_AutoUpdateDuration: -1
-        m_GameObjectToggle: []
     - rid: 8641434761050456406
       type: {class: Simple, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
       data:
@@ -560,6 +471,210 @@ MonoBehaviour:
       type: {class: Sequence, ns: Opsive.UltimateCharacterController.Items.AnimatorAudioStates, asm: Opsive.UltimateCharacterController}
       data:
         m_ResetDelay: -1
+    - rid: 8641434833023140132
+      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -2
+        m_Name: Drinking
+        m_OnStartUse: 1
+        m_OnUse: 0
+        m_OnUseUpdate: 0
+        m_OnUseComplete: 0
+        m_EffectGroup:
+          m_Effects:
+          - rid: 8641434833023140136
+    - rid: 8641434833023140133
+      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -2
+        m_Name: Drinking
+        m_OnStartUse: 1
+        m_OnUse: 0
+        m_OnUseUpdate: 0
+        m_OnUseComplete: 0
+        m_EffectGroup:
+          m_Effects:
+          - rid: 8641434833023140137
+    - rid: 8641434833023140134
+      type: {class: CharacterUseAttribute, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: 2
+        m_Name: Health
+        m_CharacterUseAttributeName: Health
+        m_CharacterUseAttributeAmount: -10
+    - rid: 8641434833023140135
+      type: {class: UseAttributeModifier, ns: , asm: Assembly-CSharp}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings:
+          - rid: 8641434833023140138
+        m_Enabled: 1
+        m_ID: 3
+        m_Name: Volume
+        m_PreventUseIfAttributeNotValid: 1
+        m_UseModifier:
+          m_AttributeName: Volume
+          m_Amount: -10
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+    - rid: 8641434833023140136
+      type: {class: PlayAudioClip, ns: Opsive.UltimateCharacterController.Items.Actions.Effect, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 0.7
+        m_AudioClipSet:
+          m_AudioConfig: {fileID: 11400000, guid: f2589e616fffd8d42a05d5ff54d4b6d8, type: 2}
+          m_AudioClips: []
+    - rid: 8641434833023140137
+      type: {class: PlayAudioClip, ns: Opsive.UltimateCharacterController.Items.Actions.Effect, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 1.1
+        m_AudioClipSet:
+          m_AudioConfig: {fileID: 11400000, guid: f2589e616fffd8d42a05d5ff54d4b6d8, type: 2}
+          m_AudioClips: []
+    - rid: 8641434833023140138
+      type: {class: ItemObjectBinding, ns: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem, asm: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem}
+      data:
+        m_ItemCategory: {fileID: 11400000, guid: dc4139e9616520140a78b290db4c1a1f, type: 2}
+        m_AttributeBindingDataArray:
+        - m_AttributeName: CategoryIcon
+          m_PropertyPath: 
+        - m_AttributeName: Icon
+          m_PropertyPath: 
+        - m_AttributeName: Description
+          m_PropertyPath: 
+        - m_AttributeName: PickupPrefab
+          m_PropertyPath: 
+        - m_AttributeName: ShapeIcon
+          m_PropertyPath: 
+        - m_AttributeName: Shape
+          m_PropertyPath: 
+        - m_AttributeName: DropPrefab
+          m_PropertyPath: 
+        - m_AttributeName: Prefabs
+          m_PropertyPath: 
+        - m_AttributeName: Hunger Amount
+          m_PropertyPath: 
+        - m_AttributeName: Heal Amount
+          m_PropertyPath: 
+        - m_AttributeName: Thirst Amount
+          m_PropertyPath: AttributeAmount
+    - rid: 8641434833023140163
+      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: 4
+        m_Name: Open Can
+        m_OnStartUse: 1
+        m_OnUse: 0
+        m_OnUseUpdate: 0
+        m_OnUseComplete: 0
+        m_EffectGroup:
+          m_Effects:
+          - rid: 8641434833023140187
+    - rid: 8641434833023140165
+      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: 5
+        m_Name: Twist Can
+        m_OnStartUse: 0
+        m_OnUse: 0
+        m_OnUseUpdate: 0
+        m_OnUseComplete: 1
+        m_EffectGroup:
+          m_Effects:
+          - rid: 8641434833023140166
+    - rid: 8641434833023140166
+      type: {class: PlayAudioClip, ns: Opsive.UltimateCharacterController.Items.Actions.Effect, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 0
+        m_AudioClipSet:
+          m_AudioConfig: {fileID: 11400000, guid: cff40229e8e393f4ca4ac9ac233793c3, type: 2}
+          m_AudioClips: []
+    - rid: 8641434833023140187
+      type: {class: PlayAudioClipFirstTime, ns: , asm: Assembly-CSharp}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 0
+        m_AudioClipSet:
+          m_AudioConfig: {fileID: 11400000, guid: 3fd28d2cd0bdc5545bc5b438104edc13, type: 2}
+          m_AudioClips: []
 --- !u!114 &817300791117491467
 MonoBehaviour:
   m_ObjectHideFlags: 0
