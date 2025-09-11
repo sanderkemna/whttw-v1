@@ -1,0 +1,660 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5305693178066467719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2328010579607475214}
+  - component: {fileID: 7737339410762941083}
+  - component: {fileID: 8914043129992563491}
+  - component: {fileID: 7841267727257957224}
+  - component: {fileID: -6615603157079233552}
+  m_Layer: 0
+  m_Name: Stroopwafel-usable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2328010579607475214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305693178066467719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2886284655692470708}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7737339410762941083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305693178066467719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73d2e6c883c6804c87c5da983c35d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_ItemDefinition: {fileID: 11400000, guid: dc4d69817d8c12643931a6a35caecd9f, type: 2}
+  m_SlotID: 0
+  m_AnimatorItemID: 102
+  m_AnimatorMovementSetID: 0
+  m_DominantItem: 1
+  m_AllowCameraZoom: 1
+  m_DropPrefab: {fileID: 0}
+  m_FullInventoryDrop: 0
+  m_EquipEvent:
+    m_WaitForAnimationEvent: 1
+    m_Duration: 0.3
+    m_WaitForSlotEvent: 0
+  m_EquipCompleteEvent:
+    m_WaitForAnimationEvent: 0
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_EquipAnimatorAudioStateSet:
+    m_AnimatorAudioStateSelector:
+      rid: 8641434883356622848
+    m_States:
+    - m_States:
+      - m_Name: Default
+        m_Preset: {fileID: 0}
+        m_BlockList: []
+        m_Default: 1
+      m_Enabled: 1
+      m_AllowDuringMovement: 1
+      m_RequireGrounded: 0
+      m_StateName: 
+      m_ItemSubstateIndex: 0
+      m_AudioClipSet:
+        m_AudioConfig: {fileID: 11400000, guid: d4f397bd9002ffd4b909f30a8a03842e, type: 2}
+        m_AudioClips: []
+  m_UnequipEvent:
+    m_WaitForAnimationEvent: 1
+    m_Duration: 0.3
+    m_WaitForSlotEvent: 0
+  m_UnequipCompleteEvent:
+    m_WaitForAnimationEvent: 0
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_UnequipAnimatorAudioStateSet:
+    m_AnimatorAudioStateSelector:
+      rid: 8641434883356622849
+    m_States:
+    - m_States:
+      - m_Name: Default
+        m_Preset: {fileID: 0}
+        m_BlockList: []
+        m_Default: 1
+      m_Enabled: 1
+      m_AllowDuringMovement: 1
+      m_RequireGrounded: 0
+      m_StateName: 
+      m_ItemSubstateIndex: 0
+      m_AudioClipSet:
+        m_AudioConfig: {fileID: 11400000, guid: 241677929b14fbc419c3d5d4ffe0b7ca, type: 2}
+        m_AudioClips: []
+  m_UIMonitorID: 0
+  m_Icon: {fileID: 0}
+  m_ShowCrosshairsOnAim: 1
+  m_CenterCrosshairs: {fileID: 0}
+  m_QuadrantOffset: 5
+  m_MaxQuadrantSpread: 10
+  m_QuadrantSpreadDamping: 0.05
+  m_LeftCrosshairs: {fileID: 0}
+  m_TopCrosshairs: {fileID: 0}
+  m_RightCrosshairs: {fileID: 0}
+  m_BottomCrosshairs: {fileID: 0}
+  m_ShowFullScreenUI: 0
+  m_FullScreenUIID: -1
+  m_PickupItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_EquipItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_UnequipItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DropItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8641434883356622848
+      type: {class: Sequence, ns: Opsive.UltimateCharacterController.Items.AnimatorAudioStates, asm: Opsive.UltimateCharacterController}
+      data:
+        m_ResetDelay: -1
+    - rid: 8641434883356622849
+      type: {class: Sequence, ns: Opsive.UltimateCharacterController.Items.AnimatorAudioStates, asm: Opsive.UltimateCharacterController}
+      data:
+        m_ResetDelay: -1
+--- !u!114 &8914043129992563491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305693178066467719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b5dc98af0593b4589b67fcfc5b4c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_Object: {fileID: 8294350671394747461}
+  m_SpawnParent:
+    m_ID: -1
+    m_Object: {fileID: 0}
+  m_LocalSpawnPosition: {x: -0.071, y: 0.089, z: -0.022}
+  m_LocalSpawnRotation: {x: 3.466, y: -3.402, z: -37.128}
+  m_LocalSpawnScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_NonDominantHandIKTarget: {fileID: 0}
+  m_NonDominantHandIKTargetHint: {fileID: 0}
+  m_HolsterTarget:
+    m_ID: -1
+    m_Object: {fileID: 0}
+--- !u!114 &7841267727257957224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305693178066467719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d052bc942b40d449ea1b413f0eaec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_ID: 1
+  m_ActionName: Eat
+  m_ActionDescription: 
+  m_DebugLogger:
+    m_DebugAction: 0
+    m_CharacterItemActionDebugModuleType: 0
+  m_UseRate: 0.1
+  m_FaceTarget: 0
+  m_StopUseAbilityOnCompleteDelay: 0
+  m_UseEvent:
+    m_WaitForAnimationEvent: 1
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_UseCompleteEvent:
+    m_WaitForAnimationEvent: 1
+    m_Duration: 0
+    m_WaitForSlotEvent: 0
+  m_ForceRootMotionPosition: 0
+  m_ForceRootMotionRotation: 0
+  m_TriggerActionModuleGroup:
+    m_Modules:
+    - rid: 8641434883356622850
+  m_UsableActionModuleGroup:
+    m_Modules:
+    - rid: 8641434883356622877
+    - rid: 8641434883356622887
+    - rid: 8641434883356622914
+    - rid: 8641434883356622922
+  references:
+    version: 2
+    RefIds:
+    - rid: 8641434883356622850
+      type: {class: Simple, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -1
+        m_Name: 
+        m_PlayAudioOnStartUse: 0
+        m_SubstateIndexData:
+          m_Additive: 0
+          m_Index: 0
+          m_Priority: 100
+        m_UseAnimatorAudioStateSet:
+          m_AnimatorAudioStateSelector:
+            rid: 8641434883356622852
+          m_States:
+          - m_States:
+            - m_Name: Default
+              m_Preset: {fileID: 0}
+              m_BlockList: []
+              m_Default: 1
+            m_Enabled: 1
+            m_AllowDuringMovement: 1
+            m_RequireGrounded: 0
+            m_StateName: 
+            m_ItemSubstateIndex: 2
+            m_AudioClipSet:
+              m_AudioConfig: {fileID: 0}
+              m_AudioClips: []
+        m_CanStopIfInputStop: 0
+        m_CanStopSubstateIndexAddition: 10
+    - rid: 8641434883356622852
+      type: {class: Sequence, ns: Opsive.UltimateCharacterController.Items.AnimatorAudioStates, asm: Opsive.UltimateCharacterController}
+      data:
+        m_ResetDelay: -1
+    - rid: 8641434883356622877
+      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -1
+        m_Name: Eating
+        m_OnStartUse: 0
+        m_OnUse: 0
+        m_OnUseUpdate: 0
+        m_OnUseComplete: 1
+        m_EffectGroup:
+          m_Effects:
+          - rid: 8641434883356622880
+    - rid: 8641434883356622880
+      type: {class: PlayAudioClip, ns: Opsive.UltimateCharacterController.Items.Actions.Effect, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 0
+        m_AudioClipSet:
+          m_AudioConfig: {fileID: 11400000, guid: 031c4ca2b6ed95c45b02537c92a65c28, type: 2}
+          m_AudioClips: []
+    - rid: 8641434883356622887
+      type: {class: CharacterUseAttribute, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings:
+          - rid: 8641434883356622892
+        m_Enabled: 1
+        m_ID: 1
+        m_Name: Health
+        m_CharacterUseAttributeName: Health
+        m_CharacterUseAttributeAmount: -5
+    - rid: 8641434883356622892
+      type: {class: ItemObjectBinding, ns: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem, asm: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem}
+      data:
+        m_ItemCategory: {fileID: 11400000, guid: dc4139e9616520140a78b290db4c1a1f, type: 2}
+        m_AttributeBindingDataArray:
+        - m_AttributeName: CategoryIcon
+          m_PropertyPath: 
+        - m_AttributeName: Icon
+          m_PropertyPath: 
+        - m_AttributeName: Description
+          m_PropertyPath: 
+        - m_AttributeName: PickupPrefab
+          m_PropertyPath: 
+        - m_AttributeName: ShapeIcon
+          m_PropertyPath: 
+        - m_AttributeName: Shape
+          m_PropertyPath: 
+        - m_AttributeName: DropPrefab
+          m_PropertyPath: 
+        - m_AttributeName: Prefabs
+          m_PropertyPath: 
+        - m_AttributeName: Hunger Amount
+          m_PropertyPath: 
+        - m_AttributeName: Heal Amount
+          m_PropertyPath: CharacterUseAttributeAmount
+        - m_AttributeName: Thirst Amount
+          m_PropertyPath: 
+    - rid: 8641434883356622914
+      type: {class: UseAttributeModifier, ns: , asm: Assembly-CSharp}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings:
+          - rid: 8641434883356622917
+        m_Enabled: 1
+        m_ID: 2
+        m_Name: Volume
+        m_PreventUseIfAttributeNotValid: 1
+        m_UseModifier:
+          m_AttributeName: Volume
+          m_Amount: -10
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+    - rid: 8641434883356622917
+      type: {class: ItemObjectBinding, ns: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem, asm: Opsive.UltimateCharacterController.Integrations.UltimateInventorySystem}
+      data:
+        m_ItemCategory: {fileID: 11400000, guid: dc4139e9616520140a78b290db4c1a1f, type: 2}
+        m_AttributeBindingDataArray:
+        - m_AttributeName: CategoryIcon
+          m_PropertyPath: 
+        - m_AttributeName: Icon
+          m_PropertyPath: 
+        - m_AttributeName: Description
+          m_PropertyPath: 
+        - m_AttributeName: PickupPrefab
+          m_PropertyPath: 
+        - m_AttributeName: ShapeIcon
+          m_PropertyPath: 
+        - m_AttributeName: Shape
+          m_PropertyPath: 
+        - m_AttributeName: DropPrefab
+          m_PropertyPath: 
+        - m_AttributeName: Prefabs
+          m_PropertyPath: 
+        - m_AttributeName: Hunger Amount
+          m_PropertyPath: AttributeAmount
+        - m_AttributeName: Heal Amount
+          m_PropertyPath: 
+        - m_AttributeName: Thirst Amount
+          m_PropertyPath: 
+    - rid: 8641434883356622922
+      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules, asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: 3
+        m_Name: Open Wrapper
+        m_OnStartUse: 1
+        m_OnUse: 0
+        m_OnUseUpdate: 0
+        m_OnUseComplete: 0
+        m_EffectGroup:
+          m_Effects:
+          - rid: 8641434883356622925
+    - rid: 8641434883356622925
+      type: {class: PlayAudioClipFirstTime, ns: , asm: Assembly-CSharp}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 0
+        m_AudioClipSet:
+          m_AudioConfig: {fileID: 11400000, guid: 4471578268374e2448d29eb7f73ccc4a, type: 2}
+          m_AudioClips: []
+--- !u!114 &-6615603157079233552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305693178066467719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30da4fa96ed67145a2c5310eca67bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Attributes:
+  - m_States:
+    - m_Name: Default
+      m_Preset: {fileID: 0}
+      m_BlockList: []
+      m_Default: 1
+    m_Name: Volume
+    m_MinValue: 0
+    m_MaxValue: 100
+    m_Value: 100
+    m_AutoUpdateValueType: 0
+    m_UpdateWhenInactive: 0
+    m_AutoUpdateStartDelay: 1
+    m_AutoUpdateInterval: 0.1
+    m_AutoUpdateAmount: 0.2
+--- !u!1 &8294350671394747461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2886284655692470708}
+  - component: {fileID: 1124143112775859230}
+  - component: {fileID: 6397137073303103635}
+  - component: {fileID: 1224777835245011710}
+  - component: {fileID: 6285128884819036975}
+  m_Layer: 30
+  m_Name: ThirdPersonStroopwafel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2886284655692470708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294350671394747461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2328010579607475214}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1124143112775859230
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294350671394747461}
+  m_Mesh: {fileID: 6098176020791062699, guid: a13fb542990bd2943ad3e18fb620d8a5, type: 3}
+--- !u!23 &6397137073303103635
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294350671394747461}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f83bb6eb6d433fb4187776e0a52414f7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1224777835245011710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294350671394747461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edead2b42b914a84faf341ae0d10c805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_ForceVisible: 0
+  m_FirstPersonVisibleOnDeath: 0
+--- !u!82 &6285128884819036975
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294350671394747461}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

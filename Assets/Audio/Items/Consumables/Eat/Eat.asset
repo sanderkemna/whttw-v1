@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3f22abf9338a54d9c3eacea205e6f5, type: 3}
+  m_Name: Eat
+  m_EditorClassIdentifier: 
+  m_AudioClips:
+  - {fileID: 8300000, guid: ce3d7aec5ea145146936da10967f1fab, type: 3}
+  - {fileID: 8300000, guid: 7d0084f44f8e90b41aef1360c209dde3, type: 3}
+  - {fileID: 8300000, guid: 7450cf7cbd1e2bc45abdadc20d1de112, type: 3}
+  - {fileID: 8300000, guid: 470041f420e6dc441a00db9893b7336e, type: 3}
+  - {fileID: 8300000, guid: 8a95ef3d869b2af478eae4c544b1f3fa, type: 3}
+  - {fileID: 8300000, guid: 3328dd90292267d46b231486e7d74543, type: 3}
+  - {fileID: 8300000, guid: 045f16cb827d3a44bb1b2f4d3c01b823, type: 3}
+  - {fileID: 8300000, guid: 01f0230bbdad7414caa03597b3100d72, type: 3}
+  - {fileID: 8300000, guid: 88d685f164e11ec43891d7599e4763db, type: 3}
+  - {fileID: 8300000, guid: 615bdb420f4c1de4bbd1d82c0037fdca, type: 3}
+  - {fileID: 8300000, guid: d7f18c83d30fbac4c97be1a7bdc7f902, type: 3}
+  - {fileID: 8300000, guid: 314c75bbb7f7f2a4696ce186962d7ff5, type: 3}
+  m_ClipSelection: 0
+  m_AudioSourcePrefab: {fileID: 0}
+  m_ShareAudioSource: 1
+  m_ReplacePreviousAudioSource: 0
+  m_CopyExistingAudioSourceProperties: 1
+  m_AudioModifier:
+    m_OutputOverride: {fileID: 0}
+    m_LoopOverride:
+      m_ValueOverride: 0
+      m_Value: 0
+    m_VolumeOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_PitchOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_StereoPanOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_SpatialBlendOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_ReverbZoneOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
+    m_DelayOverride:
+      m_ValueOverride: 0
+      m_Constant1: 0
+      m_Constant2: 0
