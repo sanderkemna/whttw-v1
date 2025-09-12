@@ -1425,7 +1425,7 @@ MonoBehaviour:
           m_AudioConfig: {fileID: 0}
           m_AudioClips: []
         m_StopAudioClipSet:
-          m_AudioConfig: {fileID: 11400000, guid: cff40229e8e393f4ca4ac9ac233793c3, type: 2}
+          m_AudioConfig: {fileID: 0}
           m_AudioClips: []
         m_AllowPositionalInput: 0
         m_AllowRotationalInput: 1
@@ -1449,7 +1449,7 @@ MonoBehaviour:
         m_SlotID: -1
         m_ActionID: 1
         m_RotateTowardsLookSourceTarget: 1
-        m_BlockOverUI: 0
+        m_BlockOverUI: 1
 --- !u!114 &2819892796921819001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,7 +1515,7 @@ MonoBehaviour:
     m_Name: Health
     m_MinValue: 0
     m_MaxValue: 100
-    m_Value: 100
+    m_Value: 70
     m_AutoUpdateValueType: 0
     m_UpdateWhenInactive: 0
     m_AutoUpdateStartDelay: 1
