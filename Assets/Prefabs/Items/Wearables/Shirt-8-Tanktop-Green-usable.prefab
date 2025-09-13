@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3940456934247792677}
   - component: {fileID: 7415068607877632342}
   m_Layer: 0
-  m_Name: Shirt-8-Tanktop-Green equippable
+  m_Name: Shirt-8-Tanktop-Green-usable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

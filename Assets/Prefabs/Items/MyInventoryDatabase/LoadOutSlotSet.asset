@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9d0f19db9c7d949b5317a193f72cd0, type: 3}
+  m_Name: LoadOutSlotSet
+  m_EditorClassIdentifier: 
+  m_ItemSlots:
+  - m_Name: Wear Head
+    m_Category:
+      m_Name: Wear Head
+      m_ItemCategory: {fileID: 11400000, guid: 6f0653d17107cde4e9b68ae55e6b6c37, type: 2}
+  - m_Name: Wear Item Backpack
+    m_Category:
+      m_Name: Wear Item Backpack
+      m_ItemCategory: {fileID: 11400000, guid: 73fa175cbcc8344448c052eddd0e2d6f, type: 2}
+  - m_Name: Wear Pants
+    m_Category:
+      m_Name: Wear Pants
+      m_ItemCategory: {fileID: 11400000, guid: a2a281fd933b18a44a7969ec5f9b3c14, type: 2}
+  - m_Name: Wear Shirt
+    m_Category:
+      m_Name: Wear Shirt
+      m_ItemCategory: {fileID: 11400000, guid: abb29360a0815934988240d66393262d, type: 2}
+  - m_Name: Wear Shoe
+    m_Category:
+      m_Name: Wear Shoe
+      m_ItemCategory: {fileID: 11400000, guid: f5a68779b978083409af169a7eb6e8f9, type: 2}
+  - m_Name: Primary
+    m_Category:
+      m_Name: Equippable
+      m_ItemCategory: {fileID: 11400000, guid: 63aa099207a17c4439e566611178fd3b, type: 2}

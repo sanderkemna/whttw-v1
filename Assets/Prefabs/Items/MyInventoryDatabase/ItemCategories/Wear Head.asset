@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37a44df922c40df4fa80e23de1480e3f, type: 3}
-  m_Name: Head Wear
+  m_Name: Wear Head
   m_EditorClassIdentifier: 
   m_ID: 2222906015
   m_ParentsData:
@@ -51,8 +51,10 @@ MonoBehaviour:
       m_ValueHashes: 
       m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
       m_ValuePositions: 000000000c0000000d0000000d00000011000000110000001500000019000000
-      m_Values: 43617465676f727949636f6e01000000006b141f32ffffffffffffffff
-      m_UnityObjects: []
+      m_Values: 43617465676f727949636f6e01010000006b141f320000000001000000
+      m_UnityObjects:
+      - {fileID: 854661011, guid: 903494806840d8e449323160c5e57f17, type: 3}
+      - {fileID: 854661011, guid: 903494806840d8e449323160c5e57f17, type: 3}
       m_Version: 3.4
   m_RequiredItemDefinitionAttributes:
     m_AttributeCollectionData:

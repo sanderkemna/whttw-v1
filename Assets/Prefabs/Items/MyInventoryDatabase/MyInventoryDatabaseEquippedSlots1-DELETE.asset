@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e9d0f19db9c7d949b5317a193f72cd0, type: 3}
-  m_Name: MyInventoryDatabaseEquippedSlots1
+  m_Name: MyInventoryDatabaseEquippedSlots1-DELETE
   m_EditorClassIdentifier: 
   m_ItemSlots:
   - m_Name: Primary
@@ -27,8 +27,8 @@ MonoBehaviour:
       m_ItemCategory: {fileID: 11400000, guid: abb29360a0815934988240d66393262d, type: 2}
   - m_Name: Vest
     m_Category:
-      m_Name: Vest Wear
-      m_ItemCategory: {fileID: 11400000, guid: 4efc1ece86c41db4bb5325b15c7e2b98, type: 2}
+      m_Name: 
+      m_ItemCategory: {fileID: 0}
   - m_Name: Head
     m_Category:
       m_Name: Head Wear
