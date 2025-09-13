@@ -155,7 +155,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 662
+        y: 1236
         width: 400
         height: 400
       alignment: 0
@@ -176,12 +176,12 @@ TextureImporter:
       name: shirt-9-sweater
       rect:
         serializedVersion: 2
-        x: 508
-        y: 797
+        x: 505
+        y: 1376
         width: 400
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,6 +190,248 @@ TextureImporter:
       bones: []
       spriteID: 380bbf1acec558a4e959c9a5f3e6c8ad
       internalID: 27505570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat-0-male
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1364
+        width: 400
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77d6a73a6a312b4e8d63751eee2f1b8
+      internalID: 767507261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat-4
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1228
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c73edf285243ed47b73087300be83ca
+      internalID: 981976521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat-0-female
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 789
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e338d2cb6a0f8648b2df9e9d075bb8c
+      internalID: -203354375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accesory-0-Female
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1488
+        width: 200
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d823b52267f9fef47a5f0534a86e599c
+      internalID: -1748215186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accesory-1-Female
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 1485
+        width: 200
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dc81d46998f034b8eddbe4dec4c0a3
+      internalID: -151677830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itembackpack-0
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 630
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db6151a0befdd147afc285c34fdd373
+      internalID: -1496148607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itembackpack-1
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 586
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbffb02df51debb4babf2115411be1c7
+      internalID: -950699403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs-0-female
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 571
+        width: 400
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81acc1fa4075c6142b68aa6fd6ca552d
+      internalID: 1897126347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legs-1-female
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 570
+        width: 400
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6758da279e07da94b9fa0973c0256765
+      internalID: 1309488508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoes-0-female
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 191
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277f057ef6820f54bbc459d7e19ef6bd
+      internalID: 890573964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoes-1-Female
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 176
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae922b46741188449a10cf6d02f6e93
+      internalID: -155181194
       vertices: []
       indices: 
       edges: []
@@ -210,6 +452,19 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      Accesory-0-Female: -1748215186
+      Accesory-1-Female: -151677830
+      Shoes-0-female: 890573964
+      Shoes-1-Female: -155181194
+      WearablesSprites_7: -1564503250
+      WearablesSprites_9: -1964772645
+      hat-0-female: -203354375
+      hat-0-male: 767507261
+      hat-4: 981976521
+      itembackpack-0: -1496148607
+      itembackpack-1: -950699403
+      legs-0-female: 1897126347
+      legs-1-female: 1309488508
       shirt-8-tanktop: -995028597
       shirt-9-sweater: 27505570
   mipmapLimitGroupName: 

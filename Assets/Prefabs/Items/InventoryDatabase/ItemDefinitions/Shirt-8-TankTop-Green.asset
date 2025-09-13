@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ac5fa5da8102b468a92c21620db0d0, type: 3}
+  m_Name: Shirt-8-TankTop-Green
+  m_EditorClassIdentifier: 
+  m_ID: 2537918194
+  m_Category: {fileID: 11400000, guid: abb29360a0815934988240d66393262d, type: 2}
+  m_Parent: {fileID: 0}
+  m_ChildrenData:
+    m_ObjectType: 'Opsive.Shared.Utility.ResizableArray`1[[Opsive.UltimateInventorySystem.Core.ItemDefinition,
+      Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+    m_ValueHashes: 
+    m_LongValueHashes: 4c1e4f8e62aa191ac2330064f10375df
+    m_ValuePositions: 0000000004000000
+    m_Values: 0000000000000000
+    m_UnityObjects: []
+    m_Version: 3.4
+  m_ItemDefinitionAttributeCollection:
+    m_AttributeCollectionData:
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
+      m_ValuePositions: 0000000004000000050000000500000009000000090000000d00000011000000
+      m_Values: 49636f6e010100000085af0c040000000001000000
+      m_UnityObjects:
+      - {fileID: -995028597, guid: ffa5e8551b3dd9e448869858ea5b6bd4, type: 3}
+      - {fileID: -995028597, guid: ffa5e8551b3dd9e448869858ea5b6bd4, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa65195fdf7a7e477b768d9cf911486f57b1d
+      m_ValuePositions: 000000000b0000000c0000000c00000010000000100000001400000029000000
+      m_Values: 4465736372697074696f6e010100000058689b9e4a757374206120706c61696e2074616e6b20746f704a757374206120706c61696e2074616e6b20746f70
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651bbc6d22cc378a73fff986c9964f66bf4
+      m_ValuePositions: 000000000a0000000b0000000b0000000f0000000f0000001300000017000000
+      m_Values: 44726f705072656661620100000000c19d0e96ffffffff00000000
+      m_UnityObjects:
+      - {fileID: 5210250371668273714, guid: 38d7931c304b53e47ad263a898702e02, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651bbc6d22cc378a73fff986c9964f66bf4
+      m_ValuePositions: 000000000c0000000d0000000d00000011000000110000001500000019000000
+      m_Values: 5069636b757050726566616201010000007b57539f0000000001000000
+      m_UnityObjects:
+      - {fileID: 2295966399464014884, guid: 01d0bcd2f23a8b64194172b4a2671f4a, type: 3}
+      - {fileID: 2295966399464014884, guid: 01d0bcd2f23a8b64194172b4a2671f4a, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.Sprite,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651af0255e014ce1cfaf3d4ee4cb64be1ae
+      m_ValuePositions: 00000000090000000a0000000a0000000e0000000e0000001200000016000000
+      m_Values: 536861706549636f6e010100000093a3c27e0000000001000000
+      m_UnityObjects:
+      - {fileID: -995028597, guid: ffa5e8551b3dd9e448869858ea5b6bd4, type: 3}
+      - {fileID: -995028597, guid: ffa5e8551b3dd9e448869858ea5b6bd4, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[Opsive.UltimateInventorySystem.UI.Item.ItemShape,
+        Opsive.UltimateInventorySystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651a4e199aea0e72da2ac19994a90cd3c8166c5699552753ffffd5ed8929db1e87938fc6a75703a3d81e8b3331b4265f256300c16a13afeebd5fad0e67ef846e8ab614b577937823f2da4e9e59eda09ead5
+      m_ValuePositions: 000000000500000006000000060000000a0000000a0000000e0000000e00000016000000170000001b00000023000000230000002b0000002c00000030000000
+      m_Values: 53686170650100000000bbcddebb010000000100000000000000000000000000000000020000000200000000000000000000000000000000
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[UnityEngine.GameObject[],
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa6515d867a59638ffc6a7d99d0efd2250dd6a15814c6040dc11fc5ebe1b403c60aca
+      m_ValuePositions: 000000000700000008000000080000000c0000000c0000001000000014000000180000001c000000
+      m_Values: 50726566616273010100000094bf5cd901000000000000000100000001000000
+      m_UnityObjects:
+      - {fileID: 2387418183073678018, guid: 6ab27fb2744359546b2663565076b2f3, type: 3}
+      - {fileID: 2387418183073678018, guid: 6ab27fb2744359546b2663565076b2f3, type: 3}
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[AdvancedPeopleSystem.CharacterElementType,
+        AdvancedPeopleSystem2, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa6512081cbb2224435b7e275bf4a9c3d2f446453651fc4c1f96b924fe0cbd06c2b7c
+      m_ValuePositions: 00000000190000001a0000001a0000001e0000001e00000022000000220000002600000026000000
+      m_Values: 416476616e63656450656f706c6553797374656d2d547970650101000000b14fd0dd0100000001000000
+      m_UnityObjects: []
+      m_Version: 3.4
+    - m_ObjectType: 'Opsive.UltimateInventorySystem.Core.AttributeSystem.Attribute`1[[System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'
+      m_ValueHashes: 
+      m_LongValueHashes: 0d00eb254f8d1b295b713f72e636d894086efd392442dff734ebab2aec72d130f446621b49ba2a58a8823c4a519fa651424b280f5394b559861dc27bf4117a0e
+      m_ValuePositions: 000000001a0000001b0000001b0000001f0000001f0000002300000027000000
+      m_Values: 416476616e63656450656f706c6553797374656d2d496e6465780101000000684229960800000008000000
+      m_UnityObjects: []
+      m_Version: 3.4
+  m_DefaultItem:
+    m_ID: 119998140
+    m_Name: Shirt-8-TankTop-Green
+    m_ItemDefinitionID: 2537918194
+    m_ItemDefinition: {fileID: 11400000}
+    m_ItemAttributeCollection:
+      m_AttributeCollectionData: []
+  m_EditorIcon: {fileID: 0}

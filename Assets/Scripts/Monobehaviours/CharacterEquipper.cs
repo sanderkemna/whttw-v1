@@ -95,20 +95,4 @@ public class CharacterEquipper : EquipperBase {
 
         character.ClearElement(characterElementType); //clear character element
     }
-
-    //private void OnEnable() {
-    //    EventHandler.RegisterEvent<Item, int>(
-    //        this,
-    //        EventNames.c_Equipper_OnEquipped_Item_Index,
-    //        OnEquipmentHasChanged
-    //    );
-    //}
-
-    //private void OnDisable() {
-    //    EventHandler.UnregisterEvent<Item, int>(
-    //        this,
-    //        EventNames.c_Equipper_OnEquipped_Item_Index,
-    //        OnEquipmentHasChanged
-    //    );
-    //}
 }

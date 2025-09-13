@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573e9748875a7bb458e9b588519ef0e5, type: 3}
+  m_Name: MyInventoryDatabase
+  m_EditorClassIdentifier: 
+  m_ItemCategories:
+  - {fileID: 11400000, guid: e2642fc27560f584fb3b87dfec792950, type: 2}
+  - {fileID: 11400000, guid: 062a6d9b64abfc243aafa0c4b3febfe6, type: 2}
+  - {fileID: 11400000, guid: cde0c1a789f440449bef34493933ca99, type: 2}
+  - {fileID: 11400000, guid: 63aa099207a17c4439e566611178fd3b, type: 2}
+  - {fileID: 11400000, guid: 441d3bb9c6c7f574d9642afa1d4ee017, type: 2}
+  - {fileID: 11400000, guid: 6af7431c7d3fedb4897cc5d52c443c53, type: 2}
+  - {fileID: 11400000, guid: 74e3a78057608e74e93dcd23d2d485a2, type: 2}
+  - {fileID: 11400000, guid: 0b23eb88eb36d414e843fc21d5a041fc, type: 2}
+  - {fileID: 11400000, guid: 2d1aaa70b2d3ed849b351af00cc7e5bb, type: 2}
+  - {fileID: 11400000, guid: 413a3f6e4f06e0f49bc55be4085a2b1b, type: 2}
+  - {fileID: 11400000, guid: 21c0252944db61644b4de906ee01e90f, type: 2}
+  - {fileID: 11400000, guid: 4f801bf8350b4214383ba659b2874733, type: 2}
+  - {fileID: 11400000, guid: dc4139e9616520140a78b290db4c1a1f, type: 2}
+  - {fileID: 11400000, guid: 5960954ef54114a4d861fdb0cb50957c, type: 2}
+  - {fileID: 11400000, guid: 5120978ff51c5b64780c40b342b7882a, type: 2}
+  - {fileID: 11400000, guid: 49f20c0acca05f0468b152fbacefbd05, type: 2}
+  - {fileID: 11400000, guid: aea14d8460cbdfd40b9158c0ce333bbf, type: 2}
+  - {fileID: 11400000, guid: 57eaf90a3f7485840aecbd3dcb9297b4, type: 2}
+  - {fileID: 11400000, guid: 6f0653d17107cde4e9b68ae55e6b6c37, type: 2}
+  - {fileID: 11400000, guid: abb29360a0815934988240d66393262d, type: 2}
+  - {fileID: 11400000, guid: a2a281fd933b18a44a7969ec5f9b3c14, type: 2}
+  - {fileID: 11400000, guid: f5a68779b978083409af169a7eb6e8f9, type: 2}
+  - {fileID: 11400000, guid: 73fa175cbcc8344448c052eddd0e2d6f, type: 2}
+  - {fileID: 11400000, guid: 28e28cebfe3f58044b08d12fd527652a, type: 2}
+  m_ItemDefinitions:
+  - {fileID: 11400000, guid: 2ba2ab44154160141a48d2b125e3dc77, type: 2}
+  - {fileID: 11400000, guid: b4e2d54fd4929e24ea60d1446e393396, type: 2}
+  - {fileID: 11400000, guid: 20ec9770fdd2b4a4e964f61356a8c7a5, type: 2}
+  - {fileID: 11400000, guid: de41ca842f1c49547aa527e4d605ad6c, type: 2}
+  - {fileID: 11400000, guid: dc4d69817d8c12643931a6a35caecd9f, type: 2}
+  - {fileID: 11400000, guid: 40f963a2a81fb6f4fb0541f790565cd9, type: 2}
+  - {fileID: 11400000, guid: bb09391d4490f8b4597b10138bd0b8f5, type: 2}
+  - {fileID: 11400000, guid: 701553a4cd195f64782e1b3ca32cb6eb, type: 2}
+  - {fileID: 11400000, guid: fe70528ea91515a4aa8d8bfbb9bcd1a4, type: 2}
+  - {fileID: 11400000, guid: 4342abd2b30e9bd4fb09d86805e7bb8b, type: 2}
+  - {fileID: 11400000, guid: 2855a1fd1bb0ff84392630492f9b8095, type: 2}
+  - {fileID: 11400000, guid: 6fec7349afc6bfd4ba317af4de96fe2f, type: 2}
+  - {fileID: 11400000, guid: 937f0253cf65bbb4e97b47e907236ee5, type: 2}
+  - {fileID: 11400000, guid: af0a9a4ec4786db46839541fa7ac08e8, type: 2}
+  - {fileID: 11400000, guid: 033b59fd8d04abd4b9da65a852680971, type: 2}
+  - {fileID: 11400000, guid: 8bc39b5ff3e2f6546aa36a112e05f705, type: 2}
+  - {fileID: 11400000, guid: d6c4ec75bf209c940b1bfa564e4d3512, type: 2}
+  - {fileID: 11400000, guid: 66b18f83f0846b7468be2f0eaf9820df, type: 2}
+  - {fileID: 11400000, guid: d885c11b100e57b43952f64487f5ec17, type: 2}
+  - {fileID: 11400000, guid: c8b69669ddf501140a0acb25258fff41, type: 2}
+  - {fileID: 11400000, guid: 5c1e3433dafeaf340b4b8eac73fbfc9e, type: 2}
+  - {fileID: 11400000, guid: d4c37a232e102f44ea6548f59fdba26e, type: 2}
+  - {fileID: 11400000, guid: 73fc461e6855e124ab30ffdb83d5f38f, type: 2}
+  - {fileID: 11400000, guid: 09662463ce89d454783069ffcaf31240, type: 2}
+  m_Currencies: []
+  m_CraftingRecipes: []
+  m_CraftingCategories:
+  - {fileID: 11400000, guid: 8c8de6f72c81c7a4ba08c71964285d1e, type: 2}
