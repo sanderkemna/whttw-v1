@@ -52,9 +52,13 @@ namespace ProjectDawn.Navigation
 
                 var newLocation = NavMesh.MoveLocation(location, transform.Position, path.AreaMask);
 
-                if (path.Grounded)
+                if (path.Grounded != Grounded.None)
                 {
-                    transform.Position = newLocation.position;
+                    if (path.Grounded == Grounded.XZ)
+                        transform.Position.xz = ((float3)newLocation.position).xz;
+                    else
+                        transform.Position = newLocation.position;
+
 
 #if !DISABLE_SONAR_HORIZON
                     float stepLength = math.distance(location.position, newLocation.position) / DeltaTime;

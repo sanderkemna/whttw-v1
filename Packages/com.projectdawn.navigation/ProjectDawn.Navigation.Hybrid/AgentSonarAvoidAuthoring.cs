@@ -1,6 +1,7 @@
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using ProjectDawn.Entities;
 
 namespace ProjectDawn.Navigation.Hybrid
 {
@@ -37,6 +38,13 @@ namespace ProjectDawn.Navigation.Hybrid
         protected NavigationLayers m_Layers = NavigationLayers.Everything;
 
         Entity m_Entity;
+
+        /// <summary>
+        /// <see cref="AgentSonarAvoid"/> component of this <see cref="AgentAuthoring"/> Entity.
+        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
+        /// </summary>
+        public ref AgentSonarAvoid Sonar =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<AgentSonarAvoid>(m_Entity).ValueRW;
 
         /// <summary>
         /// Returns default component of <see cref="AgentSonarAvoid"/>.

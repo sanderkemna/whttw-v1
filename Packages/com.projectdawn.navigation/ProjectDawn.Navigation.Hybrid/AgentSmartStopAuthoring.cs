@@ -1,5 +1,6 @@
 using Unity.Entities;
 using UnityEngine;
+using ProjectDawn.Entities;
 
 namespace ProjectDawn.Navigation.Hybrid
 {
@@ -19,6 +20,13 @@ namespace ProjectDawn.Navigation.Hybrid
         protected GiveUpStop m_GiveUpStop = GiveUpStop.Default;
 
         Entity m_Entity;
+
+        /// <summary>
+        /// <see cref="AgentSmartStop"/> component of this <see cref="AgentAuthoring"/> Entity.
+        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
+        /// </summary>
+        public ref AgentSmartStop SmartStop =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<AgentSmartStop>(m_Entity).ValueRW;
 
         /// <summary>
         /// Returns default component of <see cref="AgentSeparation"/>.

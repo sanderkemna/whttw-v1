@@ -1,5 +1,6 @@
 using Unity.Entities;
 using UnityEngine;
+using ProjectDawn.Entities;
 
 namespace ProjectDawn.Navigation.Hybrid
 {
@@ -23,8 +24,12 @@ namespace ProjectDawn.Navigation.Hybrid
 
         Entity m_Entity;
 
-        [System.Obsolete("Please use DefaultSeparation")]
-        public AgentSeparation DefaulSeparation => DefaultSeparation;
+        /// <summary>
+        /// <see cref="AgentSeparation"/> component of this <see cref="AgentAuthoring"/> Entity.
+        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
+        /// </summary>
+        public ref AgentSeparation Separation =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<AgentSeparation>(m_Entity).ValueRW;
 
         /// <summary>
         /// Returns default component of <see cref="AgentSeparation"/>.

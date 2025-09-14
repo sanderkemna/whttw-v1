@@ -139,6 +139,30 @@ namespace ProjectDawn.Navigation.Astar
                 var pathfindingLock = AstarPath.active.PausePathfindingSoon(); // TODO: Astar to public
                 var time = (float) SystemAPI.Time.ElapsedTime;
 
+#if MODULE_ASTAR_5_4_2_OR_NEWER
+                foreach (var (managedState, managedSettings, pathing, shape, transform, body, entity) in
+                    SystemAPI.Query<ManagedState, ManagedSettings, RefRW<AgentAstarPath>, RefRO<AgentShape>, RefRO<LocalTransform>, RefRO<AgentBody>>()
+                    .WithNone<LinkTraversal>()
+                    .WithEntityAccess())
+                {
+                    if (!managedState.pathTracer.isCreated)
+                        managedState.pathTracer = new PathTracer(Allocator.Persistent);
+
+                    var transformRW = transform.ValueRO;
+
+                    var destination = new DestinationPoint
+                    {
+                        destination = body.ValueRO.Destination,
+                        facingDirection = body.ValueRO.Force,
+                    };
+
+                    var movementPlane = new AgentMovementPlane(shape.ValueRO.Orentation);
+
+                    ref var autoRepath = ref pathing.ValueRW.AutoRepath;
+                    bool wantsToRecalculatePath = autoRepath.ShouldRecalculatePath(transform.ValueRO.Position, shape.ValueRO.Radius, destination.destination, time, managedState.pathTracer.isStale);
+                    RepairPathSystem.JobRecalculatePaths.MaybeRecalculatePath(managedState, managedSettings, ref pathing.ValueRW.AutoRepath, ref transformRW, ref destination, ref movementPlane, time, wantsToRecalculatePath);
+                }
+#else
                 foreach (var (managedState, pathing, shape, transform, body, entity) in
                     SystemAPI.Query<ManagedState, RefRW<AgentAstarPath>, RefRO<AgentShape>, RefRO<LocalTransform>, RefRO<AgentBody>>()
                     .WithNone<LinkTraversal>()
@@ -161,15 +185,23 @@ namespace ProjectDawn.Navigation.Astar
                     bool wantsToRecalculatePath = autoRepath.ShouldRecalculatePath(transform.ValueRO.Position, shape.ValueRO.Radius, destination.destination, time, managedState.pathTracer.isStale);
                     RepairPathSystem.JobRecalculatePaths.MaybeRecalculatePath(managedState, ref pathing.ValueRW.AutoRepath, ref transformRW, ref destination, ref movementPlane, time, wantsToRecalculatePath);
                 }
+#endif
 
                 pathfindingLock.Release();
                 Profiler.EndSample();
 
                 // Handle state machine link traversal
+#if MODULE_ASTAR_5_4_2_OR_NEWER
+                foreach (var (managedLinkInfo, managedState, managedSettings, transform, body, shape, offmeshLinkMovement, entity) in
+                    SystemAPI.Query<AstarLinkTraversalStateMachine, ManagedState, ManagedSettings, RefRW<LocalTransform>, RefRW<AgentBody>, RefRO<AgentShape>, EnabledRefRW<AgentOffMeshLinkMovementDisabled>>()
+                    .WithAll<LinkTraversal>()
+                    .WithEntityAccess())
+#else
                 foreach (var (managedLinkInfo, managedState, transform, body, shape, offmeshLinkMovement, entity) in
                     SystemAPI.Query<AstarLinkTraversalStateMachine, ManagedState, RefRW<LocalTransform>, RefRW<AgentBody>, RefRO<AgentShape>, EnabledRefRW<AgentOffMeshLinkMovementDisabled>>()
                     .WithAll<LinkTraversal>()
                     .WithEntityAccess())
+#endif
                 {
                     // We need these dummy for context
                     var movementPlane = new AgentMovementPlane(shape.ValueRO.Orentation);
@@ -184,12 +216,20 @@ namespace ProjectDawn.Navigation.Astar
                         var ctx = new AstarLinkTraversalContext(linkInfo.link);
                         managedLinkInfo.link = new AgentOffMeshLinkTraversal(linkInfo);
                         managedLinkInfo.context = ctx;
+#if MODULE_ASTAR_5_4_2_OR_NEWER
+                        managedLinkInfo.handler = RepairPathSystem.ResolveOffMeshLinkHandler(managedSettings, ctx);
+#else
                         managedLinkInfo.handler = RepairPathSystem.ResolveOffMeshLinkHandler(managedState, ctx);
+#endif
                         managedLinkInfo.stateMachine = null;
                         managedLinkInfo.coroutine = null;
                     }
 
+#if MODULE_ASTAR_5_4_2_OR_NEWER
+                    var linkNotFinished = JobManagedOffMeshLinkTransition.MoveNext(entity, managedState, ref transform.ValueRW, ref movementPlane, ref movementControl, ref movementSettings, ref managedLinkInfo.link, managedLinkInfo, EnabledRefRW<AgentOffMeshLinkMovementDisabled>.Null, EnabledRefRW<AgentOffMeshLinkLocalAvoidanceDisabled>.Null, SystemAPI.Time.DeltaTime);
+#else
                     var linkNotFinished = JobManagedOffMeshLinkTransition.MoveNext(entity, managedState, ref transform.ValueRW, ref movementPlane, ref movementControl, ref movementSettings, ref managedLinkInfo.link, managedLinkInfo, EnabledRefRW<AgentOffMeshLinkMovementDisabled>.Null, SystemAPI.Time.DeltaTime);
+#endif
 
                     if (linkNotFinished)
                     {
@@ -342,7 +382,7 @@ namespace ProjectDawn.Navigation.Astar
 
                     for (int i = 0; i < chunk.Count; i++)
                     {
-                        if (bodies[i].IsStopped)
+                        if (bodies[i].IsStopped && !OnlyApplyPendingPaths)
                             continue;
 
                         var agentCylinderShape = new AgentCylinderShape

@@ -27,9 +27,8 @@ namespace ProjectDawn.Navigation.Hybrid
         [SerializeField]
         protected bool AutoRepath = true;
 
-        [FormerlySerializedAs("m_Constrained")]
         [SerializeField]
-        protected bool m_Grounded = true;
+        protected Grounded m_Grounded = Grounded.XYZ;
 
         [SerializeField]
         internal bool m_OptimizePath;
@@ -46,10 +45,24 @@ namespace ProjectDawn.Navigation.Hybrid
         Entity m_Entity;
 
         /// <summary>
-        /// Returns default component of <see cref="NavMeshPath"/>.
+        /// <see cref="NavMeshPath"/> component of this <see cref="AgentAuthoring"/> Entity.
+        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
         /// </summary>
-        [System.Obsolete("This property has been renamed. Please use DefaultPath!")]
-        public NavMeshPath DefaulPath => DefaultPath;
+        public ref NavMeshPath Path =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<NavMeshPath>(m_Entity).ValueRW;
+
+        /// <summary>
+        /// <see cref="NavMeshNode"/> component of this <see cref="AgentAuthoring"/> Entity.
+        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
+        /// </summary>
+        public DynamicBuffer<NavMeshNode> Nodes =>
+            World.DefaultGameObjectInjectionWorld.EntityManager.GetBuffer<NavMeshNode>(m_Entity);
+
+        public ref LinkTraversalSeek SeekLinkTraversal =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<LinkTraversalSeek>(m_Entity).ValueRW;
+
+        public ref NavMeshLinkTraversal NavMeshLinkTraversal =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<NavMeshLinkTraversal>(m_Entity).ValueRW;
 
         /// <summary>
         /// Returns default component of <see cref="NavMeshPath"/>.
@@ -85,14 +98,11 @@ namespace ProjectDawn.Navigation.Hybrid
             set => World.DefaultGameObjectInjectionWorld.EntityManager.SetComponentEnabled<LinkTraversal>(m_Entity, value);
         }
 
-        public ref LinkTraversalSeek SeekLinkTraversal => ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<LinkTraversalSeek>(m_Entity).ValueRW;
-
-        public ref NavMeshLinkTraversal NavMeshLinkTraversal => ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<NavMeshLinkTraversal>(m_Entity).ValueRW;
-
         /// <summary>
         /// <see cref="NavMeshNode"/> component of this <see cref="AgentAuthoring"/> Entity.
         /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
         /// </summary>
+        [System.Obsolete("EntityNodes nodes is obsolete, please use Nodes")]
         public DynamicBuffer<NavMeshNode> EntityNodes => World.DefaultGameObjectInjectionWorld.EntityManager.GetBuffer<NavMeshNode>(m_Entity);
 
         /// <summary>

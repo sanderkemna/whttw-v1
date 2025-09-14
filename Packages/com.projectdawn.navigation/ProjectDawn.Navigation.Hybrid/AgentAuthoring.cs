@@ -18,12 +18,6 @@ namespace ProjectDawn.Navigation.Hybrid
         /// </summary>
         Dynamic = 1,
         /// <summary>
-        /// Agent is dynamic. It's entity will have have AgentBody and AgentSteering components. 
-        /// </summary>
-        //[Obsolete("AgentMotionType.Steering is deprecated, please use AgentMotionType.Locomotion!", false)]
-        [InspectorName("Steering (Deprecated)")]
-        Steering = 2,
-        /// <summary>
         /// Agent is dynamic. It's entity will have have AgentBody and AgentLocomotion components. 
         /// </summary>
         DefaultLocomotion = 3,
@@ -76,19 +70,6 @@ namespace ProjectDawn.Navigation.Hybrid
         };
 
         /// <summary>
-        /// Returns default component of <see cref="AgentSteering"/>.
-        /// </summary>
-        [Obsolete("DefaultSteering is deprecated, please use DefaultLocomotion!", false)]
-        public AgentSteering DefaultSteering => new()
-        {
-            Speed = Speed,
-            Acceleration = Acceleration,
-            AngularSpeed = math.radians(AngularSpeed),
-            StoppingDistance = StoppingDistance,
-            AutoBreaking = AutoBreaking,
-        };
-
-        /// <summary>
         /// Returns default component of <see cref="Navigation.AgentLocomotion"/>.
         /// </summary>
         public AgentLocomotion DefaultLocomotion => new()
@@ -124,18 +105,8 @@ namespace ProjectDawn.Navigation.Hybrid
         /// <see cref="AgentBody"/> component of this <see cref="AgentAuthoring"/> Entity.
         /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
         /// </summary>
-        public ref AgentBody Body => ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<AgentBody>(m_Entity).ValueRW;
-
-        /// <summary>
-        /// <see cref="AgentSteering"/> component of this <see cref="AgentAuthoring"/> Entity.
-        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
-        /// </summary>
-        [Obsolete("EntitySteering is deprecated, please use EntityLocomotion!", false)]
-        public AgentSteering EntitySteering
-        {
-            get => World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentData<AgentSteering>(m_Entity);
-            set => World.DefaultGameObjectInjectionWorld.EntityManager.SetComponentData(m_Entity, value);
-        }
+        public ref AgentBody Body =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<AgentBody>(m_Entity).ValueRW;
 
         /// <summary>
         /// <see cref="AgentLocomotion"/> component of this <see cref="AgentAuthoring"/> Entity.
@@ -151,12 +122,6 @@ namespace ProjectDawn.Navigation.Hybrid
         /// Returns true if <see cref="AgentAuthoring"/> entity has <see cref="Navigation.AgentBody"/>.
         /// </summary>
         public bool HasEntityBody => World.DefaultGameObjectInjectionWorld != null && World.DefaultGameObjectInjectionWorld.EntityManager.HasComponent<AgentBody>(m_Entity);
-
-        /// <summary>
-        /// Returns true if <see cref="AgentAuthoring"/> entity has <see cref="AgentSteering"/>.
-        /// </summary>
-        [Obsolete("HasEntitySteering is deprecated, please use HasEntityLocomotion!", false)]
-        public bool HasEntitySteering => World.DefaultGameObjectInjectionWorld != null && World.DefaultGameObjectInjectionWorld.EntityManager.HasComponent<AgentSteering>(m_Entity);
 
         /// <summary>
         /// Returns true if <see cref="AgentAuthoring"/> entity has <see cref="Navigation.AgentLocomotion"/>.
@@ -223,10 +188,6 @@ namespace ProjectDawn.Navigation.Hybrid
             manager.AddComponentData(m_Entity, DefaultAgent);
             if (MotionType != AgentMotionType.Static)
                 manager.AddComponentData(m_Entity, DefaultBody);
-#pragma warning disable 0618
-            if (MotionType == AgentMotionType.Steering)
-                manager.AddComponentData(m_Entity, DefaultSteering);
-#pragma warning restore 0618
             if (MotionType == AgentMotionType.DefaultLocomotion)
                 manager.AddComponentData(m_Entity, DefaultLocomotion);
         }
@@ -240,10 +201,6 @@ namespace ProjectDawn.Navigation.Hybrid
             AddComponent(entity, authoring.DefaultAgent);
             if (authoring.MotionType != AgentMotionType.Static)
                 AddComponent(entity, authoring.DefaultBody);
-#pragma warning disable 0618
-            if (authoring.MotionType == AgentMotionType.Steering)
-                AddComponent(entity, authoring.DefaultSteering);
-#pragma warning restore 0618
             if (authoring.MotionType == AgentMotionType.DefaultLocomotion)
                 AddComponent(entity, authoring.DefaultLocomotion);
         }

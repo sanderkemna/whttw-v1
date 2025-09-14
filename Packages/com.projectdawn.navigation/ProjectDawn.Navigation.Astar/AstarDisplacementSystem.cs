@@ -131,6 +131,9 @@ namespace ProjectDawn.Navigation.Astar
                         if (bodies[i].IsStopped)
                             continue;
 
+                        if (paths[i].Grounded == Grounded.None)
+                            continue;
+
                         var agentCylinderShape = new AgentCylinderShape
                         {
                             height = shapes[i].Height,
@@ -148,7 +151,8 @@ namespace ProjectDawn.Navigation.Astar
                         // TODO: Astar
                         var movementSetting = new MovementSettings
                         {
-                            stopDistance = 0.5f
+                            stopDistance = 0.5f,
+                            positionSmoothing = 0.5f,
                         };
 
                         var previousCloesestOnNavmesh = movementStates[i].closestOnNavmesh;
@@ -168,8 +172,10 @@ namespace ProjectDawn.Navigation.Astar
                             false
                             );
 
-                        localTransforms[i].Position = movementStates[i].closestOnNavmesh;
-                        //localTransforms[i].Position = ClampToNavmesh(localTransforms[i].Position, movementStates[i].closestOnNavmesh, agentCylinderShape, agentMovementPlane);
+                        if (paths[i].Grounded == Grounded.XZ)
+                            localTransforms[i].Position.xz = movementStates[i].closestOnNavmesh.xz;
+                        else
+                            localTransforms[i].Position = movementStates[i].closestOnNavmesh;
                     }
                 }
 

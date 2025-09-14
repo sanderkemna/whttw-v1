@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class RandomWalkingAuthoring : MonoBehaviour {
 
-    //[Tooltip("The next position this unit will move towards, is set by the system.")]
-    //public float3 targetPosition;
-    //[Tooltip("The center of the squares of min and max bounding box of walking distances.")]
-    //public float3 originPosition;
-    //[Tooltip("The minimum bounding box of walking distances.")]
     public float distanceMin;
     [Tooltip("The maximum bounding box of walking distances.")]
     public float distanceMax;

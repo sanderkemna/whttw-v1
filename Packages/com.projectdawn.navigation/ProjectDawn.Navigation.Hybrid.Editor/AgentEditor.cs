@@ -37,7 +37,7 @@ namespace ProjectDawn.Navigation.Hybrid.Editor
             using (new EditorGUI.DisabledScope(Application.isPlaying))
                 EditorGUILayout.PropertyField(m_MotionType, Styles.MotionType);
 
-            if (m_MotionType.enumValueIndex == (int)AgentMotionType.DefaultLocomotion || m_MotionType.enumValueIndex == (int) AgentMotionType.Steering)
+            if (m_MotionType.intValue == (int)AgentMotionType.DefaultLocomotion)
             {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(m_Speed, Styles.Speed);
@@ -50,7 +50,7 @@ namespace ProjectDawn.Navigation.Hybrid.Editor
 
             EditorGUILayout.PropertyField(m_Layers, Styles.Layers);
 
-            if (m_MotionType.enumValueIndex == (int) AgentMotionType.Static)
+            if (m_MotionType.intValue == (int) AgentMotionType.Static)
             {
                 EditorGUILayout.HelpBox("Static is currently not supported use dynamic!", MessageType.Error);
             }
@@ -69,10 +69,6 @@ namespace ProjectDawn.Navigation.Hybrid.Editor
                 foreach (var target in targets)
                 {
                     var authoring = target as AgentAuthoring;
-#pragma warning disable 0618
-                    if (authoring.HasEntitySteering)
-                        authoring.EntitySteering = authoring.DefaultSteering;
-#pragma warning restore 0618
                     if (authoring.HasEntityLocomotion)
                         authoring.EntityLocomotion = authoring.DefaultLocomotion;
                 }

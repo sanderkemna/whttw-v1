@@ -1,10 +1,11 @@
 using Unity.Entities;
 using UnityEngine;
+using ProjectDawn.Entities;
 
 namespace ProjectDawn.Navigation.Hybrid
 {
     /// <summary>
-    /// Enables collisio with other agents.
+    /// Enables collision with other agents.
     /// </summary>
     [RequireComponent(typeof(AgentAuthoring))]
     [AddComponentMenu("Agents Navigation/Agent Collider")]
@@ -16,6 +17,13 @@ namespace ProjectDawn.Navigation.Hybrid
         protected NavigationLayers m_Layers = NavigationLayers.Everything;
 
         Entity m_Entity;
+
+        /// <summary>
+        /// <see cref="AgentCollider"/> component of this <see cref="AgentAuthoring"/> Entity.
+        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
+        /// </summary>
+        public ref AgentCollider Collider =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<AgentCollider>(m_Entity).ValueRW;
 
         /// <summary>
         /// Returns default component of <see cref="AgentCollider"/>.

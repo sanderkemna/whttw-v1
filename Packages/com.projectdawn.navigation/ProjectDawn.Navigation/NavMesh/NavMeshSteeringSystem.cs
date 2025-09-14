@@ -97,8 +97,10 @@ namespace ProjectDawn.Navigation
                     // Handle case if failde to map location
                     if (location.polygon.IsNull())
                     {
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
-                        UnityEngine.Debug.LogWarning("Failed to map agent position to nav mesh location. This can happen either if nav mesh is not present or property MappingExtent value is too low.");
+#if (UNITY_EDITOR || DEVELOPMENT_BUILD) && !(AGENTS_NAVIGATION_LOG_NONE)
+                        UnityEngine.Debug.LogWarning(
+                            "Failed to map agent destination to the NavMesh. This can happen if the NavMesh is missing or the MappingExtent value is too low. " +
+                            "If this is expected, you can disable this warning in the agent's navigation settings by unchecking `Log Verbose`.");
 #endif
                         return;
                     }
@@ -131,8 +133,10 @@ namespace ProjectDawn.Navigation
                     // Handle case if failde to map location
                     if (location.polygon.IsNull())
                     {
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
-                        UnityEngine.Debug.LogWarning("Failed to map agent destination to nav mesh location. This can happen either if nav mesh is not present or property MappingExtent value is too low.");
+#if (UNITY_EDITOR || DEVELOPMENT_BUILD) && !(AGENTS_NAVIGATION_LOG_NONE)
+                        UnityEngine.Debug.LogWarning(
+                            "Failed to map agent destination to the NavMesh. This can happen if the NavMesh is missing or the MappingExtent value is too low. " +
+                            "If this is expected, you can disable this warning in the agent's navigation settings by unchecking `Log Verbose`.");
 #endif
                     }
 

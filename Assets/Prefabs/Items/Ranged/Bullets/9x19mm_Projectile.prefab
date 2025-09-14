@@ -202,7 +202,7 @@ MonoBehaviour:
       m_Amount: 1
       m_Item:
         m_ID: 1512211392
-        m_Name: Bullet 9x19
+        m_Name: Bullet 9x19mm
         m_ItemDefinitionID: 4038051591
         m_ItemDefinition: {fileID: 11400000, guid: 701553a4cd195f64782e1b3ca32cb6eb, type: 2}
         m_ItemAttributeCollection:

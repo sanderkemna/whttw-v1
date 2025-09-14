@@ -1,5 +1,6 @@
 using Unity.Entities;
 using UnityEngine;
+using ProjectDawn.Entities;
 
 namespace ProjectDawn.Navigation.Hybrid
 {
@@ -18,6 +19,13 @@ namespace ProjectDawn.Navigation.Hybrid
         protected float Height = 2f;
 
         Entity m_Entity;
+
+        /// <summary>
+        /// <see cref="AgentShape"/> component of this <see cref="AgentAuthoring"/> Entity.
+        /// Accessing this property is potentially heavy operation as it will require wait for agent jobs to finish.
+        /// </summary>
+        public ref AgentShape Shape =>
+            ref World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentDataRW<AgentShape>(m_Entity).ValueRW;
 
         /// <summary>
         /// Returns default component of <see cref="AgentShape"/>.

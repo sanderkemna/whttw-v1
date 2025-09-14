@@ -1,6 +1,30 @@
 # Changelog
 All notable changes to this package will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## [4.2.5] - 2025-09-08
+- Removed wantsToRecalculatePath logging from astar
+
+## [4.2.4] - 2025-09-01
+- Removed accidental leftover of priting pending path in astar
+- Added in settings new option `Log Verbose` that for now controlls navmesh not found warrning
+
+## [4.2.3] - 2025-08-19
+- Fixed error `Loading from a non-readonly static field`
+
+## [4.2.2] - 2025-08-17
+- Fixed regression where agent inspector properties are not shown for default locomotion
+- Fixed burst error for AgentGroundingSlopeSystem and AgentGroundingSystem on domain reload
+- Added new Scenario sample scene `Physics Grounding`
+
+## [4.2.1] - 2025-08-16
+- Fixed regression where imported agents navigation package loads old version
+
+## [4.2.0] - 2025-08-15
+- Changed AgentAstarPath grounded option to enum
+- Changed NavMeshPath grounded option to enum
+- Added new component AgentGrounding that uses unity builtin physics for height correction
+- Added to all component new ref based entity data returning as result simplying option changing
+
 ## [4.1.1] - 2025-06-21
 - Fixed build errors
 

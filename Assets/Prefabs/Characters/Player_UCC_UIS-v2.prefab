@@ -2698,21 +2698,13 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4445900059999097122, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
-    - {fileID: 5214156877588224119, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1471902289424763096, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1568019639240495731}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8768299140871228024, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7471192044989095767}
-    - targetCorrespondingSourceObject: {fileID: 8768299140871228024, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6054910513270153718}
     - targetCorrespondingSourceObject: {fileID: 1705858136515112798, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 796261735037767006}
@@ -2975,11 +2967,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1471902289424763096, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
   m_PrefabInstance: {fileID: 3665823601886843058}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2936483549049346575 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1882472889172101821, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
-  m_PrefabInstance: {fileID: 3665823601886843058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3213105149431217860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2182171284277177974, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
@@ -3086,17 +3073,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8223367047668907315, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
   m_PrefabInstance: {fileID: 3665823601886843058}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5436089632230693578}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4549fe22a66a4b46934ceadea79b736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &4676896363846348535 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8230384746532044357, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
-  m_PrefabInstance: {fileID: 3665823601886843058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5187967445021143860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8439960947291054982, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
@@ -3399,126 +3381,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!1 &5436089632230693578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8768299140871228024, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}
-  m_PrefabInstance: {fileID: 3665823601886843058}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7471192044989095767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5436089632230693578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f0dc0d141852c4fa74c5aeee60f7c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_States:
-  - m_Name: HandAxe
-    m_Preset: {fileID: 11400000, guid: 437d7dfc915835144a0610bf988455d8, type: 2}
-    m_BlockList: []
-    m_Default: 0
-  - m_Name: Default
-    m_Preset: {fileID: 0}
-    m_BlockList: []
-    m_Default: 1
-  m_DebugDrawLookRay: 0
-  m_BaseLayerIndex: 0
-  m_UpperBodyLayerIndex: 4
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 268435401
-  m_LookAtOffset: {x: 0, y: 0, z: 0}
-  m_LookAtBodyWeight: 0.025
-  m_LookAtHeadWeight: 0.2
-  m_LookAtEyesWeight: 1
-  m_LookAtClampWeight: 0.35
-  m_LookAtAdjustmentSpeed: 0.5
-  m_ActiveLookAtStateName: LookAt
-  m_LookAtWeightAdjustmentSpeed: 0.2
-  m_HipsPositionAdjustmentSpeed: 4
-  m_HipsPositionOffset: 0
-  m_FootOffsetAdjustment: 0.005
-  m_FootWeightActiveAdjustmentSpeed: 10
-  m_FootWeightInactiveAdjustmentSpeed: 2
-  m_OverrideFootIKWeight: -1
-  m_UpperArmWeight: 1
-  m_UpperArmAdjustmentSpeed: 10
-  m_HandWeight: 1
-  m_HandAdjustmentSpeed: 10
-  m_HandPositionOffset: {x: 0, y: 0, z: 0}
-  m_LeftHandPositionSpring:
-    m_Stiffness: 0.2
-    m_Damping: 0.25
-    m_VelocityFadeInLength: 1
-    m_MaxSoftForceFrames: 120
-    m_MinVelocity: 0.00001
-    m_MaxVelocity: 10000
-    m_MinValue: {x: -10000, y: -10000, z: -10000}
-    m_MaxValue: {x: 10000, y: 10000, z: 10000}
-  m_LeftHandRotationSpring:
-    m_Stiffness: 0.2
-    m_Damping: 0.05
-    m_VelocityFadeInLength: 1
-    m_MaxSoftForceFrames: 120
-    m_MinVelocity: 0.00001
-    m_MaxVelocity: 10000
-    m_MinValue: {x: -10000, y: -10000, z: -10000}
-    m_MaxValue: {x: 10000, y: 10000, z: 10000}
-  m_RightHandPositionSpring:
-    m_Stiffness: 0.2
-    m_Damping: 0.25
-    m_VelocityFadeInLength: 1
-    m_MaxSoftForceFrames: 120
-    m_MinVelocity: 0.00001
-    m_MaxVelocity: 10000
-    m_MinValue: {x: -10000, y: -10000, z: -10000}
-    m_MaxValue: {x: 10000, y: 10000, z: 10000}
-  m_RightHandRotationSpring:
-    m_Stiffness: 0.2
-    m_Damping: 0.05
-    m_VelocityFadeInLength: 1
-    m_MaxSoftForceFrames: 120
-    m_MinVelocity: 0.00001
-    m_MaxVelocity: 10000
-    m_MinValue: {x: -10000, y: -10000, z: -10000}
-    m_MaxValue: {x: 10000, y: 10000, z: 10000}
---- !u!114 &6054910513270153718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5436089632230693578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74bc2472b1f6f6041952d8c86fa34a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_States:
-  - m_Name: Default
-    m_Preset: {fileID: 0}
-    m_BlockList: []
-    m_Default: 1
-  m_SurfaceImpact: {fileID: 11400000, guid: a552e44ece591a849aed9b0fb70807f2, type: 2}
-  m_FootstepMode: 0
-  m_Feet:
-  - m_Object: {fileID: 2936483549049346575}
-    m_Group: 0
-    m_FlippedFootprint: 0
-  - m_Object: {fileID: 4676896363846348535}
-    m_Group: 0
-    m_FlippedFootprint: 1
-  m_MoveDirectionFrameCount: 7
-  m_FootOffset: 0
-  m_MinTriggerInterval: 0.1
-  m_RequireMovement: 1
-  m_RequireAlternatingFeet: 1
-  m_FixedInterval: 0.3
-  m_MinBobInterval: 0.2
 --- !u!1 &5823396913834608425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7065940587677128603, guid: 6b6947d7d69d2614c8c5f549ed5f3d77, type: 3}

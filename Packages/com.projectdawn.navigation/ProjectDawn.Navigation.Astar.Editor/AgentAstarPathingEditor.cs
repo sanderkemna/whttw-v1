@@ -9,14 +9,10 @@ namespace ProjectDawn.Navigation.Astar
     class AgentAstarPathingEditor : UnityEditor.Editor
     {
 #if ENABLE_ASTAR_PATHFINDING_PROJECT
-        static class Styles
-        {
-            public static readonly GUIContent Layers = EditorGUIUtility.TrTextContent("Layers", "");
-        }
-
         SerializedProperty m_AutoRepath;
         SerializedProperty m_Pathfinding;
         SerializedProperty m_LinkTraversalMode;
+        SerializedProperty m_Grounded;
 
         public override void OnInspectorGUI()
         {
@@ -24,6 +20,7 @@ namespace ProjectDawn.Navigation.Astar
             EditorGUILayout.PropertyField(m_AutoRepath);
             EditorGUILayout.PropertyField(m_Pathfinding);
             EditorGUILayout.PropertyField(m_LinkTraversalMode);
+            EditorGUILayout.PropertyField(m_Grounded);
             EditorGUILayout.HelpBox("This is experimental feature. Not everything is set to work.", MessageType.Warning);
             if (serializedObject.ApplyModifiedProperties())
             {
@@ -40,6 +37,7 @@ namespace ProjectDawn.Navigation.Astar
         {
             var managedState = serializedObject.FindProperty("m_ManagedState");
             m_AutoRepath = serializedObject.FindProperty("m_Path").FindPropertyRelative("AutoRepath");
+            m_Grounded = serializedObject.FindProperty("m_Path").FindPropertyRelative("Grounded");
             m_Pathfinding = managedState.FindPropertyRelative("pathfindingSettings");
             m_LinkTraversalMode = serializedObject.FindProperty("m_LinkTraversalMode");
 
