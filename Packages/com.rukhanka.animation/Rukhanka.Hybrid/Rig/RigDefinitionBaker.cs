@@ -313,7 +313,7 @@ public partial class RigDefinitionBaker: Baker<RigDefinitionAuthoring>
 		{
 			var boneTransformFlags = transformFlags | (manualBoneStripping && i != 0 ? TransformUsageFlags.WorldSpace : 0);
 			var skeletonBone = skeletonBones[i];
-			var boneEntity = GetEntityForBone(skeletonBone.boneTransform, boneTransformFlags, rigDef.boneEntityStrippingMode == RigDefinitionAuthoring.BoneEntityStrippingMode.Automatic);
+			var boneEntity = GetEntityForBone(skeletonBone.boneTransform, boneTransformFlags, rigDef);
 			boneEntityRefArr.Add(new BoneEntityRef() {boneEntity = boneEntity, rigBoneIndex = i});
 		}
 	}
@@ -388,6 +388,7 @@ public partial class RigDefinitionBaker: Baker<RigDefinitionAuthoring>
 		ref var hdb = ref bb.Allocate(ref rdb.humanData);
 		var humanToRigArr = bb.Allocate(ref hdb.humanBoneToSkeletonBoneIndices, (int)HumanBodyBones.LastBone);
 		var humanRotArr = bb.Allocate(ref hdb.humanRotData, skeletonBones.Count);
+		//var mirroredIndicesArr = bb.Allocate(ref hdb.mirroredBoneIndices, skeletonBones.Count);
 		
 		for (int j = 0; j < humanToRigArr.Length; ++j)
 			humanToRigArr[j] = -1;
@@ -406,9 +407,10 @@ public partial class RigDefinitionBaker: Baker<RigDefinitionAuthoring>
 				//	Set human body part for this bone
 				rbi.humanBodyPart = humanPartToAvatarMaskPartRemapTable[humanRigIndex];
 			}
-		
-			SetHumanBodyBodyPartForNonAssignedBones(bonesArr);
 		}
+		
+		//CreateHumanoidMirrorData(humanToRigArr, mirroredIndicesArr);	
+		SetHumanBodyBodyPartForNonAssignedBones(bonesArr);
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -423,6 +425,21 @@ public partial class RigDefinitionBaker: Baker<RigDefinitionAuthoring>
 			return rb.humanBodyPart;
 		
 		return GetAvatarMaskBodyPartFromParent(rb.parentBoneIndex, bonesArr);
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	void CreateHumanoidMirrorData(BlobBuilderArray<int> humanToRigArr, BlobBuilderArray<int> mirroredIndicesArr)
+	{
+		for (var i = 0; i < mirroredIndicesArr.Length; ++i)
+			mirroredIndicesArr[i] = i;
+		
+		for (var i = 0; i < humanToRigArr.Length; ++i)
+		{
+			ref var v = ref humanToRigArr[i];
+			var mirroredPart = humanoidMirrorTable[i];
+			mirroredIndicesArr[v] = humanToRigArr[(int)mirroredPart];
+		}
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -479,11 +496,16 @@ public partial class RigDefinitionBaker: Baker<RigDefinitionAuthoring>
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	unsafe Entity GetEntityForBone(Transform t, TransformUsageFlags boneFlags, bool automaticBoneStripping)
+	unsafe Entity GetEntityForBone(Transform t, TransformUsageFlags boneFlags, RigDefinitionAuthoring rigDef)
 	{
+		//	Hierarchy root should be always included
+		if (t == rigDef.transform)
+			return GetEntity(t, boneFlags);
+		
 		if (t == null || t.GetComponent<SkinnedMeshRenderer>() != null)
 			return Entity.Null;
 
+		var automaticBoneStripping = rigDef.boneEntityStrippingMode == RigDefinitionAuthoring.BoneEntityStrippingMode.Automatic;
 		var rv = automaticBoneStripping ? _State.BakedEntityData->GetEntity(t) : GetEntity(t, boneFlags);
 		return rv;
 	}

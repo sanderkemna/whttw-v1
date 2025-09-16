@@ -10,7 +10,7 @@ using Unity.Transforms;
 
 namespace Rukhanka
 {
-partial struct GPUAttachmentsUpdateSystem
+partial class GPUAttachmentsUpdateSystem
 {
 [BurstCompile]
 partial struct UpdateGPUAttachmentBoneIndexJob: IJobEntity
@@ -39,12 +39,13 @@ partial struct UpdateGPUAttachmentBoneIndexJob: IJobEntity
         Entity e,
         ref GPUAttachmentBoneIndexMPComponent abi,
         ref GPUAttachmentToBoneTransformMPComponent atbt,
-        ref GPURigEntityLocalToWorldMPComponent rltw
+        ref GPURigEntityLocalToWorldMPComponent rltw,
+        in GPUAttachmentComponent ac
     )
     {
         abi.boneIndex = -1;
         
-        var pbi = GetParentRigBoneEntity(e);
+        var pbi = GetParentRigBoneEntity(e, ac);
         if (pbi.boneEntity == Entity.Null)
             return;
         
@@ -59,7 +60,7 @@ partial struct UpdateGPUAttachmentBoneIndexJob: IJobEntity
     
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    ParentBoneInfo GetParentRigBoneEntity(Entity e)
+    ParentBoneInfo GetParentRigBoneEntity(Entity e, GPUAttachmentComponent ac)
     {
         AnimatorEntityRefComponent rbr = default;
         float4x4 entityToBoneTransform = float4x4.identity;
@@ -80,7 +81,7 @@ partial struct UpdateGPUAttachmentBoneIndexJob: IJobEntity
         {
             rv.boneEntity = parent.Value;
             rv.rigEntity = rbr.animatorEntity;
-            rv.boneIndexInRig = rbr.boneIndexInAnimationRig;
+            rv.boneIndexInRig = math.select(rbr.boneIndexInAnimationRig, ac.attachedBoneIndex, ac.attachedBoneIndex >= 0);
             rv.attachmentToBoneTransform = entityToBoneTransform;
         }
         

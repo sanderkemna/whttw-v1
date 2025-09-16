@@ -1,8 +1,8 @@
 #if !RUKHANKA_NO_DEFORMATION_SYSTEM
 
 using Unity.Entities;
-using Unity.Burst;
 using Unity.Transforms;
+using UnityEngine;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -12,26 +12,40 @@ namespace Rukhanka
 [WorldSystemFilter(WorldSystemFilterFlags.Editor | WorldSystemFilterFlags.Default)]
 [UpdateInGroup(typeof(RukhankaDeformationSystemGroup))]
 [UpdateAfter(typeof(MeshDeformationSystem))]
-partial struct GPUAttachmentsUpdateSystem: ISystem
+partial class GPUAttachmentsUpdateSystem: SystemBase
 {
-    [BurstCompile]
-    public void OnCreate(ref SystemState ss)
+    GraphicsBuffer dummyGB;
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    protected override void OnCreate()
     {
         var gpuAttachmentsQuery = SystemAPI.QueryBuilder()
             .WithAll<GPUAttachmentBoneIndexMPComponent>()
             .Build();
-        ss.RequireForUpdate(gpuAttachmentsQuery);
+        RequireForUpdate(gpuAttachmentsQuery);
+        
+        //  Make small dummy bone transform buffer to prevent "attempted to draw with missing bindings" warnings and missed meshes for GPU attachments in edit mode
+		dummyGB = new (GraphicsBuffer.Target.Structured, GraphicsBuffer.UsageFlags.None, 1, 4);
+		Shader.SetGlobalBuffer(GPUAnimationSystem.ShaderID_rigSpaceBoneTransformsBuf, dummyGB);
+		Shader.SetGlobalBuffer(GPUAnimationSystem.ShaderID_boneLocalTransforms, dummyGB);
     }
     
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    [BurstCompile]
-    public void OnUpdate(ref SystemState ss)
+    protected override void OnDestroy()
+    {
+        dummyGB?.Dispose();
+    }
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    protected override void OnUpdate()
     {
         var animatedDataOffsetsMap =
             SystemAPI.TryGetSingleton<GPURuntimeAnimationData>(out var rad)
             ? rad.frameEntityAnimatedDataOffsetsMap
-            : new (0x4, ss.WorldUpdateAllocator);
+            : new (0x4, WorldUpdateAllocator);
         
         var attachmentBoneIndexUpdateJob = new UpdateGPUAttachmentBoneIndexJob()
         {
@@ -40,9 +54,9 @@ partial struct GPUAttachmentsUpdateSystem: ISystem
             parentLookup = SystemAPI.GetComponentLookup<Parent>(true),
             rigBoneRefLookup = SystemAPI.GetComponentLookup<AnimatorEntityRefComponent>(true),
         };
-        var attachmentBoneIndexUpdateJH = attachmentBoneIndexUpdateJob.ScheduleParallel(ss.Dependency);
-        ss.Dependency = attachmentBoneIndexUpdateJH;
-        ss.Dependency.Complete();
+        var attachmentBoneIndexUpdateJH = attachmentBoneIndexUpdateJob.ScheduleParallel(Dependency);
+        Dependency = attachmentBoneIndexUpdateJH;
+        Dependency.Complete();
     }
 }
 }

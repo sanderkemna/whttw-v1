@@ -5,7 +5,10 @@ using UnityEngine;
 
 namespace Rukhanka.Hybrid
 {
-public class BoneVisualizationAuthoring: MonoBehaviour { }
+public class BoneVisualizationAuthoring: MonoBehaviour
+{
+	public float tripodSize;
+}
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -15,7 +18,11 @@ class BoneVisualizationBaker: Baker<BoneVisualizationAuthoring>
 	{
 	#if !UNITY_SERVER
 		var e = GetEntity(TransformUsageFlags.Dynamic);
-		AddComponent<BoneVisualizationComponent>(e);
+		var bvc = new BoneVisualizationComponent()
+		{
+			tripodSize = a.tripodSize
+		};
+		AddComponent(e, bvc);
 	#endif
 		
 	#if (RUKHANKA_NO_DEBUG_DRAWER && RUKHANKA_DEBUG_INFO)

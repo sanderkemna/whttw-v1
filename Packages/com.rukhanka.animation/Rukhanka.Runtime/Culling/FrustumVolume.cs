@@ -116,18 +116,36 @@ internal struct FrustumVolume
         rv.middlePoint = mp.xyz / mp.w;
         
         //  Build planes
-        // +X
-        rv.planes[0] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[7], rv.points[6]);
-        // -X
-        rv.planes[1] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[5], rv.points[4]);
-        // +Y
-        rv.planes[2] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[6], rv.points[5]);
-        // -Y
-        rv.planes[3] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[4], rv.points[7]);
-        // +Z
-        rv.planes[4] = MathUtils.BuildPlaneFromNormalAndPoint(-ccd.viewDir, rv.points[5]);
-        // -Z
-        rv.planes[5] = MathUtils.BuildPlaneFromNormalAndPoint(ccd.viewDir, rv.points[0]);
+        if (ccd.isOrthographic)
+        {
+            // +X
+            rv.planes[0] = MathUtils.BuildPlaneFromThreePoints(rv.points[3], rv.points[7], rv.points[2]);
+            // -X
+            rv.planes[1] = MathUtils.BuildPlaneFromThreePoints(rv.points[1], rv.points[5], rv.points[0]);
+            // +Y
+            rv.planes[2] = MathUtils.BuildPlaneFromThreePoints(rv.points[2], rv.points[6], rv.points[1]);
+            // -Y
+            rv.planes[3] = MathUtils.BuildPlaneFromThreePoints(rv.points[0], rv.points[4], rv.points[3]);
+            // +Z
+            rv.planes[4] = MathUtils.BuildPlaneFromThreePoints(rv.points[5], rv.points[6], rv.points[4]);
+            // -Z
+            rv.planes[5] = MathUtils.BuildPlaneFromThreePoints(rv.points[0], rv.points[2], rv.points[1]);
+        }
+        else
+        {
+            // +X
+            rv.planes[0] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[7], rv.points[6]);
+            // -X
+            rv.planes[1] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[5], rv.points[4]);
+            // +Y
+            rv.planes[2] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[6], rv.points[5]);
+            // -Y
+            rv.planes[3] = MathUtils.BuildPlaneFromThreePoints(ccd.pos, rv.points[4], rv.points[7]);
+            // +Z
+            rv.planes[4] = MathUtils.BuildPlaneFromNormalAndPoint(-ccd.viewDir, rv.points[5]);
+            // -Z
+            rv.planes[5] = MathUtils.BuildPlaneFromNormalAndPoint(ccd.viewDir, rv.points[0]);
+        }
         
         return rv;
     }

@@ -39,6 +39,7 @@ public struct ChildMotion
 	public Motion motion;
 	public float threshold;
 	public float timeScale;
+	public bool mirror;
 	public FixedStringName directBlendParameterName;
 	public float2 position2D;
 }

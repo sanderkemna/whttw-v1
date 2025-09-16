@@ -93,7 +93,7 @@ partial struct SetDeformedMeshIndicesJob: IJobEntity
 	[NativeDisableUnsafePtrRestriction]
 	public UnsafeAtomicCounter32 frameDeformedVerticesCounter;
 	
-#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 	//	Either 0 or 1
 	public int currentFrameDeformedBufferIndex;
 #endif
@@ -102,7 +102,7 @@ partial struct SetDeformedMeshIndicesJob: IJobEntity
 
 	unsafe void Execute(in AnimatedRendererComponent arc, ref DeformedMeshIndex dri, ref DeformedMeshIndexDeprecated drid)
 	{
-	#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+	#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 		dri.Value[2] = (uint)currentFrameDeformedBufferIndex;
 	#endif
 		
@@ -112,7 +112,7 @@ partial struct SetDeformedMeshIndicesJob: IJobEntity
 		//	of skinned vertices data. Indexing it will return zero values for skinning mesh
 		if (!entityToSMRFrameDataMap.TryGetValue(arc.skinnedMeshEntity, out var smrdd))
 		{
-		#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+		#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 			#if RUKHANKA_INPLACE_SKINNING
 				dri.Value[currentFrameDeformedBufferIndex] = 0xffffffff;
 			#else
@@ -130,7 +130,7 @@ partial struct SetDeformedMeshIndicesJob: IJobEntity
 			return;
 		}
 		
-	#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+	#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 		dri.Value[currentFrameDeformedBufferIndex] = (uint)smrdd.deformedVertexIndex;
 		drid.Value[currentFrameDeformedBufferIndex] = dri.Value[currentFrameDeformedBufferIndex];
 	#else

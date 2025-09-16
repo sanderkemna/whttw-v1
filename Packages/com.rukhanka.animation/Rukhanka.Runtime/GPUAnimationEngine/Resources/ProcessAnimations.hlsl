@@ -13,6 +13,7 @@ RWStructuredBuffer<BoneTransform> outAnimatedBones;
 float2 NormalizeAnimationTime(float at, AnimationClip ac)
 {
     at += ac.cycleOffset;
+    if (at < 0) at = 1 + at;
     float normalizedTime = ac.IsLooped() ? frac(at) : saturate(at);
     float timeInSeconds = normalizedTime * ac.length;
     float2 rv = float2(timeInSeconds, normalizedTime);
@@ -38,9 +39,9 @@ BoneTransform CalculateLoopPose(BoneTransform bonePose, TrackSet ts, HumanRotati
 {
     float lerpFactor = normalizedTime;
 
-    FirstFrameTrackSampler ffSampler;
+    TrackSampler ffSampler = CreateFirstFrameTrackSampler();
     BoneTransformAndFlags rootPoseStart = SampleTrackGroup(ts, ffSampler, hrd);
-    LastFrameTrackSampler lfSampler;
+    TrackSampler lfSampler = CreateLastFrameTrackSampler();
     BoneTransformAndFlags rootPoseEnd = SampleTrackGroup(ts, lfSampler, hrd);
 
     float3 dPos = rootPoseEnd.bt.pos - rootPoseStart.bt.pos;
@@ -68,8 +69,7 @@ bool SampleAnimation(AnimationClip ac, uint baseAddress, float2 animTime, int ri
     tsClip.trackGroupsOffset += trackGroupIndex * 4;
 
     float timeInSeconds = animTime.x;
-    DefaultTrackSampler tSampler;
-    tSampler.time = timeInSeconds;
+    TrackSampler tSampler = CreateDefaultTrackSampler(timeInSeconds);
     btf = SampleTrackGroup(tsClip, tSampler, hrd);
 
     if (blendMode == BLEND_MODE_ADDITIVE)
@@ -83,7 +83,7 @@ bool SampleAnimation(AnimationClip ac, uint baseAddress, float2 animTime, int ri
         int additiveTrackGroupIndex = QueryPerfectHashTable(rigBoneHash, additiveTrackSet.trackGroupPHTSeed, additiveTrackSet.trackGroupPHTOffset, additiveTrackSet.trackGroupPHTSizeMask);
         if (additiveTrackGroupIndex >= 0)
         {
-            FirstFrameTrackSampler ffSampler;
+            TrackSampler ffSampler = CreateFirstFrameTrackSampler();
             additiveTrackSet.trackGroupsOffset += additiveTrackGroupIndex * 4;
             BoneTransformAndFlags additiveFramePose = SampleTrackGroup(additiveTrackSet, ffSampler, hrd);
             btf.bt = MakeAdditiveAnimation(btf.bt, additiveFramePose.bt);

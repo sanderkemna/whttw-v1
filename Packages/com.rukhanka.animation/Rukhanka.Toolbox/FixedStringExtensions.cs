@@ -9,7 +9,7 @@ namespace Rukhanka.Toolbox
 {
 public static class FixedStringExtensions
 {
-	public unsafe static Hash128 CalculateHash128(in this FixedStringName s)
+	public static unsafe Hash128 CalculateHash128(in this FixedStringName s)
 	{
 		if (s.IsEmpty)
 			return default;
@@ -32,7 +32,7 @@ public static class FixedStringExtensions
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-	public unsafe static uint CalculateHash32(in this FixedStringName s)
+	public static unsafe uint CalculateHash32(in this FixedStringName s)
 	{
 		if (s.IsEmpty)
 			return default;

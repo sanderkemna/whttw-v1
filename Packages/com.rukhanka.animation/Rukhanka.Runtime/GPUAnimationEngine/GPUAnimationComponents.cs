@@ -12,6 +12,13 @@ public struct GPUAnimationEngineTag: IComponentData, IEnableableComponent { }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+public struct GPUAttachmentComponent: IComponentData
+{
+    public int attachedBoneIndex;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //  Used to move attachments using GPU computed bone poses in shader
 [MaterialProperty("_RukhankaGPUBoneIndex")]
 public struct GPUAttachmentBoneIndexMPComponent: IComponentData

@@ -291,7 +291,7 @@ public struct StateMachineProcessJob: IJobChunk
 
 		ExitTransition(ref acc, ref events);
 		EnterTransition(ref acc, ref layer, runtimeParams, srcStateDurationFrameDelta, curStateDuration, ref events, triggersToReset);
-		//	Check tranision exit conditions one more time in case of Enter->Exit sequence appeared in single frame
+		//	Check transition exit conditions one more time in case of Enter->Exit sequence appeared in single frame
 		ExitTransition(ref acc, ref events);
 
 		ProcessTransitionInterruptions();

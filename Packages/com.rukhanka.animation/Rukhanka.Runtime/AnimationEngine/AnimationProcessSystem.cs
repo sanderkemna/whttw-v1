@@ -113,36 +113,6 @@ public partial struct AnimationProcessSystem: ISystem
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	JobHandle EmitAnimationEvents(ref SystemState ss, JobHandle dependsOn)
-	{
-		var debugLog = false;
-		var dt = SystemAPI.Time.DeltaTime;
-		
-	#if RUKHANKA_DEBUG_INFO
-		if (SystemAPI.TryGetSingleton<DebugConfigurationComponent>(out var dc))
-			debugLog = dc.logAnimationEvents;
-	#endif
-		
-		var emitAnimationEventsJob = new EmitAnimationEventsJob()
-		{
-			doDebugLogging = debugLog,
-			deltaTime = dt
-		};
-		var jh = emitAnimationEventsJob.ScheduleParallel(dependsOn);
-		return jh;
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	JobHandle MakeProcessedAnimationsSnapshot(ref SystemState ss, JobHandle dependsOn)
-	{
-		var makeProcessedAnimationsSnapshotJob = new MakeProcessedAnimationsSnapshotJob() { };
-		var jh = makeProcessedAnimationsSnapshotJob.ScheduleParallel(dependsOn);
-		return jh;
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 	JobHandle AnimationCalculation(ref SystemState ss, NativeList<Entity> entitiesArr, in RuntimeAnimationData runtimeData, JobHandle dependsOn)
 	{
 		var animationToProcessBufferLookup = SystemAPI.GetBufferLookup<AnimationToProcessComponent>(true);
@@ -266,13 +236,7 @@ public partial struct AnimationProcessSystem: ISystem
 		var chunkBaseEntityIndices = animatedObjectQuery.CalculateBaseEntityIndexArrayAsync(ss.WorldUpdateAllocator, ss.Dependency, out var baseIndexCalcJH);
 		var entitiesArr = animatedObjectQuery.ToEntityListAsync(ss.WorldUpdateAllocator, ss.Dependency, out var entityArrJH);
 
-		//	Emit animation events based on current and previously processed animations
-		var emitAnimationEventsJH = EmitAnimationEvents(ref ss, ss.Dependency);
-		
-		//	Make a snapshot of current frame animations, to use it in next frame as previously processed jobs
-		var makeProcessedAnimationsSnapshotJH = MakeProcessedAnimationsSnapshot(ref ss, emitAnimationEventsJH);
-
-		var combinedJH = JobHandle.CombineDependencies(baseIndexCalcJH, entityArrJH, makeProcessedAnimationsSnapshotJH);
+		var combinedJH = JobHandle.CombineDependencies(baseIndexCalcJH, entityArrJH);
 		
 		//	Define array with bone pose offsets for calculated bone poses
 		var calcBoneOffsetsJH = PrepareComputationData(ref ss, chunkBaseEntityIndices, ref runtimeData, entitiesArr, combinedJH);

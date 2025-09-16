@@ -14,8 +14,4 @@
 #pragma kernel CopyInitialMeshData
 #pragma kernel CopyInitialMeshBlendShapes
 #pragma kernel CreatePerVertexDeformationWorkload
-#pragma kernel Skinning_128
-#pragma kernel Skinning_256
-#pragma kernel Skinning_512
-#pragma kernel Skinning_1024
-#pragma kernel Skinning_2048
+#pragma kernel Skinning

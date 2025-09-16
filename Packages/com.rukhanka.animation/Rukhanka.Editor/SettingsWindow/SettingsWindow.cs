@@ -49,7 +49,7 @@ public class SettingsWindow: SettingsProvider
         
         ConfigureUI(settingsInstance);
         SetupDebugAndValidationCheckbox(settingsInstance);
-        SetupToggle(settingsInstance, "ENABLE_DOTS_DEFORMATION_MOTION_VECTORS", "enableMotionVectorsToggle", new []{ runtimeRSP, hybridRSP }, scm);
+        SetupToggle(settingsInstance, "RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS", "enableMotionVectorsToggle", new []{ runtimeRSP, hybridRSP }, scm);
     #if RUKHANKA_INPLACE_SKINNING
         var hdd = settingsInstance.Q<VisualElement>("halfDeformedData");
         var hddl = settingsInstance.Q<Label>("halfDeformedDataLabel");
@@ -126,8 +126,8 @@ public class SettingsWindow: SettingsProvider
     {
         var debugInfoIcon = settingsInstance.Q<Label>("debugInfoHelpIcon");
         debugInfoIcon.RegisterCallback<ClickEvent>(evt => { Application.OpenURL("https://docs.rukhanka.com/Debug%20and%20Validation/validation_layer"); });
-        var halfPrecisionDeformationDataIcon = settingsInstance.Q<Label>("halfDeformedDataHelpIcon");
-        halfPrecisionDeformationDataIcon.RegisterCallback<ClickEvent>(evt => { Application.OpenURL("https://docs.rukhanka.com/deformation_system"); });
+        var enableMotionVectorsHelpIcon = settingsInstance.Q<Label>("enableMotionVectorsHelpIcon");
+        enableMotionVectorsHelpIcon.RegisterCallback<ClickEvent>(evt => { Application.OpenURL("https://docs.rukhanka.com/settings_dialog#enable-motion-vectors-for-deformation-shaders"); });
         var dualQuaternionSkinningIcon = settingsInstance.Q<Label>("dualQuaternionSkinningHelpIcon");
         dualQuaternionSkinningIcon.RegisterCallback<ClickEvent>(evt => { Application.OpenURL("https://docs.rukhanka.com/settings_dialog#dual-quaternion-skinning"); });
         var halfDeformedDataHelpIcon = settingsInstance.Q<Label>("halfDeformedDataHelpIcon");

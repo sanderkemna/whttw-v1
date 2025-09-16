@@ -48,6 +48,7 @@ public struct HumanRotationData
 public struct HumanData
 {
 	public BlobArray<HumanRotationData> humanRotData;
+	public BlobArray<int> mirroredBoneIndices;
 	public BlobArray<int> humanBoneToSkeletonBoneIndices;
 }
 

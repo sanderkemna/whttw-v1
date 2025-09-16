@@ -42,6 +42,7 @@ namespace Rukhanka
         GPUAnimator_SkinnedMeshBone_Read,
         GPUAnimator_RigDefinition_Read,
         GPUAnimator_RigBone_Read,
+        GPUAnimator_GPUAttachment_RigSpaceBoneTransforms_Read,
 		Total
     }
 }

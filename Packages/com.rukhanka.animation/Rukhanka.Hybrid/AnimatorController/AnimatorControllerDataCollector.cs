@@ -333,6 +333,7 @@ internal class AnimatorControllerDataCollector
 		var rv = new RTP.ChildMotion();
 		rv.threshold = cm.threshold;
 		rv.timeScale = cm.timeScale;
+		rv.mirror = cm.mirror;
 		rv.directBlendParameterName = cm.directBlendParameter;
 		//	Data for 2D blend trees
 		rv.position2D = cm.position;

@@ -3,6 +3,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
+#include "Packages/com.rukhanka.animation/Rukhanka.Runtime/GPUAnimationEngine/Resources/TrackSampler.hlsl"
+
+/////////////////////////////////////////////////////////////////////////////////
+
 struct BoneTransformAndFlags
 {
     BoneTransform bt;
@@ -15,13 +19,6 @@ struct BoneTransformAndFlags
         rv.flags = 0;
         return rv;
     }
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-
-interface ITrackSampler
-{
-    float Sample(Track tk, int keyFrameBaseAddress);
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -69,7 +66,7 @@ Quaternion MuscleValuesToQuaternion(HumanRotationData humanBoneInfo, float3 musc
 
 /////////////////////////////////////////////////////////////////////////////////
 
-BoneTransformAndFlags SampleTrackGroup(TrackSet ts, ITrackSampler trackSampler, HumanRotationData hrd)
+BoneTransformAndFlags SampleTrackGroup(TrackSet ts, TrackSampler trackSampler, HumanRotationData hrd)
 {
     int trackStartIndex = animationClips.Load(ts.trackGroupsOffset);
     int trackEndIndex = animationClips.Load(ts.trackGroupsOffset + 4);
@@ -121,6 +118,7 @@ BoneTransformAndFlags SampleTrackGroup(TrackSet ts, ITrackSampler trackSampler, 
         rot[0] = q.value.x;
         rot[1] = q.value.y;
         rot[2] = q.value.z;
+        rot[3] = q.value.w;
     }
 
     if (isHumanMuscle)
@@ -143,38 +141,6 @@ BoneTransformAndFlags SampleTrackGroup(TrackSet ts, ITrackSampler trackSampler, 
     rv.flags = flags;
 
     return rv;
-};
-
-//-----------------------------------------------------------------------------------------//
-
-struct DefaultTrackSampler: ITrackSampler
-{
-    float time;
-
-    float Sample(Track tk, int keyFrameBaseAddress)
-    {
-        return tk.SampleByBinarySearch(time, keyFrameBaseAddress);
-    }
-};
-
-//-----------------------------------------------------------------------------------------//
-
-struct FirstFrameTrackSampler: ITrackSampler
-{
-    float Sample(Track tk, int keyFrameBaseAddress)
-    {
-        return tk.GetFirstFrameValue(keyFrameBaseAddress);
-    }
-};
-
-//-----------------------------------------------------------------------------------------//
-
-struct LastFrameTrackSampler: ITrackSampler
-{
-    float Sample(Track tk, int keyFrameBaseAddress)
-    {
-        return tk.GetLastFrameValue(keyFrameBaseAddress);
-    }
 };
 
 #endif

@@ -154,6 +154,7 @@ public struct ChildMotionBlob
 	public MotionBlob motion;
 	public float threshold;
 	public float timeScale;
+	public bool mirror;
 	public float2 position2D;
 	public int directBlendParameterIndex;
 }

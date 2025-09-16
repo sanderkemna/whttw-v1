@@ -9,13 +9,37 @@ using UnityEngine;
 namespace Rukhanka
 {
 
-[WorldSystemFilter(WorldSystemFilterFlags.Default)]
+[WorldSystemFilter(WorldSystemFilterFlags.Default | WorldSystemFilterFlags.Editor)]
 [UpdateInGroup(typeof(RukhankaDeformationSystemGroup), OrderLast = true)]
 public partial class ShaderDebugAndValidationSystem: SystemBase
 {
-	GraphicsBuffer debugLoggerCB;
-	int[] debugLoggerReadbackData;
-	int[] debugLoggerZeroData;
+	
+/////////////////////////////////////////////////////////////////////////////////
+	
+	protected override void OnUpdate()
+	{
+		for (var i = 0; i <  ShaderDebugAndValidationInitSystem.debugLoggerReadbackData.Length; ++i)
+		{
+			var errorsCount = ShaderDebugAndValidationInitSystem.debugLoggerReadbackData[i];
+			if (errorsCount == 0)
+				continue;
+			
+			var dm = (RukhankaDebugMarkers)i;
+			Debug.LogException(new Exception($"Shader Validation: '{dm.ToString()}' marker error count '{errorsCount}'"));
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------//
+
+[WorldSystemFilter(WorldSystemFilterFlags.Default | WorldSystemFilterFlags.Editor)]
+[UpdateInGroup(typeof(InitializationSystemGroup), OrderFirst = true)]
+internal partial class ShaderDebugAndValidationInitSystem: SystemBase
+{
+	public static GraphicsBuffer debugLoggerCB;
+	public static int[] debugLoggerReadbackData;
+	public static int[] debugLoggerZeroData;
+	static readonly int ShaderID_debugLoggerCB = Shader.PropertyToID("debugLoggerCB");
 	
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -26,25 +50,16 @@ public partial class ShaderDebugAndValidationSystem: SystemBase
 		debugLoggerZeroData = new int[totalMarkers];
 		debugLoggerCB = new GraphicsBuffer(GraphicsBuffer.Target.Structured, GraphicsBuffer.UsageFlags.None, totalMarkers, sizeof(int));
 		debugLoggerCB.SetData(debugLoggerZeroData);
-		Shader.SetGlobalBuffer("debugLoggerCB", debugLoggerCB);
+		Shader.SetGlobalBuffer(ShaderID_debugLoggerCB, debugLoggerCB);
 	}
 	
 /////////////////////////////////////////////////////////////////////////////////
 
 	protected override void OnUpdate()
 	{
+		Shader.SetGlobalBuffer(ShaderID_debugLoggerCB, debugLoggerCB);
 		debugLoggerCB.GetData(debugLoggerReadbackData);
 		debugLoggerCB.SetData(debugLoggerZeroData);
-		
-		for (var i = 0; i < debugLoggerReadbackData.Length; ++i)
-		{
-			var errorsCount = debugLoggerReadbackData[i];
-			if (errorsCount == 0)
-				continue;
-			
-			var dm = (RukhankaDebugMarkers)i;
-			Debug.LogException(new Exception($"Shader Validation: '{dm.ToString()}' marker error count '{errorsCount}'"));
-		}
 	}
 	
 /////////////////////////////////////////////////////////////////////////////////

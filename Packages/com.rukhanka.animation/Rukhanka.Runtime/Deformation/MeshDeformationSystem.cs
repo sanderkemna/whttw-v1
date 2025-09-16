@@ -28,7 +28,7 @@ public partial class MeshDeformationSystem: SystemBase
 	GraphicsBuffer frameVertexSkinningWorkloadCB;
 	
 	GraphicsBuffer finalDeformedVerticesCB;
-#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 	//	Double buffer scheme. Current frame will read previous frame data to calculate motion delta
 	GraphicsBuffer finalDeformedVerticesCB1;
 	uint bufferSwapCounter = 0;
@@ -114,7 +114,7 @@ public partial class MeshDeformationSystem: SystemBase
 		frameVertexSkinningWorkloadCB?.Dispose();
 		
 		finalDeformedVerticesCB?.Dispose();
-	#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+	#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 		finalDeformedVerticesCB1?.Dispose();
 	#endif
 		
@@ -233,12 +233,21 @@ public partial class MeshDeformationSystem: SystemBase
 			cs1.SetBuffer(skinningKernel, ShaderID_outDeformedVertices, outDeformedVerticesCB);
 			cs1.SetInt(ShaderID_totalSkinnedVerticesCount, frameDeformedVerticesCount);
 			cs1.SetInt(ShaderID_voidMeshVertexCount, drd.maximumVerticesAcrossAllRegisteredMeshes);
-			skinningKernel.Dispatch(deformedVerticesBufferSize, 1, 1);
+			
+			var maxWorkGroupSize = (int)skinningKernel.GetMaxWorkGroupSize().x;
+			var numDispatchCalls = 0;
+			for (var currentVertexOffset = 0; currentVertexOffset < deformedVerticesBufferSize; currentVertexOffset += maxWorkGroupSize)
+			{
+				var deformedVertexCount = math.min(maxWorkGroupSize, deformedVerticesBufferSize - currentVertexOffset);
+				cs1.SetInt(ShaderID_currentSkinnedVertexOffset, currentVertexOffset);
+				skinningKernel.Dispatch(deformedVertexCount, 1, 1);
+				numDispatchCalls += 1;
+			}
 		}
 		
 		Shader.SetGlobalBuffer(ShaderID_DeformedMeshData, outDeformedVerticesCB);
 		
-	#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+	#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 		if (finalDeformedVerticesCB1 != null)
 			Shader.SetGlobalBuffer(ShaderID_PreviousFrameDeformedMeshData, finalDeformedVerticesCB1);
 		(finalDeformedVerticesCB, finalDeformedVerticesCB1) = (finalDeformedVerticesCB1, finalDeformedVerticesCB);
@@ -354,7 +363,7 @@ public partial class MeshDeformationSystem: SystemBase
 		{
 			frameDeformedVerticesCounter = new UnsafeAtomicCounter32(UnsafeUtility.AddressOf(ref drd.frameDeformedVerticesCount)),
 			entityToSMRFrameDataMap = drd.entityToSMRFrameDataMap,
-		#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+		#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 			currentFrameDeformedBufferIndex = (int)(bufferSwapCounter & 1)
 		#endif
 		};
@@ -374,13 +383,7 @@ public partial class MeshDeformationSystem: SystemBase
 		fillInitialMeshDataKernel = new ComputeKernel(meshDeformationSystemCS, "CopyInitialMeshData");
 		fillInitialMeshBlendShapesKernel = new ComputeKernel(meshDeformationSystemCS, "CopyInitialMeshBlendShapes");
 		createPerVertexDeformationWorkloadKernel = new ComputeKernel(meshDeformationSystemCS, "CreatePerVertexDeformationWorkload");
-		
-		//	Pick skinning kernel depending on hardware capabilities (max workgroup size)
-		var workGroupSizeX = math.ceilpow2(SystemInfo.maxComputeWorkGroupSizeX);
-		if (workGroupSizeX != SystemInfo.maxComputeWorkGroupSizeX)
-			workGroupSizeX >>= 1;
-		
-		skinningKernel = new ComputeKernel(meshDeformationSystemCS, $"Skinning_{workGroupSizeX}");
+		skinningKernel = new ComputeKernel(meshDeformationSystemCS, "Skinning");
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

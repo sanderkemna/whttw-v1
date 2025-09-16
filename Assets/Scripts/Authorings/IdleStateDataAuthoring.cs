@@ -2,10 +2,12 @@ using Unity.Entities;
 using UnityEngine;
 
 public class IdleStateDataAuthoring : MonoBehaviour {
-    [Tooltip("The time untill the default animation changes to another idle animation. This does not change directly but after the default animation has ended.")]
+    [Tooltip("The time untill the default animation changes to another idle animation. " +
+        "This does not change directly but after the default animation has ended.")]
     [SerializeField] private float timeUntilIdleChange;
 
-    [Tooltip("The amount of extra idle animations there are in the blend tree. The default idle animation should be on position 0, and then inbetween all other animations. " +
+    [Tooltip("The amount of extra idle animations there are in the blend tree. The default " +
+        "idle animation should be on position 0, and then inbetween all other animations. " +
         "You end up with n*2-1 animations in the blend tree.")]
     [SerializeField] private int numberOfIdleAnimations;
 

@@ -116,16 +116,9 @@ public struct AnimationStream: IDisposable
         if (boneIndex >= rigBoneProps.rigBoneCount)
             return;
         
-        var absBoneIndex = rigBoneProps.bonePoseOffset + boneIndex;
-        ref var curPose = ref runtimeData.worldSpaceBonesBuffer.ElementAt(absBoneIndex);
+        var curPose = GetWorldPose(boneIndex);
         curPose.pos = pos;
-        
-        var parentWorldPosition = GetParentBoneWorldPose(boneIndex).pos;
-        
-        ref var boneLocalPose = ref runtimeData.animatedBonesBuffer.ElementAt(absBoneIndex);
-        boneLocalPose.pos = pos - parentWorldPosition;
-        
-        MarkChildrenWorldPosesAsDirty(boneIndex);
+        SetWorldPose(boneIndex, curPose);
     }
     
 /////////////////////////////////////////////////////////////////////////////////

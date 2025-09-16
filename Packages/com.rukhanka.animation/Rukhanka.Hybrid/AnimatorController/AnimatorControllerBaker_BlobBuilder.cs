@@ -56,6 +56,7 @@ public partial class AnimatorControllerBaker
 	{
 		cmb.threshold = cm.threshold;
 		cmb.timeScale = cm.timeScale;
+		cmb.mirror = cm.mirror;
 		cmb.position2D = cm.position2D;
 		cmb.directBlendParameterIndex = allParams.IndexOf(cm.directBlendParameterName);
 		AddMotionBlob(cm.motion, ref bb, ref cmb.motion, allParams);

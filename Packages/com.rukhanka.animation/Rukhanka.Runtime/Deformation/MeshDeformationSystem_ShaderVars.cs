@@ -28,6 +28,7 @@ public partial class MeshDeformationSystem
 	readonly int ShaderID_totalDeformedMeshesCount = Shader.PropertyToID("totalDeformedMeshesCount");
 	readonly int ShaderID_totalSkinnedVerticesCount = Shader.PropertyToID("totalSkinnedVerticesCount");
 	readonly int ShaderID_voidMeshVertexCount = Shader.PropertyToID("voidMeshVertexCount");
+	readonly int ShaderID_currentSkinnedVertexOffset = Shader.PropertyToID("currentSkinnedVertexOffset");
 	readonly int ShaderID_DeformedMeshData = Shader.PropertyToID("_DeformedMeshData");
 	readonly int ShaderID_PreviousFrameDeformedMeshData = Shader.PropertyToID("_PreviousFrameDeformedMeshData");
 	readonly int ShaderID_meshBlendShapesBuffer = Shader.PropertyToID("meshBlendShapesBuffer");

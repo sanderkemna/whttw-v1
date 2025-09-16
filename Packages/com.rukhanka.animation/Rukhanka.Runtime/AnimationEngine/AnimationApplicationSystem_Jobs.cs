@@ -251,7 +251,8 @@ unsafe partial struct FillRigToSkinBonesRemapTableCacheJob: IJobEntity
 			}
 		}
 		var rv = bb.CreateBlobAssetReference<BoneRemapTableBlob>(Allocator.Persistent);
-		rigToSkinnedMeshRemapTables.TryAdd(h, rv);
+		if (!rigToSkinnedMeshRemapTables.TryAdd(h, rv))
+			rv.Dispose();
 	}
 }
 

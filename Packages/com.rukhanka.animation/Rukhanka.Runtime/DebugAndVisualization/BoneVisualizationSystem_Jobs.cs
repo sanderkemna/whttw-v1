@@ -42,12 +42,21 @@ partial struct RenderBonesCPUAnimatorsJob: IJobEntity
             if (rb.parentBoneIndex < 0)
                 continue;
 
-            var bonePos0 = bt[l].pos;
-            var bonePos1 = bt[rb.parentBoneIndex].pos;
+            var bonePose0 = bt[l];
+            var bonePose1 = bt[rb.parentBoneIndex];
 
-            if (math.any(math.abs(bonePos0 - bonePos1)))
+            if (math.any(math.abs(bonePose0.pos - bonePose1.pos)))
             {
-                drawer.DrawBoneMesh(bt[l].pos, bt[rb.parentBoneIndex].pos, colorTriangles, colorLines);
+                drawer.DrawBoneMesh(bonePose0.pos, bonePose1.pos, colorTriangles, colorLines);
+                if (bvc.tripodSize > 0)
+                {
+                    var fwd = math.rotate(bonePose0.rot, math.forward()) * bvc.tripodSize;
+                    var left = math.rotate(bonePose0.rot, math.up()) * bvc.tripodSize;
+                    var up = math.rotate(bonePose0.rot, math.left()) * bvc.tripodSize;
+                    drawer.DrawLine(bonePose0.pos, bonePose0.pos + fwd, 0x0000ffff);
+                    drawer.DrawLine(bonePose0.pos, bonePose0.pos + up, 0x00ff00ff);
+                    drawer.DrawLine(bonePose0.pos, bonePose0.pos + left, 0xff0000ff);
+                }
             }
         }
     }

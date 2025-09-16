@@ -1,7 +1,11 @@
 #pragma once
 
+//#pragma enable_d3d11_debug_symbols
+
 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/UnityInstancing.hlsl"
 #include "Packages/com.rukhanka.animation/Rukhanka.Runtime/GPUAnimationEngine/Resources/GPUStructures.hlsl"
+#include "Packages/com.rukhanka.animation/Rukhanka.Runtime/Common/Shaders/ShaderConf.hlsl"
+#include "Packages/com.rukhanka.animation/Rukhanka.Runtime/Common/Shaders/Debug.hlsl"
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -36,7 +40,10 @@ void GPUAttachmentMeshMover_float(in float3 vertex, in float3 normal, in float3 
     float4x4 entityRootLocalToWorld = UNITY_ACCESS_DOTS_INSTANCED_PROP(float4x4, _RukhankaAnimatedEntityLocalToWorld);
 
     animatedVertex = mul(attachmentToBoneTransform, float4(vertex, 1)).xyz;
+    CHECK_STRUCTURED_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_GPUANIMATOR_GPUATTACHMENT_RIG_SPACE_BONE_TRANSFORMS_READ, gpuBoneIndex, rigSpaceBoneTransformsBuf)
     BoneTransform bt = rigSpaceBoneTransformsBuf[gpuBoneIndex];
+    //  No need to scale attached mesh. We are interested only in position + rotation
+    bt.scale = 1;
 
     float3 transformedPos = BoneTransform::TransformPoint(bt, animatedVertex);
     animatedVertex = transformedPos;

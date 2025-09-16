@@ -32,22 +32,25 @@ public partial class RukhankaSystemsBootstrap: SystemBase
 		bool isClient = IsClientOrLocalSimulationWorld(World);
 	#endif
 
+		var sysGroup = World.GetOrCreateSystemManaged<RukhankaAnimationSystemGroup>();
+		var acs = World.CreateSystem<AnimatorControllerSystem<AnimatorControllerQuery>>();
+		var facs = World.CreateSystem<FillAnimationsFromControllerSystem>();
+		var aees = World.CreateSystem<AnimationEventEmitSystem>();
+		var aps = World.CreateSystem<AnimationProcessSystem>();
+		var aas = World.CreateSystem<AnimationApplicationSystem>();
+		var cs = World.CreateSystem<AnimationCullingSystem>();
+		var ikGroup = World.GetOrCreateSystemManaged<RukhankaAnimationInjectionSystemGroup>();
+		var actxus = World.GetOrCreateSystemManaged<AnimationCullingContextUpdateSystem>();
+		
 		//	Add client animator controller systems
 		if (isClient)
 		{
-			var sysGroup = World.GetOrCreateSystemManaged<RukhankaAnimationSystemGroup>();
-			var acs = World.CreateSystem<AnimatorControllerSystem<AnimatorControllerQuery>>();
-			var facs = World.CreateSystem<FillAnimationsFromControllerSystem>();
-			var aps = World.CreateSystem<AnimationProcessSystem>();
-			var aas = World.CreateSystem<AnimationApplicationSystem>();
-			var cs = World.CreateSystem<AnimationCullingSystem>();
-			var ikGroup = World.GetOrCreateSystemManaged<RukhankaAnimationInjectionSystemGroup>();
-			var actxus = World.GetOrCreateSystemManaged<AnimationCullingContextUpdateSystem>();
 			
 			sysGroup.AddSystemToUpdateList(acs);
 			sysGroup.AddSystemToUpdateList(facs);
 			sysGroup.AddSystemToUpdateList(actxus);
 			sysGroup.AddSystemToUpdateList(cs);
+			sysGroup.AddSystemToUpdateList(aees);
 			sysGroup.AddSystemToUpdateList(aps);
 			sysGroup.AddSystemToUpdateList(ikGroup);
 			sysGroup.AddSystemToUpdateList(aas);
@@ -63,18 +66,9 @@ public partial class RukhankaSystemsBootstrap: SystemBase
 	#if RUKHANKA_WITH_NETCODE
 		if (isServer)
 		{
-			var sysGroup = World.GetOrCreateSystemManaged<RukhankaAnimationSystemGroup>();
-			var acs = World.CreateSystem<AnimatorControllerSystem<AnimatorControllerQuery>>();
-			var facs = World.CreateSystem<FillAnimationsFromControllerSystem>();
-			var aps = World.CreateSystem<AnimationProcessSystem>();
-			var aas = World.CreateSystem<AnimationApplicationSystem>();
-			var actxus = World.GetOrCreateSystemManaged<AnimationCullingContextUpdateSystem>();
-			var cs = World.CreateSystem<AnimationCullingSystem>();
-
-			var ikGroup = World.GetOrCreateSystemManaged<RukhankaAnimationInjectionSystemGroup>();
-			
 			sysGroup.AddSystemToUpdateList(acs);
 			sysGroup.AddSystemToUpdateList(facs);
+			sysGroup.AddSystemToUpdateList(aees);
 			sysGroup.AddSystemToUpdateList(aps);
 			sysGroup.AddSystemToUpdateList(ikGroup);
 			sysGroup.AddSystemToUpdateList(aas);

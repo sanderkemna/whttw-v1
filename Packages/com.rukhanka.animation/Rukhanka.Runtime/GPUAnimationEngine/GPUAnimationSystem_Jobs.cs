@@ -276,9 +276,14 @@ partial struct FillFrameAnimatedRigWorkloadBuffersJob: IJobEntity
 			animationToProcessBuf[idx] = gpuAtp;
 		}
 		
+		if (!rigDefinitionOffsets.TryGetValue(rdc.rigBlob.Value.hash, out var rigDefIndex))
+		{
+			return;
+		}
+		
 		var faj = new GPUStructures.AnimationJob()
 		{
-			rigDefinitionIndex = rigDefinitionOffsets[rdc.rigBlob.Value.hash],
+			rigDefinitionIndex = rigDefIndex,
 			animatedBoneIndexOffset = animDataOffset.boneIndex,
 			animationsToProcessRange = new int2(animDataOffset.animationToProcessIndex, atpCount)
 		};
@@ -345,7 +350,9 @@ partial struct FillFrameSkinMatrixWorkloadBuffersJob: IJobEntity
 		BurstAssert.IsTrue(gotAnimDataOffset, "Cannot get output animation data offset for rig");
 		
 		var animatedEntityL2W = localToWorldLookup[asmc.animatedRigEntity];
-		var rootBoneEntityL2W = localToWorldLookup[asmc.rootBoneEntity];
+		var rootBoneEntityL2W = animatedEntityL2W;
+		if (asmc.rootBoneEntity != Entity.Null)
+			rootBoneEntityL2W = localToWorldLookup[asmc.rootBoneEntity];
 		var invAnimatedEntityPose = math.inverse(animatedEntityL2W.Value);
 		var rootBonePose = rootBoneEntityL2W.Value;
 		var rootBoneToEntityTransform = math.mul(invAnimatedEntityPose, rootBonePose);

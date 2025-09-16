@@ -28,6 +28,7 @@ RWStructuredBuffer<DeformedVertex> outDeformedVertices;
 
 uint totalSkinnedVerticesCount;
 uint voidMeshVertexCount;
+int currentSkinnedVertexOffset;
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -125,28 +126,31 @@ DeformedVertex ApplySkinMatrices
 
 /////////////////////////////////////////////////////////////////////////////////
 
-void Skinning(uint tid)
+[numthreads(128, 1, 1)]
+void Skinning(uint tid: SV_DispatchThreadID)
 {
+    uint skinnedVertexIndex = tid + currentSkinnedVertexOffset;
+
     //  Skip zero vertex because it is uninitialized marker
-    if (tid >= totalSkinnedVerticesCount || tid == 0)
+    if (skinnedVertexIndex >= totalSkinnedVerticesCount || skinnedVertexIndex == 0)
     {
-        if (tid < totalSkinnedVerticesCount + voidMeshVertexCount)
+        if (skinnedVertexIndex < totalSkinnedVerticesCount + voidMeshVertexCount)
         {
         #ifdef RUKHANKA_HALF_DEFORMED_DATA
-            outDeformedVertices[tid] = (PackedDeformedVertex)0;
+            outDeformedVertices[skinnedVertexIndex] = (PackedDeformedVertex)0;
         #else
-            outDeformedVertices[tid] = (DeformedVertex)0;
+            outDeformedVertices[skinnedVertexIndex] = (DeformedVertex)0;
         #endif
-            CHECK_STRUCTURED_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_DEFORMATION_COPY_MESH_DATA, tid, outDeformedVertices);
+            CHECK_STRUCTURED_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_DEFORMATION_COPY_MESH_DATA, skinnedVertexIndex, outDeformedVertices);
         }
         return;
     }
 
-    CHECK_RAW_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_DEFORMATION_PER_VERTEX_WORKLOAD_READ, tid * 4, 4, framePerVertexWorkload);
-    uint frameDeformedMeshIndex = framePerVertexWorkload.Load(tid * 4);
+    CHECK_RAW_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_DEFORMATION_PER_VERTEX_WORKLOAD_READ, skinnedVertexIndex * 4, 4, framePerVertexWorkload);
+    uint frameDeformedMeshIndex = framePerVertexWorkload.Load(skinnedVertexIndex * 4);
     CHECK_STRUCTURED_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_DEFORMATION_FRAME_DEFORMED_VERTEX_READ, frameDeformedMeshIndex, frameDeformedMeshes);
     MeshFrameDeformationDescription mfd = frameDeformedMeshes[frameDeformedMeshIndex];
-    uint meshVertexIndex = tid - mfd.baseOutVertexIndex;
+    uint meshVertexIndex = skinnedVertexIndex - mfd.baseOutVertexIndex;
     uint absoluteInputMeshVertexIndex = meshVertexIndex + mfd.baseInputMeshVertexIndex;
     SourceSkinnedMeshVertex smv = SourceSkinnedMeshVertex::ReadFromRawBuffer(inputMeshVertexData, absoluteInputMeshVertexIndex);
 
@@ -161,24 +165,13 @@ void Skinning(uint tid)
     rv = ApplySkinMatrices(rv, smv.boneWeightsOffset, smv.boneWeightsCount, mfd);
 
 #ifdef RUKHANKA_HALF_DEFORMED_DATA
-    outDeformedVertices[tid] = PackedDeformedVertex::Pack(rv);
+    outDeformedVertices[skinnedVertexIndex] = PackedDeformedVertex::Pack(rv);
 #else
-    outDeformedVertices[tid] = rv;
+    outDeformedVertices[skinnedVertexIndex] = rv;
 #endif
-    CHECK_STRUCTURED_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_DEFORMATION_DEFORMED_VERTEX_WRITE, tid, outDeformedVertices);
+    CHECK_STRUCTURED_BUFFER_OUT_OF_BOUNDS(RUKHANKADEBUGMARKERS_DEFORMATION_DEFORMED_VERTEX_WRITE, skinnedVertexIndex, outDeformedVertices);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-
-[numthreads(128, 1, 1)]
-void Skinning_128(uint tid: SV_DispatchThreadID) { Skinning(tid); }
-[numthreads(256, 1, 1)]
-void Skinning_256(uint tid: SV_DispatchThreadID) { Skinning(tid); }
-[numthreads(512, 1, 1)]
-void Skinning_512(uint tid: SV_DispatchThreadID) { Skinning(tid); }
-[numthreads(1024, 1, 1)]
-void Skinning_1024(uint tid: SV_DispatchThreadID) { Skinning(tid); }
-[numthreads(1024, 1, 1)]
-void Skinning_2048(uint tid: SV_DispatchThreadID) { Skinning(tid); }
 
 #endif // SKINNING_HLSL_

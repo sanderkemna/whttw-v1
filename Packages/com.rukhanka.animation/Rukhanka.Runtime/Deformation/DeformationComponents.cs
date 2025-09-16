@@ -24,7 +24,7 @@ namespace Rukhanka
     
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
     //	DEPRECATED: remove me
     [MaterialProperty("_DotsDeformationParams")]
     public struct DeformedMeshIndexDeprecated: IComponentData

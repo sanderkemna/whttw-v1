@@ -7,7 +7,6 @@ using Unity.Burst.CompilerServices;
 using Unity.Burst.Intrinsics;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
-using Unity.Deformations;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -260,6 +259,7 @@ public struct ComputeBoneAnimationJob: IJobParallelForDefer
 	public static float2 NormalizeAnimationTime(float at, ref AnimationClipBlob ac)
 	{
 		at += ac.cycleOffset;
+		if (at < 0) at = 1 + at;
 		var normalizedTime = ac.looped ? math.frac(at) : math.saturate(at);
 		var rv = normalizedTime * ac.length;
 		return new (rv, normalizedTime);
@@ -288,6 +288,8 @@ public struct ComputeBoneAnimationJob: IJobParallelForDefer
 			return;
 
 		var numLoopCycles = (int)math.floor(atp.time + atp.animation.Value.cycleOffset);
+		var cycleSign = math.sign(numLoopCycles);
+		numLoopCycles = math.abs(numLoopCycles);
 		if (numLoopCycles < 1)
 			return;
 
@@ -295,6 +297,8 @@ public struct ComputeBoneAnimationJob: IJobParallelForDefer
 		var startFramePose = GetTransformFrame(ref ts, trackRange, default, TrackFrame.First);
 
 		var deltaPose = BoneTransform.Multiply(endFramePose, BoneTransform.Inverse(startFramePose));
+		if (cycleSign < 0)
+			deltaPose = BoneTransform.Inverse(deltaPose);
 
 		BoneTransform accumCyclePose = BoneTransform.Identity();
 		for (var c = numLoopCycles; c > 0; c >>= 1)
@@ -349,7 +353,7 @@ public struct ComputeBoneAnimationJob: IJobParallelForDefer
 			if (a.layerIndex == layerIndex) continue;
 
 			var inAvatarMask = IsBoneInAvatarMask(boneIndex, humanAvatarMaskBodyPart, a.avatarMask);
-			var hasTrack = boneHash == 0 || a.animation.Value.clipTracks.GetTrackGroupIndex(boneHash) >= 0;
+			var hasTrack = boneHash == 0 || (a.animation.IsCreated && a.animation.Value.clipTracks.GetTrackGroupIndex(boneHash) >= 0);
 			var layerWeight = inAvatarMask && hasTrack ? a.layerWeight : 0;
 
 			var lw = w * layerWeight;
@@ -512,7 +516,7 @@ public struct ComputeBoneAnimationJob: IJobParallelForDefer
 		//	If we have got Euler angles instead of quaternion, convert them here
 		if (eulerToQuaternion)
 		{
-			rv.rot = quaternion.Euler(math.radians(rv.rot.value.xyz), math.RotationOrder.XYZ);
+			rv.rot = quaternion.EulerZXY(math.radians(rv.rot.value.xyz));
 		}
 
 		if (isHumanMuscle)
@@ -569,7 +573,7 @@ public struct ComputeBoneAnimationJob: IJobParallelForDefer
 		//	If we have got Euler angles instead of quaternion, convert them here
 		if (eulerToQuaternion)
 		{
-			rv.rot = quaternion.Euler(math.radians(rv.rot.value.xyz), math.RotationOrder.XYZ);
+			rv.rot = quaternion.EulerZXY(math.radians(rv.rot.value.xyz));
 		}
 
 		if (isHumanMuscle)
@@ -593,7 +597,7 @@ partial struct ProcessAnimatorParameterCurveJob: IJobEntity
 
 		//	Animations must be ordered by layer index
 		Span<float> layerWeights = stackalloc float[animationsToProcess[^1].layerIndex + 1];
-		ComputeBoneAnimationJob.CalculateFinalLayerWeights(layerWeights, animationsToProcess, -1, 0, (AvatarMaskBodyPart)(-1));
+		ComputeBoneAnimationJob.CalculateFinalLayerWeights(layerWeights, animationsToProcess, -1, SpecialBones.AnimatorTypeNameHash, (AvatarMaskBodyPart)(-1));
 		
 		for (var i = 0; i < acpc.Length; ++i)
 		{
@@ -1012,174 +1016,6 @@ partial struct ComputeRootMotionJob: IJobEntity
 		rmvc.worldVelocity = motionDeltaPose.pos / deltaTime;	
 		TransformHelpers.ComputeWorldTransformMatrix(e, out var localTransformMatrix, ref localTransformLookup, ref parentLookup, ref ptmLookup);
 		rmvc.worldVelocity = math.rotate(localTransformMatrix, rmvc.worldVelocity);
-	}
-}
-
-//=================================================================================================================//
-
-[BurstCompile]
-partial struct EmitAnimationEventsJob : IJobEntity
-{
-	public bool doDebugLogging;
-	public float deltaTime;
-	
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	void Execute(Entity e, in DynamicBuffer<AnimationToProcessComponent> atp, in DynamicBuffer<PreviousProcessedAnimationComponent> ppa, ref DynamicBuffer<AnimationEventComponent> aec)
-	{
-		aec.Clear();
-
-		var ppaArr = ppa.AsNativeArray();
-		var atpArr = atp.AsNativeArray();
-		ulong prevAnimationsProcessedIndices = 0;
-		
-		var maxBitsCount = UnsafeUtility.SizeOf<ulong>() * 8;
-		BurstAssert.IsTrue(ppaArr.Length <= maxBitsCount, "Too many simultaneous animations! Change bits holder to the NativeBitArray if this error occurs.");
-		
-		for (var i = 0; i < atpArr.Length; ++i)
-		{
-			var a = atpArr[i];
-			if (a.animation == BlobAssetReference<AnimationClipBlob>.Null)
-				continue;
-			
-			var curTime = a.time;
-			var prevBufferId = GetPreviousBufferAnimationIndex(a.motionId, i, ppaArr);
-			var prevTime = 0.0f;
-			if (prevBufferId < 0)
-			{
-				//	There is no such animation in "previous buffer". Assume that this animation advances by dt already
-				prevTime = curTime - deltaTime;	
-			}
-			else
-			{
-				prevAnimationsProcessedIndices |= 1ul << prevBufferId;
-				prevTime = ppaArr[prevBufferId].animationTime;
-			}
-			
-			if (prevTime == curTime)
-				continue;
-			
-			var negativeAnimationDT = prevTime > curTime;
-			if (negativeAnimationDT)
-				(prevTime, curTime) = (curTime, prevTime);
-			
-			ref var aes = ref a.animation.Value.events;
-			if (a.animation.Value.looped)
-			{
-				ProcessEventsForLoopedAnimation(e, ref aec, ref aes, prevTime, curTime, negativeAnimationDT);
-			}
-			else
-			{
-                if (prevTime < 1 && curTime > 0)
-					ProcessEventsForAnimation(e, ref aec, ref aes, prevTime, curTime, negativeAnimationDT);
-			}
-		}
-		
-		//	Now we need check for animations that missed now, but were there at previous frame
-		//	Animation can ending playing for at least one frame (dt)
-		for (var i = 0; i < ppaArr.Length; ++i)
-		{
-			var bitMask = 1ul << i;
-			if ((prevAnimationsProcessedIndices & bitMask) != 0)
-				continue;
-			
-			var p = ppaArr[i];
-			ref var aes = ref p.animation.Value.events;
-			ProcessEventsForAnimation(e, ref aec, ref aes, p.animationTime, p.animationTime + deltaTime, false);
-		}
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	void ProcessEventsForLoopedAnimation(Entity e, ref DynamicBuffer<AnimationEventComponent> aec, ref BlobArray<AnimationEventBlob> aes, float prevTime, float curTime, bool negativeAnimationDT)
-	{
-		var t0 = prevTime;
-		var dt = curTime - prevTime;
-		if (t0 < 0)
-			t0 = t0 - math.floor(t0);
-		
-		var t1 = t0 + dt;
-		var it0 = t0;
-		
-		//	Divide whole range to sections that fit in [0..1] range, and execute events calculation for them individually
-		do
-		{
-			it0 = math.floor(it0);
-			var tStart = math.max(it0, t0);
-			var tEnd = math.min(it0 + 1, t1);
-			tEnd -= tStart;
-			tStart = math.frac(tStart);
-			tEnd += tStart;
-			ProcessEventsForAnimation(e, ref aec, ref aes, tStart, tEnd, negativeAnimationDT);
-			it0 += 1;
-		}
-		while (it0 < t1);
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	void ProcessEventsForAnimation(Entity e, ref DynamicBuffer<AnimationEventComponent> outEvents, ref BlobArray<AnimationEventBlob> events, float fStart, float fEnd, bool reverseEventIteration)
-	{
-		for (var i = 0; i < events.Length; ++i)
-		{
-			//	Reverse events iteration order to preserve events order in output buffer
-			var idx = reverseEventIteration ? events.Length - i - 1 : i;
-			ref var ae = ref events[idx];
-			var eventTime = ae.time;
-			
-			var emitEvent = eventTime >= fStart && eventTime <= fEnd;
-		
-			if (emitEvent)
-			{	
-				var evt = new AnimationEventComponent(ref ae);
-				outEvents.Add(evt);
-				
-			#if RUKHANKA_DEBUG_INFO
-				if (doDebugLogging)
-					Debug.Log($"Emit event for entity {e}. Name: {ae.name.ToFixedString()}, Hash: {ae.nameHash}, F: {ae.floatParam}, I: {ae.intParam}, S: {ae.stringParam.ToFixedString()}");
-			#endif
-			}
-		}
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	int GetPreviousBufferAnimationIndex(uint motionId, int animationBufferIndex, NativeArray<PreviousProcessedAnimationComponent> ppa)
-	{
-		//	Fast path
-		if (animationBufferIndex < ppa.Length && ppa[animationBufferIndex].motionId == motionId)
-			return animationBufferIndex;
-
-		//	Full search
-		for (var i = 0; i < ppa.Length; ++i)
-		{
-			if (motionId == ppa[i].motionId)
-				return i;
-		}
-
-		return -1;
-	}
-}
-
-//=================================================================================================================//
-
-[BurstCompile]
-partial struct MakeProcessedAnimationsSnapshotJob: IJobEntity
-{
-	void Execute(in DynamicBuffer<AnimationToProcessComponent> atp, ref DynamicBuffer<PreviousProcessedAnimationComponent> ppa)
-	{
-		ppa.Resize(atp.Length, NativeArrayOptions.UninitializedMemory);
-		for (var i = 0; i < atp.Length; ++i)
-		{
-			var a = atp[i];
-			var p = new PreviousProcessedAnimationComponent()
-			{
-				animationTime = a.time,
-				motionId = a.motionId,
-				animation = a.animation
-			};
-			ppa[i] = p;
-		}
 	}
 }
 }

@@ -17,14 +17,15 @@ public partial class GPUAnimationSystem
 	readonly int ShaderID_animationClips = Shader.PropertyToID("animationClips");
 	readonly int ShaderID_humanRotationDataBuffer = Shader.PropertyToID("humanRotationDataBuffer");
 	readonly int ShaderID_animatedBonesCount = Shader.PropertyToID("animatedBonesCount");
-	readonly int ShaderID_boneLocalTransforms = Shader.PropertyToID("boneLocalTransforms");
 	readonly int ShaderID_outBoneTransforms = Shader.PropertyToID("outBoneTransforms");
 	readonly int ShaderID_avatarMasksBuffer = Shader.PropertyToID("avatarMasksBuffer");
 	readonly int ShaderID_skinMatrixWorkloadBuf = Shader.PropertyToID("skinMatrixWorkloadBuf");
-	readonly int ShaderID_rigSpaceBoneTransformsBuf = Shader.PropertyToID("rigSpaceBoneTransformsBuf");
 	readonly int ShaderID_outSkinMatrices = Shader.PropertyToID("outSkinMatrices");
 	readonly int ShaderID_skinnedMeshBoneData = Shader.PropertyToID("skinnedMeshBoneData");
 	readonly int ShaderID_totalSkinnedMeshes = Shader.PropertyToID("totalSkinnedMeshes");
+	
+	public static readonly int ShaderID_boneLocalTransforms = Shader.PropertyToID("boneLocalTransforms");
+	public static readonly int ShaderID_rigSpaceBoneTransformsBuf = Shader.PropertyToID("rigSpaceBoneTransformsBuf");
 }
 }
 

@@ -380,7 +380,7 @@ public partial class SkinnedMeshBaker: Baker<SkinnedMeshRenderer>
 			if (m == null)
 				continue;
 
-		#if ENABLE_DOTS_DEFORMATION_MOTION_VECTORS
+		#if RUKHANKA_ENABLE_DEFORMATION_MOTION_VECTORS
 			var deformationCompatibleShader = m.HasProperty("_DeformationParamsForMotionVectors");
 			var oldDeformationCompatibleShader = m.HasProperty("_DotsDeformationParams");
 		#else
