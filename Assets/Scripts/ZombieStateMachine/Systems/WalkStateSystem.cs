@@ -1,25 +1,23 @@
 using Unity.Burst;
 using Unity.Entities;
 
-[BurstCompile]
-public partial struct WalkStateSystem : ISystem {
+namespace WHTTW.ZombieStateMachine {
 
     [BurstCompile]
-    private partial struct WalkStateJob : IJobEntity {
-        public float DeltaTime;
+    public partial struct WalkStateSystem : ISystem {
 
-        public void Execute(ref AgentStateData agentState) {
-            if (agentState.Value != AgentStateType.Walk)
-                return;
+        [BurstCompile]
+        private partial struct WalkStateJob : IJobEntity {
 
-            // Walk logic here
+            public void Execute(ref AgentStateData agentState) {
+                if (agentState.State != AgentStateType.Walk) { return; }
+
+                // Walk logic here
+            }
         }
-    }
 
-    public void OnUpdate(ref SystemState state) {
-        var job = new WalkStateJob {
-            DeltaTime = SystemAPI.Time.DeltaTime
-        };
-        job.ScheduleParallel();
+        public void OnUpdate(ref SystemState state) {
+            new WalkStateJob().ScheduleParallel();
+        }
     }
 }

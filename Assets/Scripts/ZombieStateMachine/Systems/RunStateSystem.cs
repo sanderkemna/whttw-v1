@@ -1,25 +1,27 @@
 using Unity.Burst;
 using Unity.Entities;
 
-[BurstCompile]
-public partial struct RunStateSystem : ISystem {
+namespace WHTTW.ZombieStateMachine {
 
     [BurstCompile]
-    private partial struct RunStateJob : IJobEntity {
-        public float DeltaTime;
+    public partial struct RunStateSystem : ISystem {
 
-        public void Execute(ref AgentStateData agentState) {
-            if (agentState.Value != AgentStateType.Run)
-                return;
+        [BurstCompile]
+        private partial struct RunStateJob : IJobEntity {
+            public float DeltaTime;
 
-            // run logic here
+            public void Execute(ref AgentStateData agentState) {
+                if (agentState.State != AgentStateType.Run) { return; }
+
+                // run logic here
+            }
         }
-    }
 
-    public void OnUpdate(ref SystemState state) {
-        var job = new RunStateJob {
-            DeltaTime = SystemAPI.Time.DeltaTime
-        };
-        job.ScheduleParallel();
+        public void OnUpdate(ref SystemState state) {
+            var job = new RunStateJob {
+                DeltaTime = SystemAPI.Time.DeltaTime
+            };
+            job.ScheduleParallel();
+        }
     }
 }

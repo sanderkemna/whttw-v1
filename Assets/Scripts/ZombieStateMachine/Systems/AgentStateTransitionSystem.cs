@@ -1,39 +1,44 @@
 using Unity.Burst;
 using Unity.Entities;
 
-[BurstCompile]
-public partial struct AgentStateTransitionSystem : ISystem {
+namespace WHTTW.ZombieStateMachine {
+
     [BurstCompile]
-    private partial struct StateTransitionJob : IJobEntity {
-        public float DeltaTime;
+    public partial struct AgentStateTransitionSystem : ISystem {
 
-        public void Execute(ref AgentStateData agentState) {
-            agentState.TimeInState += DeltaTime;
+        [BurstCompile]
+        private partial struct StateTransitionJob : IJobEntity {
+            public float DeltaTime;
 
-            if (agentState.TimeInState < 2f)
-                return;
+            public void Execute(ref AgentStateData agentState) {
 
-            // Determine next state based on current state
-            switch (agentState.Value) {
-                case AgentStateType.Idle:
-                    agentState.Value = AgentStateType.Walk;
-                    break;
-                case AgentStateType.Walk:
-                    agentState.Value = AgentStateType.Run;
-                    break;
-                case AgentStateType.Run:
-                    agentState.Value = AgentStateType.Idle;
-                    break;
+                agentState.TimeInState += DeltaTime;
+
+                if (agentState.TimeInState < 2f)
+                    return;
+
+                // Determine next state based on current state
+                switch (agentState.State) {
+                    case AgentStateType.Idle:
+                        agentState.State = AgentStateType.Walk;
+                        break;
+                    case AgentStateType.Walk:
+                        agentState.State = AgentStateType.Run;
+                        break;
+                    case AgentStateType.Run:
+                        agentState.State = AgentStateType.Idle;
+                        break;
+                }
+
+                agentState.TimeInState = 0f;
             }
-
-            agentState.TimeInState = 0f;
         }
-    }
 
-    public void OnUpdate(ref SystemState state) {
-        var job = new StateTransitionJob {
-            DeltaTime = SystemAPI.Time.DeltaTime
-        };
-        job.ScheduleParallel();
+        public void OnUpdate(ref SystemState state) {
+
+            new StateTransitionJob {
+                DeltaTime = SystemAPI.Time.DeltaTime,
+            }.ScheduleParallel();
+        }
     }
 }
