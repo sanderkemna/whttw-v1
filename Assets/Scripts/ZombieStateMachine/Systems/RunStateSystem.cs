@@ -10,8 +10,8 @@ namespace WHTTW.ZombieStateMachine {
         private partial struct RunStateJob : IJobEntity {
             public float DeltaTime;
 
-            public void Execute(ref AgentStateData agentState) {
-                if (agentState.State != AgentStateType.Run) { return; }
+            public void Execute(ref ZombieStateData agentState) {
+                if (agentState.State != ZombieStateType.Run) { return; }
 
                 // run logic here
             }

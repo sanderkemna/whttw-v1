@@ -1,4 +1,4 @@
-public enum AgentStateType {
+public enum ZombieStateType {
     Idle,
     Walk,
     Run

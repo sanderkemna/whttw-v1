@@ -3,6 +3,7 @@ using Rukhanka;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
+using WHTTW.ZombieStateMachine;
 
 /// <summary>
 /// Uses character input from Animator to trigger Rukhanka animations.
@@ -55,10 +56,12 @@ public partial class RukhankaAnimatorSystem : SystemBase {
         public Random random;
 
         /// <summary>
-        /// Updates and switches idle state animations of the agent. This would normally be a StateMachineBehaviour script in the Animator Controller.
+        /// Updates and switches idle state animations of the agent. This would normally be a StateMachineBehaviour 
+        /// script in the Animator Controller.
         /// </summary>
         /// <remarks>
-        /// Inspiration taken from: https://www.youtube.com/watch?v=OCd7terfNxk - Ketra Games, Add Random "Bored" Idle Animations to Your Character (Unity Tutorial)
+        /// Inspiration taken from: https://www.youtube.com/watch?v=OCd7terfNxk - Ketra Games, Add Random "Bored" Idle 
+        /// Animations to Your Character (Unity Tutorial)
         /// Rukhanka docs: https://docs.rukhanka.com/Scripting/Events/animator_controller_events
         /// This method determines whether the agent is in an idle state by checking its velocity
         /// and updates the animation parameters accordingly. If the agent transitions into an idle state, it selects an
@@ -66,7 +69,11 @@ public partial class RukhankaAnimatorSystem : SystemBase {
         /// handles transitions between idle animations and ensures smooth blending of animation states using
         /// interpolation. It processes animation events to determine the timing of state updates and adjusts the idle
         /// state data accordingly.</remarks>
-        void Execute(AnimatorParametersAspect paramAspect, in AgentBody agentBody, ref IdleStateData idleData, in DynamicBuffer<AnimatorControllerEventComponent> eventController) {
+        void Execute(
+            AnimatorParametersAspect paramAspect,
+            in AgentBody agentBody,
+            ref IdleStateData idleData,
+            in DynamicBuffer<AnimatorControllerEventComponent> eventController) {
 
             if (paramAspect.HasParameter(paramIdleState) && math.length(agentBody.Velocity).Equals(0)) {
                 // we are in idle state

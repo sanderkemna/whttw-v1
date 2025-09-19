@@ -16,7 +16,7 @@ public class DetectZombieCloseBy : MonoBehaviour {
         if (collisionWorld.OverlapSphere(transform.position, 2f, ref distanceHitList, CollisionFilter.Default)) {
             // hit something within radius
             foreach (DistanceHit distanceHit in distanceHitList) {
-                if (entityManager.HasComponent<IdleStateData>(distanceHit.Entity)) {
+                if (entityManager.HasComponent<IdleStateDataOld>(distanceHit.Entity)) {
                     count++;
                 }
             }

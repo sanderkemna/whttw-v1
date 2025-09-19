@@ -197,7 +197,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 177039442541024076, guid: eca399977c13d324ca288910c20c9aa4, type: 3}
   m_PrefabInstance: {fileID: 1746570635}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &536076403
+--- !u!114 &536076413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,6 +210,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingState: 0
+  timeUntilIdleChange: 2
+  numberOfIdleAnimations: 6
+  distanceMin: 2
+  distanceMax: 5
+  lingerTimerMax: 10
 --- !u!1001 &1746570635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,7 +304,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 177039442541024076, guid: eca399977c13d324ca288910c20c9aa4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 536076403}
+      addedObject: {fileID: 536076413}
   m_SourcePrefab: {fileID: 100100000, guid: eca399977c13d324ca288910c20c9aa4, type: 3}
 --- !u!1001 &1999039412
 PrefabInstance:

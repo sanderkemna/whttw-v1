@@ -14,7 +14,7 @@ public class IdleStateDataAuthoring : MonoBehaviour {
     class Baker : Baker<IdleStateDataAuthoring> {
         public override void Bake(IdleStateDataAuthoring authoring) {
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-            AddComponent(entity, new IdleStateData {
+            AddComponent(entity, new IdleStateDataOld {
                 Timer = 0,
                 IsIdle = false,
                 BoredAnimationIndex = 0,
@@ -26,7 +26,7 @@ public class IdleStateDataAuthoring : MonoBehaviour {
 }
 
 // ECS component
-public struct IdleStateData : IComponentData {
+public struct IdleStateDataOld : IComponentData {
     public float Timer;
     public bool IsIdle;
     public int BoredAnimationIndex;

@@ -9,8 +9,8 @@ namespace WHTTW.ZombieStateMachine {
         [BurstCompile]
         private partial struct IdleStateJob : IJobEntity {
 
-            public void Execute(ref AgentStateData agentState) {
-                if (agentState.State != AgentStateType.Idle) { return; }
+            public void Execute(ref ZombieStateData agentState) {
+                if (agentState.State != ZombieStateType.Idle) { return; }
 
                 // idle logic here
             }
