@@ -36,6 +36,7 @@ public partial class RukhankaAnimatorSystem : SystemBase {
     }
 
     [BurstCompile]
+    [WithAll(typeof(WalkStateTag))]
     partial struct ForwardSpeedAnimatorJob : IJobEntity {
 
         public FastAnimatorParameter paramForwardSpeed;
@@ -48,6 +49,7 @@ public partial class RukhankaAnimatorSystem : SystemBase {
     }
 
     [BurstCompile]
+    [WithAll(typeof(IdleStateTag))]
     partial struct IdleAnimatorJob : IJobEntity {
         private static readonly float INTERPOLATION_SPEED = 5f;
 

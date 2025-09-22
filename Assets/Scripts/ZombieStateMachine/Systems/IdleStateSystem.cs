@@ -7,7 +7,7 @@ namespace WHTTW.ZombieStateMachine {
     public partial struct IdleStateSystem : ISystem {
 
         [BurstCompile]
-        [WithAll(typeof(IdleStateData))]
+        [WithAll(typeof(IdleStateTag))]
         private partial struct IdleStateJob : IJobEntity {
 
             public void Execute(ref ZombieStateData agentState) {

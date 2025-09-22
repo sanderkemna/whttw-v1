@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace WHTTW.ZombieStateMachine {
 
-    //TODO: just make this one big zombiestatedata component, instead of multiple small ones.
     public class ZombieStateAuthoring : MonoBehaviour {
 
         [Tooltip("The starting state of the zombie.")]

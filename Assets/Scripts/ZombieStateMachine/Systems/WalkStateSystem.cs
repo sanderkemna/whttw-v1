@@ -8,38 +8,43 @@ namespace WHTTW.ZombieStateMachine {
     [BurstCompile]
     public partial struct WalkStateSystem : ISystem {
 
-        // TODO: make this a job
         [BurstCompile]
-        public void OnUpdate(ref SystemState systemState) {
+        public readonly void OnUpdate(ref SystemState state) {
+            var walkStateJob = new WalkStateJob();
+            state.Dependency = walkStateJob.ScheduleParallel(state.Dependency);
+        }
+    }
 
-            foreach (var (zombieState, walk, agentBody)
-                    in SystemAPI
-                        .Query<RefRW<ZombieStateData>, RefRW<WalkStateData>, RefRW<AgentBody>>()
-                        .WithAll<WalkStateTag>()) {
+    [BurstCompile]
+    [WithAll(typeof(WalkStateTag))]
+    public partial struct WalkStateJob : IJobEntity {
 
-                // set new random target position
-                if (!walk.ValueRO.TargetIsSet) {
-                    Random random = walk.ValueRO.random;
+        [BurstCompile]
+        public readonly void Execute(ref WalkStateData walk, ref AgentBody agentBody) {
 
-                    float3 randomDirection = new float3(random.NextFloat(-1f, 1f), 0, random.NextFloat(-1f, 1f));
-                    randomDirection = math.normalize(randomDirection);
+            // Set new random target position
+            if (!walk.TargetIsSet) {
+                Random random = walk.random;
+                float3 randomDirection = new float3(
+                    random.NextFloat(-1f, 1f),
+                    0,
+                    random.NextFloat(-1f, 1f)
+                );
+                randomDirection = math.normalize(randomDirection);
 
-                    walk.ValueRW.targetPosition =
-                        walk.ValueRO.originPosition +
-                        randomDirection * random.NextFloat(walk.ValueRO.distanceMin, walk.ValueRO.distanceMax);
+                walk.targetPosition = walk.originPosition +
+                    randomDirection * random.NextFloat(walk.distanceMin, walk.distanceMax);
 
-                    walk.ValueRW.random = random; // Update the random state
+                walk.random = random; // Update the random state
+                agentBody.SetDestination(walk.targetPosition);
+                walk.TargetIsSet = true;
+                walk.TargetIsReached = false;
+            }
 
-                    agentBody.ValueRW.SetDestination(walk.ValueRO.targetPosition);
-                    walk.ValueRW.TargetIsSet = true;
-                    walk.ValueRW.TargetIsReached = false;
-                }
-
-                // If agentbody has reached target, then send signal to controller to set new state.
-                if (walk.ValueRO.TargetIsSet && agentBody.ValueRO.IsStopped) {
-                    walk.ValueRW.TargetIsSet = false;
-                    walk.ValueRW.TargetIsReached = true;
-                }
+            // If agentbody has reached target, then send signal to controller to set new state
+            if (walk.TargetIsSet && agentBody.IsStopped) {
+                walk.TargetIsSet = false;
+                walk.TargetIsReached = true;
             }
         }
     }
