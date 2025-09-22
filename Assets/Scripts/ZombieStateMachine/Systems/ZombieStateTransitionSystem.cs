@@ -7,52 +7,95 @@ namespace WHTTW.ZombieStateMachine {
     public partial struct ZombieStateTransitionSystem : ISystem {
 
         [BurstCompile]
-        private partial struct StateTransitionJob : IJobEntity {
-            public float DeltaTime;
+        public void OnUpdate(ref SystemState state) {
+            var deltaTime = SystemAPI.Time.DeltaTime;
 
-            public void Execute(ref ZombieStateData zombieState, ref WalkStateData walk) {
+            // First job: Update state timers
+            var updateTimersJob = new UpdateStateTimersJob {
+                DeltaTime = deltaTime
+            };
+            updateTimersJob.ScheduleParallel();
 
-                zombieState.TimeInState += DeltaTime;
+            // Second job: Handle state transitions
+            var stateTransitionJob = new ZombieStateTransitionJob {
+                EntityCommandBuffer = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>()
+                    .CreateCommandBuffer(state.WorldUnmanaged).AsParallelWriter()
+            };
 
-                // Determine next state based on current state
-                switch (zombieState.State) {
-                    case ZombieStateType.Idle:
-                        if (zombieState.TimeInState < 10f)
-                            return;
+            state.Dependency = stateTransitionJob.ScheduleParallel(state.Dependency);
+        }
+    }
 
-                        zombieState.State = ZombieStateType.Walk;
-                        walk.TargetIsSet = false;
-                        zombieState.TimeInState = 0f;
+    [BurstCompile]
+    public partial struct UpdateStateTimersJob : IJobEntity {
+        public float DeltaTime;
 
-                        break;
+        [BurstCompile]
+        public readonly void Execute(ref ZombieStateData zombieState) {
+            zombieState.TimeInState += DeltaTime;
+        }
+    }
 
-                    case ZombieStateType.Walk:
-                        if (walk.TargetIsReached) {
-                            zombieState.State = ZombieStateType.Idle;
-                            zombieState.TimeInState = 0f;
-                            return;
-                        }
+    [BurstCompile]
+    public partial struct ZombieStateTransitionJob : IJobEntity {
+        public EntityCommandBuffer.ParallelWriter EntityCommandBuffer;
 
-                        break;
+        [BurstCompile]
+        public readonly void Execute([ChunkIndexInQuery] int chunkIndex, Entity entity,
+                ref ZombieStateData zombieState, in WalkStateData walkState) {
+            var shouldChangeState = false;
+            var newState = ZombieStateType.Idle;
 
-                    case ZombieStateType.Run:
-                        if (zombieState.TimeInState < 2f)
-                            return;
+            // Determine next state based on current state
+            switch (zombieState.StateCurrent) {
+                case ZombieStateType.Idle:
+                    if (zombieState.TimeInState >= 10f) {
+                        shouldChangeState = true;
+                        newState = ZombieStateType.Walk;
+                    }
+                    break;
 
-                        zombieState.State = ZombieStateType.Idle;
-                        zombieState.TimeInState = 0f;
+                case ZombieStateType.Walk:
+                    if (walkState.TargetIsReached) {
+                        shouldChangeState = true;
+                        newState = ZombieStateType.Idle;
+                    }
+                    break;
+            }
 
-                        break;
-                }
+            if (shouldChangeState) {
+                // Update state data
+                ChangeState(ref zombieState, newState);
 
+                // Schedule component updates via command buffer
+                UpdateStateComponents(EntityCommandBuffer, chunkIndex, entity, newState);
             }
         }
 
-        public void OnUpdate(ref SystemState state) {
+        [BurstCompile]
+        private static void ChangeState(ref ZombieStateData zombie, ZombieStateType newState) {
+            if (zombie.StateCurrent == newState) return;
 
-            new StateTransitionJob {
-                DeltaTime = SystemAPI.Time.DeltaTime,
-            }.ScheduleParallel();
+            zombie.StatePrevious = zombie.StateCurrent;
+            zombie.StateCurrent = newState;
+            zombie.TimeInState = 0f;
+        }
+
+        private static void UpdateStateComponents(EntityCommandBuffer.ParallelWriter ecb,
+            int sortKey, Entity entity, ZombieStateType newState) {
+            // Disable all tags first
+            ecb.SetComponentEnabled<IdleStateTag>(sortKey, entity, false);
+            ecb.SetComponentEnabled<WalkStateTag>(sortKey, entity, false);
+
+            // Enable the appropriate tag for the new state
+            switch (newState) {
+                case ZombieStateType.Idle:
+                    ecb.SetComponentEnabled<IdleStateTag>(sortKey, entity, true);
+                    break;
+                case ZombieStateType.Walk:
+                    ecb.SetComponentEnabled<WalkStateTag>(sortKey, entity, true);
+                    break;
+            }
         }
     }
 }

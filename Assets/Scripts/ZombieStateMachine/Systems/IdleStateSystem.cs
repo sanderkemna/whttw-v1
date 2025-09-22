@@ -7,10 +7,10 @@ namespace WHTTW.ZombieStateMachine {
     public partial struct IdleStateSystem : ISystem {
 
         [BurstCompile]
+        [WithAll(typeof(IdleStateData))]
         private partial struct IdleStateJob : IJobEntity {
 
             public void Execute(ref ZombieStateData agentState) {
-                if (agentState.State != ZombieStateType.Idle) { return; }
 
                 // idle logic here
             }

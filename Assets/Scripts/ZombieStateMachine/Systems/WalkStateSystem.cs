@@ -13,9 +13,9 @@ namespace WHTTW.ZombieStateMachine {
         public void OnUpdate(ref SystemState systemState) {
 
             foreach (var (zombieState, walk, agentBody)
-                    in SystemAPI.Query<RefRW<ZombieStateData>, RefRW<WalkStateData>, RefRW<AgentBody>>()) {
-
-                if (zombieState.ValueRO.State != ZombieStateType.Walk) { return; }
+                    in SystemAPI
+                        .Query<RefRW<ZombieStateData>, RefRW<WalkStateData>, RefRW<AgentBody>>()
+                        .WithAll<WalkStateTag>()) {
 
                 // set new random target position
                 if (!walk.ValueRO.TargetIsSet) {
@@ -35,8 +35,7 @@ namespace WHTTW.ZombieStateMachine {
                     walk.ValueRW.TargetIsReached = false;
                 }
 
-                // reached target if distance to target is within tolerance
-                //if (walk.ValueRO.TargetIsSet && agentBody.ValueRO.RemainingDistance <= REACHED_TARGET_DISTANCE) {
+                // If agentbody has reached target, then send signal to controller to set new state.
                 if (walk.ValueRO.TargetIsSet && agentBody.ValueRO.IsStopped) {
                     walk.ValueRW.TargetIsSet = false;
                     walk.ValueRW.TargetIsReached = true;

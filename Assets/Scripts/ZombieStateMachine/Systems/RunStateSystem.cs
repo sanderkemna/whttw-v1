@@ -11,7 +11,7 @@ namespace WHTTW.ZombieStateMachine {
             public float DeltaTime;
 
             public void Execute(ref ZombieStateData agentState) {
-                if (agentState.State != ZombieStateType.Run) { return; }
+                if (agentState.StateCurrent != ZombieStateType.Run) { return; }
 
                 // run logic here
             }

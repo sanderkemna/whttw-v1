@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace WHTTW.ZombieStateMachine {
 
+    //TODO: just make this one big zombiestatedata component, instead of multiple small ones.
     public class ZombieStateAuthoring : MonoBehaviour {
 
         [Tooltip("The starting state of the zombie.")]
@@ -17,7 +18,8 @@ namespace WHTTW.ZombieStateMachine {
             public override void Bake(ZombieStateAuthoring authoring) {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new ZombieStateData() {
-                    State = authoring.startingState,
+                    StateCurrent = authoring.startingState,
+                    StatePrevious = authoring.startingState,
                 });
 
                 AddComponent(entity, new IdleStateData {
@@ -34,16 +36,22 @@ namespace WHTTW.ZombieStateMachine {
                     distanceMin = authoring.walkSettings.distanceMin,
                     distanceMax = authoring.walkSettings.distanceMax,
                     random = new Unity.Mathematics.Random((uint)entity.Index),
-                    lingerTimerMax = authoring.walkSettings.lingerTimerMax
                 });
+
+                AddComponent<IdleStateTag>(entity);
+                AddComponent<WalkStateTag>(entity);
+                SetComponentEnabled<IdleStateTag>(entity, authoring.startingState == ZombieStateType.Idle);
+                SetComponentEnabled<WalkStateTag>(entity, authoring.startingState == ZombieStateType.Walk);
             }
         }
     }
 
     public struct ZombieStateData : IComponentData {
-        public ZombieStateType State;
+        public ZombieStateType StateCurrent;
+        public ZombieStateType StatePrevious;
         public float TimeInState;
     }
+    public struct IdleStateTag : IComponentData, IEnableableComponent { }
     public struct IdleStateData : IComponentData {
         public float Timer;
         public bool IsIdle;
@@ -54,18 +62,17 @@ namespace WHTTW.ZombieStateMachine {
         public int numberOfIdleAnimations;
     }
 
+    public struct WalkStateTag : IComponentData, IEnableableComponent { }
     public struct WalkStateData : IComponentData {
         public float3 targetPosition;
         public float3 originPosition;
         public bool TargetIsSet;
         public bool TargetIsReached;
         public Unity.Mathematics.Random random;
-        public float lingerTimer;
 
         // set by the Authoring
         public float distanceMin;
         public float distanceMax;
-        public float lingerTimerMax;
     }
 
     [System.Serializable]
