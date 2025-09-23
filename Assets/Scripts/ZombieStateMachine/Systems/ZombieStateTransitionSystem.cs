@@ -41,8 +41,13 @@ namespace WHTTW.ZombieStateMachine {
         public EntityCommandBuffer.ParallelWriter EntityCommandBuffer;
 
         [BurstCompile]
-        public readonly void Execute([ChunkIndexInQuery] int chunkIndex, Entity entity,
-                ref ZombieStateData zombieState, in WalkStateData walkState) {
+        public readonly void Execute(
+            [ChunkIndexInQuery] int chunkIndex,
+            Entity entity,
+            ref ZombieStateData zombieState,
+            in WalkStateData walkState,
+            in AlertStateData alertState) {
+
             var shouldChangeState = false;
             var newState = ZombieStateType.Idle;
 
@@ -57,6 +62,13 @@ namespace WHTTW.ZombieStateMachine {
 
                 case ZombieStateType.Walk:
                     if (walkState.TargetIsReached) {
+                        shouldChangeState = true;
+                        newState = ZombieStateType.Alert;
+                    }
+                    break;
+
+                case ZombieStateType.Alert:
+                    if (!alertState.IsTriggered) {
                         shouldChangeState = true;
                         newState = ZombieStateType.Idle;
                     }
@@ -86,6 +98,7 @@ namespace WHTTW.ZombieStateMachine {
             // Disable all tags first
             ecb.SetComponentEnabled<IdleStateTag>(sortKey, entity, false);
             ecb.SetComponentEnabled<WalkStateTag>(sortKey, entity, false);
+            ecb.SetComponentEnabled<AlertStateTag>(sortKey, entity, false);
 
             // Enable the appropriate tag for the new state
             switch (newState) {
@@ -94,6 +107,9 @@ namespace WHTTW.ZombieStateMachine {
                     break;
                 case ZombieStateType.Walk:
                     ecb.SetComponentEnabled<WalkStateTag>(sortKey, entity, true);
+                    break;
+                case ZombieStateType.Alert:
+                    ecb.SetComponentEnabled<AlertStateTag>(sortKey, entity, true);
                     break;
             }
         }

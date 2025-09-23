@@ -10,7 +10,7 @@ namespace WHTTW.ZombieStateMachine {
         [SerializeField] private ZombieStateType startingState;
 
         [SerializeField] private IdleStateSettings idleSettings = new();
-
+        [SerializeField] private AlertStateSettings alertSettings = new();
         [SerializeField] private WalkStateSettings walkSettings = new();
 
         class Baker : Baker<ZombieStateAuthoring> {
@@ -25,8 +25,16 @@ namespace WHTTW.ZombieStateMachine {
                     Timer = 0,
                     IsIdle = false,
                     BoredAnimationIndex = 0,
-                    timeUntilIdleChange = authoring.idleSettings.timeUntilIdleChange,
+                    timeUntilIdleAnimationChange = authoring.idleSettings.timeUntilIdleAnimationChange,
                     numberOfIdleAnimations = authoring.idleSettings.numberOfIdleAnimations
+                });
+
+                AddComponent(entity, new AlertStateData {
+                    IsTriggered = false,
+                    AlertIntensity = 0f,
+                    AlertDuration = 0f,
+                    IntensityDecayRate = authoring.alertSettings.IntensityDecayRate,
+                    MaxAlertDuration = authoring.alertSettings.MaxAlertDuration,
                 });
 
                 AddComponent(entity, new WalkStateData() {
@@ -39,8 +47,10 @@ namespace WHTTW.ZombieStateMachine {
 
                 AddComponent<IdleStateTag>(entity);
                 AddComponent<WalkStateTag>(entity);
+                AddComponent<AlertStateTag>(entity);
                 SetComponentEnabled<IdleStateTag>(entity, authoring.startingState == ZombieStateType.Idle);
                 SetComponentEnabled<WalkStateTag>(entity, authoring.startingState == ZombieStateType.Walk);
+                SetComponentEnabled<AlertStateTag>(entity, authoring.startingState == ZombieStateType.Alert);
             }
         }
     }
@@ -57,7 +67,7 @@ namespace WHTTW.ZombieStateMachine {
         public int BoredAnimationIndex;
 
         // set by the Authoring
-        public float timeUntilIdleChange;
+        public float timeUntilIdleAnimationChange;
         public int numberOfIdleAnimations;
     }
 
@@ -74,13 +84,35 @@ namespace WHTTW.ZombieStateMachine {
         public float distanceMax;
     }
 
+    public struct AlertStateTag : IComponentData, IEnableableComponent { }
+    public struct AlertStateData : IComponentData {
+        public bool IsTriggered;
+        public float AlertIntensity; // 0.0 to 1.0
+        public float AlertDuration;
+
+        // set by the Authoring
+        public float IntensityDecayRate;
+        public float MaxAlertDuration;
+    }
+
+
     [System.Serializable]
     public class IdleStateSettings {
-        [Tooltip("The time until the default animation changes to another idle animation.")]
-        public float timeUntilIdleChange = 2;
+        [Tooltip("The time [seconds] until the default animation changes to another idle animation.")]
+        public float timeUntilIdleAnimationChange = 2f;
 
         [Tooltip("The amount of extra idle animations there are in the blend tree.")]
         public int numberOfIdleAnimations = 6;
+    }
+
+    [System.Serializable]
+    public class AlertStateSettings {
+        [Tooltip("The max time [seconds] a zombie can stay in the alert state, as precaution.")]
+        public float MaxAlertDuration = 30f;
+
+        [Tooltip("The decay rate of the alert intensity, after a while the alertness will slowly " +
+            "degrade untill the zombie is back at idle state.")]
+        public float IntensityDecayRate = 0.1f;
     }
 
     [System.Serializable]
@@ -92,6 +124,6 @@ namespace WHTTW.ZombieStateMachine {
         public float distanceMax = 5;
 
         [Tooltip("The max linger time in [s] of the unit.")]
-        public float lingerTimerMax = 10;
+        public float lingerTimerMax = 10f;
     }
 }

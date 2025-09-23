@@ -9,7 +9,7 @@ namespace WHTTW.ZombieStateMachine {
     public partial struct WalkStateSystem : ISystem {
 
         [BurstCompile]
-        public readonly void OnUpdate(ref SystemState state) {
+        public void OnUpdate(ref SystemState state) {
             var walkStateJob = new WalkStateJob();
             state.Dependency = walkStateJob.ScheduleParallel(state.Dependency);
         }
@@ -20,7 +20,7 @@ namespace WHTTW.ZombieStateMachine {
     public partial struct WalkStateJob : IJobEntity {
 
         [BurstCompile]
-        public readonly void Execute(ref WalkStateData walk, ref AgentBody agentBody) {
+        public void Execute(ref WalkStateData walk, ref AgentBody agentBody) {
 
             // Set new random target position
             if (!walk.TargetIsSet) {
@@ -36,6 +36,7 @@ namespace WHTTW.ZombieStateMachine {
                     randomDirection * random.NextFloat(walk.distanceMin, walk.distanceMax);
 
                 walk.random = random; // Update the random state
+
                 agentBody.SetDestination(walk.targetPosition);
                 walk.TargetIsSet = true;
                 walk.TargetIsReached = false;

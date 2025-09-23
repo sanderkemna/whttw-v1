@@ -85,7 +85,7 @@ public partial class RukhankaAnimatorSystem : SystemBase {
                     if (!idleData.IsIdle) {
                         idleData.Timer += deltaTime;
 
-                        if (idleData.Timer > idleData.timeUntilIdleChange && evnt.timeInState % 1 < 0.02f) {
+                        if (idleData.Timer > idleData.timeUntilIdleAnimationChange && evnt.timeInState % 1 < 0.02f) {
                             // new animation has just started
                             idleData.IsIdle = true;
 
