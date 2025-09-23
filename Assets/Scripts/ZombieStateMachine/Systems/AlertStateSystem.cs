@@ -34,9 +34,6 @@ namespace WHTTW.ZombieStateMachine {
 
             alertState.AlertDuration += DeltaTime;
 
-            // Update alert intensity over time
-            //float intensityDecay = alertState.IntensityDecayRate * DeltaTime;
-            //alertState.AlertIntensity = math.max(0.0f, alertState.AlertIntensity - intensityDecay);
             UpdateAlertIntensity(ref alertState);
 
             // Check if alert should be cleared

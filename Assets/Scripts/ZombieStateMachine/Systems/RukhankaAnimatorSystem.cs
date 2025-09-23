@@ -15,8 +15,8 @@ public partial class RukhankaAnimatorSystem : SystemBase {
     static readonly string floatParam1Name = "forwardSpeed";
     static FastAnimatorParameter paramForwardSpeed = new(floatParam1Name);
 
-    static readonly string paramIdleStateName = "idleState";
-    static FastAnimatorParameter paramIdleState = new(paramIdleStateName);
+    static readonly string paramIdleAnimationStateName = "idleAnimationId";
+    static FastAnimatorParameter paramIdleAnimationState = new(paramIdleAnimationStateName);
 
     protected override void OnUpdate() {
 
@@ -27,7 +27,7 @@ public partial class RukhankaAnimatorSystem : SystemBase {
         Dependency = forwardSpeedJob.ScheduleParallel(Dependency);
 
         var idleAnimatorJob = new IdleAnimatorJob() {
-            paramIdleState = paramIdleState,
+            paramIdleAnimationState = paramIdleAnimationState,
             deltaTime = SystemAPI.Time.DeltaTime,
             random = new Random((uint)UnityEngine.Random.Range(1, int.MaxValue)),
         };
@@ -53,7 +53,7 @@ public partial class RukhankaAnimatorSystem : SystemBase {
     partial struct IdleAnimatorJob : IJobEntity {
         private static readonly float INTERPOLATION_SPEED = 5f;
 
-        public FastAnimatorParameter paramIdleState;
+        public FastAnimatorParameter paramIdleAnimationState;
         public float deltaTime;
         public Random random;
 
@@ -77,7 +77,7 @@ public partial class RukhankaAnimatorSystem : SystemBase {
             ref IdleStateData idleData,
             in DynamicBuffer<AnimatorControllerEventComponent> eventController) {
 
-            if (paramAspect.HasParameter(paramIdleState) && math.length(agentBody.Velocity).Equals(0)) {
+            if (paramAspect.HasParameter(paramIdleAnimationState) && math.length(agentBody.Velocity).Equals(0)) {
                 // we are in idle state
                 foreach (var evnt in eventController) {
                     if (evnt.eventType != AnimatorControllerEventComponent.EventType.StateUpdate) { continue; }
@@ -92,7 +92,7 @@ public partial class RukhankaAnimatorSystem : SystemBase {
                             int index = random.NextInt(1, idleData.numberOfIdleAnimations + 1);
                             idleData.BoredAnimationIndex = index * 2 - 1;
 
-                            paramAspect.SetFloatParameter(paramIdleState, (float)(idleData.BoredAnimationIndex - 1));
+                            paramAspect.SetFloatParameter(paramIdleAnimationState, (float)(idleData.BoredAnimationIndex - 1));
                         }
                     } else if (evnt.timeInState % 1 > 0.98f) {
                         // animation is about to finish
@@ -105,10 +105,10 @@ public partial class RukhankaAnimatorSystem : SystemBase {
                     }
 
                     // smooth blend
-                    float current = paramAspect.GetFloatParameter(paramIdleState);
+                    float current = paramAspect.GetFloatParameter(paramIdleAnimationState);
                     float target = idleData.BoredAnimationIndex;
                     float blended = math.lerp(current, target, deltaTime * INTERPOLATION_SPEED);
-                    paramAspect.SetFloatParameter(paramIdleState, blended);
+                    paramAspect.SetFloatParameter(paramIdleAnimationState, blended);
                 }
             }
         }

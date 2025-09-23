@@ -98,7 +98,7 @@ namespace WHTTW.ZombieStateMachine {
 
     [System.Serializable]
     public class IdleStateSettings {
-        [Tooltip("The time [seconds] until the default animation changes to another idle animation.")]
+        [Tooltip("The time in [s] until the default animation changes to another idle animation.")]
         public float timeUntilIdleAnimationChange = 2f;
 
         [Tooltip("The amount of extra idle animations there are in the blend tree.")]
@@ -107,12 +107,12 @@ namespace WHTTW.ZombieStateMachine {
 
     [System.Serializable]
     public class AlertStateSettings {
-        [Tooltip("The max time [seconds] a zombie can stay in the alert state, as precaution.")]
-        public float MaxAlertDuration = 30f;
+        [Tooltip("The max time in [s] a zombie can stay in the alert state, as precaution.")]
+        public float MaxAlertDuration = 300f;
 
         [Tooltip("The decay rate of the alert intensity, after a while the alertness will slowly " +
             "degrade untill the zombie is back at idle state.")]
-        public float IntensityDecayRate = 0.1f;
+        public float IntensityDecayRate = 0.02f;
     }
 
     [System.Serializable]

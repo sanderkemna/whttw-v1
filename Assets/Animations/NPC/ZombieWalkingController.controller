@@ -129,7 +129,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: forwardSpeed
     m_Mirror: 0
-  m_BlendParameter: idleState
+  m_BlendParameter: idleAnimationId
   m_BlendParameterY: forwardSpeed
   m_MinThreshold: 0
   m_MaxThreshold: 11
@@ -216,7 +216,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: idleState
+  - m_Name: idleAnimationId
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
