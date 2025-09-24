@@ -94,6 +94,12 @@ namespace WHTTW.ZombieStateMachine {
         public float IntensityDecayRate;
         public float MaxAlertDuration;
     }
+    public struct FootstepEvent {
+        public float3 Position;
+        public float Radius;
+        public float Intensity;
+        public float Timestamp;
+    }
 
 
     [System.Serializable]
