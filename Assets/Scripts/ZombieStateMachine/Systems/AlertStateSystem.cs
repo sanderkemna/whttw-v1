@@ -1,6 +1,8 @@
+using ProjectDawn.Navigation;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Transforms;
 
 namespace WHTTW.ZombieStateMachine {
 
@@ -23,22 +25,40 @@ namespace WHTTW.ZombieStateMachine {
         public float DeltaTime;
 
         [BurstCompile]
-        public void Execute(ref AlertStateData alertState) {
+        public void Execute(ref AlertStateData alert, ref AgentLocomotion agentLocomotion, ref AgentBody agentBody, LocalTransform transform) {
 
             // upon entry for the first time, set the triggered to true
-            if (!alertState.IsTriggered) {
-                alertState.IsTriggered = true;
-                alertState.AlertIntensity = 1.0f;
-                alertState.AlertDuration = 0f;
+            if (!alert.IsTriggered) {
+                alert.IsTriggered = true;
+                alert.AlertIntensity = 1.0f;
+                alert.AlertDuration = 0f;
+
+                // move to a new target fast
+                agentLocomotion.Speed = alert.MaxSpeed;
+
+                Random random = alert.random;
+                float3 randomDirection = new float3(
+                    random.NextFloat(-1f, 1f),
+                    0,
+                    random.NextFloat(-1f, 1f)
+                );
+                randomDirection = math.normalize(randomDirection);
+
+                alert.targetPosition = alert.originPosition +
+                    randomDirection * random.NextFloat(alert.distanceMin, alert.distanceMax);
+
+                alert.random = random; // Update the random state
+
+                agentBody.SetDestination(alert.targetPosition);
             }
 
-            alertState.AlertDuration += DeltaTime;
+            alert.AlertDuration += DeltaTime;
 
-            UpdateAlertIntensity(ref alertState);
+            UpdateAlertIntensity(ref alert);
 
             // Check if alert should be cleared
-            if (ShouldClearAlert(ref alertState)) {
-                ClearAlert(ref alertState);
+            if (ShouldClearAlert(ref alert)) {
+                ClearAlert(ref alert);
             }
         }
 

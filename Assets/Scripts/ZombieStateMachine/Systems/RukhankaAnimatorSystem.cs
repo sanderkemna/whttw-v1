@@ -35,8 +35,10 @@ public partial class RukhankaAnimatorSystem : SystemBase {
         Dependency = idleAnimatorJob.ScheduleParallel(Dependency);
     }
 
+    /// <summary>
+    /// Updates the forward float parameter depending on the agent body speed. Done by Rukhanka asset.
+    /// </summary>
     [BurstCompile]
-    [WithAll(typeof(WalkStateTag))]
     partial struct ForwardSpeedAnimatorJob : IJobEntity {
 
         public FastAnimatorParameter paramForwardSpeed;
@@ -48,6 +50,20 @@ public partial class RukhankaAnimatorSystem : SystemBase {
         }
     }
 
+    /// <summary>
+    /// Updates and switches idle state animations of the agent. This would normally be a StateMachineBehaviour 
+    /// script in the Animator Controller.
+    /// </summary>
+    /// <remarks>
+    /// Inspiration taken from: https://www.youtube.com/watch?v=OCd7terfNxk - Ketra Games, Add Random "Bored" Idle 
+    /// Animations to Your Character (Unity Tutorial)
+    /// Rukhanka docs: https://docs.rukhanka.com/Scripting/Events/animator_controller_events
+    /// This method determines whether the agent is in an idle state by checking its velocity
+    /// and updates the animation parameters accordingly. If the agent transitions into an idle state, it selects an
+    /// animation index for idle behavior and smoothly blends the animation parameters over time.  The method also
+    /// handles transitions between idle animations and ensures smooth blending of animation states using
+    /// interpolation. It processes animation events to determine the timing of state updates and adjusts the idle
+    /// state data accordingly.</remarks>
     [BurstCompile]
     [WithAll(typeof(IdleStateTag))]
     partial struct IdleAnimatorJob : IJobEntity {
@@ -57,20 +73,6 @@ public partial class RukhankaAnimatorSystem : SystemBase {
         public float deltaTime;
         public Random random;
 
-        /// <summary>
-        /// Updates and switches idle state animations of the agent. This would normally be a StateMachineBehaviour 
-        /// script in the Animator Controller.
-        /// </summary>
-        /// <remarks>
-        /// Inspiration taken from: https://www.youtube.com/watch?v=OCd7terfNxk - Ketra Games, Add Random "Bored" Idle 
-        /// Animations to Your Character (Unity Tutorial)
-        /// Rukhanka docs: https://docs.rukhanka.com/Scripting/Events/animator_controller_events
-        /// This method determines whether the agent is in an idle state by checking its velocity
-        /// and updates the animation parameters accordingly. If the agent transitions into an idle state, it selects an
-        /// animation index for idle behavior and smoothly blends the animation parameters over time.  The method also
-        /// handles transitions between idle animations and ensures smooth blending of animation states using
-        /// interpolation. It processes animation events to determine the timing of state updates and adjusts the idle
-        /// state data accordingly.</remarks>
         void Execute(
             AnimatorParametersAspect paramAspect,
             in AgentBody agentBody,
@@ -82,12 +84,12 @@ public partial class RukhankaAnimatorSystem : SystemBase {
                 foreach (var evnt in eventController) {
                     if (evnt.eventType != AnimatorControllerEventComponent.EventType.StateUpdate) { continue; }
 
-                    if (!idleData.IsIdle) {
+                    if (!idleData.IsInExtraAnimationMode) {
                         idleData.Timer += deltaTime;
 
                         if (idleData.Timer > idleData.timeUntilIdleAnimationChange && evnt.timeInState % 1 < 0.02f) {
                             // new animation has just started
-                            idleData.IsIdle = true;
+                            idleData.IsInExtraAnimationMode = true;
 
                             int index = random.NextInt(1, idleData.numberOfIdleAnimations + 1);
                             idleData.BoredAnimationIndex = index * 2 - 1;
@@ -96,11 +98,11 @@ public partial class RukhankaAnimatorSystem : SystemBase {
                         }
                     } else if (evnt.timeInState % 1 > 0.98f) {
                         // animation is about to finish
-                        if (idleData.IsIdle) {
+                        if (idleData.IsInExtraAnimationMode) {
                             idleData.BoredAnimationIndex--;
                         }
 
-                        idleData.IsIdle = false;
+                        idleData.IsInExtraAnimationMode = false;
                         idleData.Timer = 0;
                     }
 

@@ -42,11 +42,11 @@ namespace WHTTW.ZombieStateMachine {
 
         [BurstCompile]
         public readonly void Execute(
-            [ChunkIndexInQuery] int chunkIndex,
-            Entity entity,
-            ref ZombieStateData zombieState,
-            in WalkStateData walkState,
-            in AlertStateData alertState) {
+                [ChunkIndexInQuery] int chunkIndex,
+                Entity entity,
+                ref ZombieStateData zombieState,
+                in WalkStateData walkState,
+                in AlertStateData alertState) {
 
             var shouldChangeState = false;
             var newState = ZombieStateType.Idle;

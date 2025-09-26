@@ -20,7 +20,7 @@ namespace WHTTW.ZombieStateMachine {
     public partial struct WalkStateJob : IJobEntity {
 
         [BurstCompile]
-        public void Execute(ref WalkStateData walk, ref AgentBody agentBody) {
+        public void Execute(ref WalkStateData walk, ref AgentBody agentBody, ref AgentLocomotion agentLocomotion) {
 
             // Set new random target position
             if (!walk.TargetIsSet) {
@@ -38,6 +38,7 @@ namespace WHTTW.ZombieStateMachine {
                 walk.random = random; // Update the random state
 
                 agentBody.SetDestination(walk.targetPosition);
+                agentLocomotion.Speed = walk.MaxSpeed;
                 walk.TargetIsSet = true;
                 walk.TargetIsReached = false;
             }

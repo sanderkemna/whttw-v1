@@ -23,7 +23,7 @@ namespace WHTTW.ZombieStateMachine {
 
                 AddComponent(entity, new IdleStateData {
                     Timer = 0,
-                    IsIdle = false,
+                    IsInExtraAnimationMode = false,
                     BoredAnimationIndex = 0,
                     timeUntilIdleAnimationChange = authoring.idleSettings.timeUntilIdleAnimationChange,
                     numberOfIdleAnimations = authoring.idleSettings.numberOfIdleAnimations
@@ -35,6 +35,13 @@ namespace WHTTW.ZombieStateMachine {
                     AlertDuration = 0f,
                     IntensityDecayRate = authoring.alertSettings.IntensityDecayRate,
                     MaxAlertDuration = authoring.alertSettings.MaxAlertDuration,
+                    MaxSpeed = authoring.alertSettings.MaxSpeed,
+
+                    targetPosition = new float3(authoring.transform.position.x + 1, authoring.transform.position.y, authoring.transform.position.z),
+                    originPosition = authoring.transform.position,
+                    distanceMin = authoring.alertSettings.distanceMin,
+                    distanceMax = authoring.alertSettings.distanceMax,
+                    random = new Unity.Mathematics.Random((uint)entity.Index),
                 });
 
                 AddComponent(entity, new WalkStateData() {
@@ -43,6 +50,7 @@ namespace WHTTW.ZombieStateMachine {
                     distanceMin = authoring.walkSettings.distanceMin,
                     distanceMax = authoring.walkSettings.distanceMax,
                     random = new Unity.Mathematics.Random((uint)entity.Index),
+                    MaxSpeed = authoring.walkSettings.MaxSpeed,
                 });
 
                 AddComponent<IdleStateTag>(entity);
@@ -63,7 +71,7 @@ namespace WHTTW.ZombieStateMachine {
     public struct IdleStateTag : IComponentData, IEnableableComponent { }
     public struct IdleStateData : IComponentData {
         public float Timer;
-        public bool IsIdle;
+        public bool IsInExtraAnimationMode;
         public int BoredAnimationIndex;
 
         // set by the Authoring
@@ -80,6 +88,7 @@ namespace WHTTW.ZombieStateMachine {
         public Unity.Mathematics.Random random;
 
         // set by the Authoring
+        public float MaxSpeed;
         public float distanceMin;
         public float distanceMax;
     }
@@ -90,9 +99,17 @@ namespace WHTTW.ZombieStateMachine {
         public float AlertIntensity; // 0.0 to 1.0
         public float AlertDuration;
 
+        // temp
+        public Unity.Mathematics.Random random;
+        public float distanceMin;
+        public float distanceMax;
+        public float3 targetPosition;
+        public float3 originPosition;
+
         // set by the Authoring
         public float IntensityDecayRate;
         public float MaxAlertDuration;
+        public float MaxSpeed;
     }
     public struct SoundEvent {
         public float3 Position;
@@ -119,6 +136,15 @@ namespace WHTTW.ZombieStateMachine {
         [Tooltip("The decay rate of the alert intensity, after a while the alertness will slowly " +
             "degrade untill the zombie is back at idle state.")]
         public float IntensityDecayRate = 0.02f;
+
+        [Tooltip("The maximum speed of the zombie in alert state.")]
+        public float MaxSpeed = 2.5f;
+
+        [Tooltip("The minimum bounding box of new alert wandering position.")]
+        public float distanceMin = 2;
+
+        [Tooltip("The maximum bounding box of new alert wandering position.")]
+        public float distanceMax = 5;
     }
 
     [System.Serializable]
@@ -131,5 +157,8 @@ namespace WHTTW.ZombieStateMachine {
 
         [Tooltip("The max linger time in [s] of the unit.")]
         public float lingerTimerMax = 10f;
+
+        [Tooltip("The maximum speed of the zombie in walk state.")]
+        public float MaxSpeed = 1.5f;
     }
 }

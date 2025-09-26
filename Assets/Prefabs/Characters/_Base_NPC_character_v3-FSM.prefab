@@ -3619,7 +3619,7 @@ Animator:
   m_GameObject: {fileID: 2725856960103166971}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 38f17867a12b13d4ab8b4bd58e0f1ab8, type: 2}
-  m_Controller: {fileID: 9100000, guid: 46abb2e589fc80444b81b4dd2820e85a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0f1c7be2b7406f942848cf36534dbfee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3784,10 +3784,14 @@ MonoBehaviour:
   alertSettings:
     MaxAlertDuration: 10
     IntensityDecayRate: 0.1
+    MaxSpeed: 2.5
+    distanceMin: 2
+    distanceMax: 5
   walkSettings:
     distanceMin: 4
     distanceMax: 10
     lingerTimerMax: 10
+    MaxSpeed: 1.5
 --- !u!1 &2738282461916356522
 GameObject:
   m_ObjectHideFlags: 0

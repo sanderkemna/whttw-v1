@@ -28,8 +28,7 @@ public partial class SoundEventHandlerSystem : SystemBase {
     }
 
     protected override void OnDestroy() {
-        // Unsubscribe from global events
-        SoundEventsManager.Instance.OnSoundMade.RemoveListener(OnSoundMadeReceived);
+        if (SoundEventsManager.Instance != null) SoundEventsManager.Instance.OnSoundMade.RemoveListener(OnSoundMadeReceived);
         if (pendingEvents.IsCreated) pendingEvents.Dispose();
         if (currentFrameEvents.IsCreated) currentFrameEvents.Dispose();
     }
