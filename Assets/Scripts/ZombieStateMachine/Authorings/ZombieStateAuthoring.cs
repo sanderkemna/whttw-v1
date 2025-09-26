@@ -17,7 +17,7 @@ namespace WHTTW.ZombieStateMachine {
 
         [SerializeField] private IdleStateSettings idleSettings = new();
         [SerializeField] private AlertStateSettings alertSettings = new();
-        [SerializeField] private WalkStateSettings walkSettings = new();
+        [SerializeField] private WanderStateSettings wanderSettings = new();
         [SerializeField] private SoundEventListenerSettings soundEventSettings = new();
 
         class Baker : Baker<ZombieStateAuthoring> {
@@ -46,13 +46,13 @@ namespace WHTTW.ZombieStateMachine {
                     MaxSpeed = authoring.alertSettings.MaxSpeed,
                 });
 
-                AddComponent(entity, new WalkStateData() {
+                AddComponent(entity, new WanderStateData() {
                     targetPosition = new float3(authoring.transform.position.x + 1, authoring.transform.position.y, authoring.transform.position.z),
                     originPosition = authoring.transform.position,
-                    distanceMin = authoring.walkSettings.distanceMin,
-                    distanceMax = authoring.walkSettings.distanceMax,
+                    distanceMin = authoring.wanderSettings.distanceMin,
+                    distanceMax = authoring.wanderSettings.distanceMax,
                     random = new Unity.Mathematics.Random((uint)entity.Index),
-                    MaxSpeed = authoring.walkSettings.MaxSpeed,
+                    MaxSpeed = authoring.wanderSettings.MaxSpeed,
                 });
 
                 AddComponent(entity, new SoundEventListener {
@@ -61,10 +61,10 @@ namespace WHTTW.ZombieStateMachine {
                 });
 
                 AddComponent<IdleStateTag>(entity);
-                AddComponent<WalkStateTag>(entity);
+                AddComponent<WanderStateTag>(entity);
                 AddComponent<AlertStateTag>(entity);
                 SetComponentEnabled<IdleStateTag>(entity, authoring.startingState == ZombieStateType.Idle);
-                SetComponentEnabled<WalkStateTag>(entity, authoring.startingState == ZombieStateType.Walk);
+                SetComponentEnabled<WanderStateTag>(entity, authoring.startingState == ZombieStateType.Wander);
                 SetComponentEnabled<AlertStateTag>(entity, authoring.startingState == ZombieStateType.Alert);
             }
         }
@@ -93,8 +93,8 @@ namespace WHTTW.ZombieStateMachine {
         public int numberOfIdleAnimations;
     }
 
-    public struct WalkStateTag : IComponentData, IEnableableComponent { }
-    public struct WalkStateData : IComponentData {
+    public struct WanderStateTag : IComponentData, IEnableableComponent { }
+    public struct WanderStateData : IComponentData {
         public float3 targetPosition;
         public float3 originPosition;
         public bool TargetIsSet;
@@ -176,17 +176,14 @@ namespace WHTTW.ZombieStateMachine {
     }
 
     [System.Serializable]
-    public class WalkStateSettings {
+    public class WanderStateSettings {
         [Tooltip("The minimum bounding box of new random walking target position.")]
         public float distanceMin = 2;
 
         [Tooltip("The maximum bounding box of new random walking target position.")]
         public float distanceMax = 5;
 
-        [Tooltip("The max linger time in [s] of the unit.")]
-        public float lingerTimerMax = 10f;
-
-        [Tooltip("The maximum speed of the zombie in walk state.")]
+        [Tooltip("The maximum speed of the zombie in wander state.")]
         public float MaxSpeed = 1.5f;
     }
 }

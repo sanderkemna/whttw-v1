@@ -5,7 +5,7 @@
 /// </summary>
 public enum ZombieStateType {
     Idle,
-    Walk,
+    Wander,
     Run,
     Alert,
 }
