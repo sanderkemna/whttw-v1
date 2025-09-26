@@ -3537,7 +3537,6 @@ GameObject:
   - component: {fileID: 2395941342200658877}
   - component: {fileID: 4247485715932922913}
   - component: {fileID: 568589026642648295}
-  - component: {fileID: 2787289121993896712}
   - component: {fileID: 8486954630299131262}
   m_Layer: 0
   m_Name: _Base_NPC_character_v3-FSM
@@ -3670,7 +3669,7 @@ MonoBehaviour:
   Speed: 2
   Acceleration: 5
   AngularSpeed: 120
-  StoppingDistance: 0.2
+  StoppingDistance: 0.3
   AutoBreaking: 1
   m_Layers: 1
 --- !u!114 &8584484905837235888
@@ -3694,7 +3693,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2725856960103166971}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d72058503702eb42aca97d680e69de1, type: 3}
   m_Name: 
@@ -3735,36 +3734,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0344116cd75eaaf488b894904a1649d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 0.25
+  Radius: 0.15
   Angle: 230
   MaxAngle: 300
   Mode: 3
   BlockedStop: 0
   UseWalls: 0
   m_Layers: -1
---- !u!136 &2787289121993896712
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2725856960103166971}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Height: 1.8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &8486954630299131262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,19 +3755,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingState: 0
   idleSettings:
+    maxIdleTime: 10
     timeUntilIdleAnimationChange: 2
     numberOfIdleAnimations: 6
   alertSettings:
-    MaxAlertDuration: 10
+    MaxAlertDuration: 100
     IntensityDecayRate: 0.1
     MaxSpeed: 2.5
-    distanceMin: 2
-    distanceMax: 5
   walkSettings:
     distanceMin: 4
     distanceMax: 10
     lingerTimerMax: 10
     MaxSpeed: 1.5
+  soundEventSettings:
+    hearingRange: 15
+    hearingSensitivity: 0.7
 --- !u!1 &2738282461916356522
 GameObject:
   m_ObjectHideFlags: 0

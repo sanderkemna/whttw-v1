@@ -1,6 +1,8 @@
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Mathematics;
+using Unity.Transforms;
 using WHTTW.SoundEventsManager;
 using WHTTW.ZombieStateMachine;
 
@@ -23,18 +25,17 @@ public partial class SoundEventHandlerSystem : SystemBase {
     private void SubscribeToManagerIfNotAlready() {
         // Subscribe to global footstep events
         if (SoundEventsManager.Instance != null) {
-            SoundEventsManager.Instance.OnSoundMade.AddListener(OnSoundMadeReceived);
+            SoundEventsManager.Instance.OnSoundMade.AddListener(OnSoundReceived);
         }
     }
 
     protected override void OnDestroy() {
-        if (SoundEventsManager.Instance != null) SoundEventsManager.Instance.OnSoundMade.RemoveListener(OnSoundMadeReceived);
+        if (SoundEventsManager.Instance != null) SoundEventsManager.Instance.OnSoundMade.RemoveListener(OnSoundReceived);
         if (pendingEvents.IsCreated) pendingEvents.Dispose();
         if (currentFrameEvents.IsCreated) currentFrameEvents.Dispose();
     }
 
-    // Called by global event system
-    private void OnSoundMadeReceived(SoundEventData eventData) {
+    private void OnSoundReceived(SoundEventData eventData) {
         if (pendingEvents.IsCreated) {
             pendingEvents.Add(eventData.ToDOTSEvent());
         }
@@ -49,71 +50,47 @@ public partial class SoundEventHandlerSystem : SystemBase {
 
         if (currentFrameEvents.Length == 0) return;
 
-        var footstepDetectionJob = new FootstepDetectionJob {
+        var soundDetectionJob = new SoundDetectionJob {
             SoundEvents = currentFrameEvents.AsArray(),
             CurrentTime = (float)SystemAPI.Time.ElapsedTime
         };
 
-        Dependency = footstepDetectionJob.ScheduleParallel(Dependency);
+        Dependency = soundDetectionJob.ScheduleParallel(Dependency);
     }
 }
 
 [BurstCompile]
-public partial struct FootstepDetectionJob : IJobEntity {
+public partial struct SoundDetectionJob : IJobEntity {
     [ReadOnly] public NativeArray<SoundEvent> SoundEvents;
     [ReadOnly] public float CurrentTime;
 
     [BurstCompile]
-    public void Execute(ref AlertStateData alertState) {
-        UnityEngine.Debug.Log("Im triggered!");
+    public void Execute(ref AlertStateData alertState, ref SoundEventListener listener, in LocalTransform transform) {
+
+        for (int i = 0; i < SoundEvents.Length; i++) {
+            var sound = SoundEvents[i];
+            float distance = math.distance(transform.Position, sound.Position);
+
+            if (distance <= listener.HearingRange) {
+                float hearingFactor = CalculateHearingFactor(distance, listener.HearingRange, sound.Intensity, listener.HearingSensitivity);
+
+                if (hearingFactor > 0.3f) {
+                    alertState.IsTriggered = true;
+                    alertState.AlertIntensity += hearingFactor;
+                    alertState.HasTarget = true;
+                    alertState.TargetPosition = sound.Position;
+                    alertState.HasReachedTarget = false;
+
+                    break;
+                }
+            }
+        }
     }
 
-    //[BurstCompile]
-    //public void Execute(ref AlertStateData alertState, ref FootstepListener listener,
-    //    in LocalTransform transform) {
-    //    if (alertState.IsTriggered) return;
-
-    //    for (int i = 0; i < FootstepEvents.Length; i++) {
-    //        var footstep = FootstepEvents[i];
-    //        float distance = math.distance(transform.Position, footstep.Position);
-
-    //        if (distance <= listener.HearingRange) {
-    //            float hearingFactor = CalculateHearingFactor(distance, listener.HearingRange,
-    //                footstep.Intensity, listener.HearingSensitivity);
-
-    //            if (hearingFactor > 0.3f) {
-    //                TriggerNoiseAlert(ref alertState, ref listener, footstep, hearingFactor, CurrentTime);
-    //                break;
-    //            }
-    //        }
-    //    }
-    //}
-
-    //[BurstCompile]
-    //private static float CalculateHearingFactor(float distance, float maxRange,
-    //    float noiseIntensity, float sensitivity) {
-    //    float distanceFactor = 1.0f - (distance / maxRange);
-    //    return distanceFactor * noiseIntensity * sensitivity;
-    //}
-
-    //[BurstCompile]
-    //private static void TriggerNoiseAlert(ref AlertStateData alertState, ref FootstepListener listener,
-    //    FootstepEvent footstep, float hearingFactor, float currentTime) {
-    //    alertState.IsTriggered = true;
-    //    alertState.AlertType = AlertType.NoiseHeard;
-    //    alertState.AlertDuration = 5.0f + (hearingFactor * 5.0f);
-    //    alertState.AlertIntensity = hearingFactor;
-    //    alertState.IntensityDecayRate = 0.2f;
-
-    //    alertState.HasTarget = true;
-    //    alertState.TargetPosition = footstep.Position;
-    //    alertState.HasReachedTarget = false;
-    //    alertState.ReachThreshold = 2.0f;
-
-    //    alertState.InvestigationDuration = 3.0f;
-    //    alertState.InvestigationTimer = 0.0f;
-    //    alertState.AlertMoveSpeed = 3.5f;
-
-    //    listener.LastHeardTime = currentTime;
-    //}
+    [BurstCompile]
+    private static float CalculateHearingFactor(float distance, float maxRange,
+        float noiseIntensity, float sensitivity) {
+        float distanceFactor = 1.0f - (distance / maxRange);
+        return distanceFactor * noiseIntensity * sensitivity;
+    }
 }

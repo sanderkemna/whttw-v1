@@ -46,41 +46,48 @@ namespace WHTTW.ZombieStateMachine {
                 Entity entity,
                 ref ZombieStateData zombieState,
                 in WalkStateData walkState,
+                in IdleStateData idleState,
                 in AlertStateData alertState) {
 
             var shouldChangeState = false;
             var newState = ZombieStateType.Idle;
 
-            // Determine next state based on current state
-            switch (zombieState.StateCurrent) {
-                case ZombieStateType.Idle:
-                    if (zombieState.TimeInState >= 10f) {
-                        shouldChangeState = true;
-                        newState = ZombieStateType.Walk;
-                    }
-                    break;
+            // Set the new state in order of priority
+            if (alertState.IsTriggered) {
+                shouldChangeState = true;
+                newState = ZombieStateType.Alert;
+            } else {
 
-                case ZombieStateType.Walk:
-                    if (walkState.TargetIsReached) {
-                        shouldChangeState = true;
-                        newState = ZombieStateType.Alert;
-                    }
-                    break;
+                // Determine next state based on current state
+                switch (zombieState.StateCurrent) {
+                    case ZombieStateType.Idle:
+                        if (zombieState.TimeInState >= idleState.MaxIdleTime) {
+                            shouldChangeState = true;
+                            newState = ZombieStateType.Walk;
+                        }
+                        break;
 
-                case ZombieStateType.Alert:
-                    if (!alertState.IsTriggered) {
+                    case ZombieStateType.Walk:
+                        if (walkState.TargetIsReached) {
+                            shouldChangeState = true;
+                            newState = ZombieStateType.Idle;
+                        }
+                        break;
+
+                    default:
+                        // Handle unexpected state 
                         shouldChangeState = true;
                         newState = ZombieStateType.Idle;
-                    }
-                    break;
+                        break;
+                }
             }
 
             if (shouldChangeState) {
                 // Update state data
-                ChangeState(ref zombieState, newState);
+                //ChangeState(ref zombieState, newState);
 
                 // Schedule component updates via command buffer
-                UpdateStateComponents(EntityCommandBuffer, chunkIndex, entity, newState);
+                UpdateStateComponents(ref zombieState, EntityCommandBuffer, chunkIndex, entity, newState);
             }
         }
 
@@ -93,8 +100,14 @@ namespace WHTTW.ZombieStateMachine {
             zombie.TimeInState = 0f;
         }
 
-        private static void UpdateStateComponents(EntityCommandBuffer.ParallelWriter ecb,
-            int sortKey, Entity entity, ZombieStateType newState) {
+        private static void UpdateStateComponents(ref ZombieStateData zombie, EntityCommandBuffer.ParallelWriter ecb, int sortKey, Entity entity, ZombieStateType newState) {
+
+            if (zombie.StateCurrent == newState) return;
+
+            zombie.StatePrevious = zombie.StateCurrent;
+            zombie.StateCurrent = newState;
+            zombie.TimeInState = 0f;
+
             // Disable all tags first
             ecb.SetComponentEnabled<IdleStateTag>(sortKey, entity, false);
             ecb.SetComponentEnabled<WalkStateTag>(sortKey, entity, false);

@@ -46,7 +46,6 @@ public partial class RukhankaAnimatorSystem : SystemBase {
         void Execute(AnimatorParametersAspect paramAspect, in AgentBody agentBody) {
             if (paramAspect.HasParameter(paramForwardSpeed))
                 paramAspect.SetFloatParameter(paramForwardSpeed, math.length(agentBody.Velocity));
-
         }
     }
 

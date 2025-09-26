@@ -2,7 +2,6 @@ using ProjectDawn.Navigation;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
-using Unity.Transforms;
 
 namespace WHTTW.ZombieStateMachine {
 
@@ -25,32 +24,18 @@ namespace WHTTW.ZombieStateMachine {
         public float DeltaTime;
 
         [BurstCompile]
-        public void Execute(ref AlertStateData alert, ref AgentLocomotion agentLocomotion, ref AgentBody agentBody, LocalTransform transform) {
+        public void Execute(ref AlertStateData alert, ref AgentLocomotion agentLocomotion, ref AgentBody agentBody) {
 
             // upon entry for the first time, set the triggered to true
-            if (!alert.IsTriggered) {
-                alert.IsTriggered = true;
-                alert.AlertIntensity = 1.0f;
-                alert.AlertDuration = 0f;
+            //if (!alert.IsTriggered) {
+            //    alert.IsTriggered = true;
+            //    alert.AlertDuration = 0f;
 
-                // move to a new target fast
-                agentLocomotion.Speed = alert.MaxSpeed;
-
-                Random random = alert.random;
-                float3 randomDirection = new float3(
-                    random.NextFloat(-1f, 1f),
-                    0,
-                    random.NextFloat(-1f, 1f)
-                );
-                randomDirection = math.normalize(randomDirection);
-
-                alert.targetPosition = alert.originPosition +
-                    randomDirection * random.NextFloat(alert.distanceMin, alert.distanceMax);
-
-                alert.random = random; // Update the random state
-
-                agentBody.SetDestination(alert.targetPosition);
-            }
+            //    // move to a new target fast
+            //    agentLocomotion.Speed = alert.MaxSpeed;
+            //    //agentBody.SetDestination(alert.targetPosition);
+            //}
+            HandleNoiseInvestigation(ref alert, ref agentLocomotion, ref agentBody);
 
             alert.AlertDuration += DeltaTime;
 
@@ -59,6 +44,20 @@ namespace WHTTW.ZombieStateMachine {
             // Check if alert should be cleared
             if (ShouldClearAlert(ref alert)) {
                 ClearAlert(ref alert);
+            }
+        }
+
+        [BurstCompile]
+        private void HandleNoiseInvestigation(ref AlertStateData alertState, ref AgentLocomotion agentLocomotion, ref AgentBody agentBody) {
+
+            if (alertState.HasTarget && !alertState.HasReachedTarget) {
+
+                agentBody.SetDestination(alertState.TargetPosition);
+                agentLocomotion.Speed = alertState.MaxSpeed;
+
+                if (agentBody.IsStopped) {
+                    alertState.HasReachedTarget = true;
+                }
             }
         }
 

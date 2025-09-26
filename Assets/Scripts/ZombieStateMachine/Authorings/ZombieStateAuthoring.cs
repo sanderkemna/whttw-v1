@@ -1,9 +1,15 @@
-using Unity.Entities;
-using Unity.Mathematics;
-using UnityEngine;
 
 namespace WHTTW.ZombieStateMachine {
 
+    using ProjectDawn.Navigation;
+    using ProjectDawn.Navigation.Hybrid;
+    using Unity.Entities;
+    using Unity.Mathematics;
+    using UnityEngine;
+    using WHTTW.SoundEventsManager;
+
+    [RequireComponent(typeof(AgentAuthoring), typeof(AgentCylinderShapeAuthoring), typeof(AgentColliderAuthoring))]
+    [RequireComponent(typeof(AgentNavMeshAuthoring))]
     public class ZombieStateAuthoring : MonoBehaviour {
 
         [Tooltip("The starting state of the zombie.")]
@@ -12,6 +18,7 @@ namespace WHTTW.ZombieStateMachine {
         [SerializeField] private IdleStateSettings idleSettings = new();
         [SerializeField] private AlertStateSettings alertSettings = new();
         [SerializeField] private WalkStateSettings walkSettings = new();
+        [SerializeField] private SoundEventListenerSettings soundEventSettings = new();
 
         class Baker : Baker<ZombieStateAuthoring> {
             public override void Bake(ZombieStateAuthoring authoring) {
@@ -26,7 +33,8 @@ namespace WHTTW.ZombieStateMachine {
                     IsInExtraAnimationMode = false,
                     BoredAnimationIndex = 0,
                     timeUntilIdleAnimationChange = authoring.idleSettings.timeUntilIdleAnimationChange,
-                    numberOfIdleAnimations = authoring.idleSettings.numberOfIdleAnimations
+                    numberOfIdleAnimations = authoring.idleSettings.numberOfIdleAnimations,
+                    MaxIdleTime = authoring.idleSettings.maxIdleTime,
                 });
 
                 AddComponent(entity, new AlertStateData {
@@ -36,12 +44,6 @@ namespace WHTTW.ZombieStateMachine {
                     IntensityDecayRate = authoring.alertSettings.IntensityDecayRate,
                     MaxAlertDuration = authoring.alertSettings.MaxAlertDuration,
                     MaxSpeed = authoring.alertSettings.MaxSpeed,
-
-                    targetPosition = new float3(authoring.transform.position.x + 1, authoring.transform.position.y, authoring.transform.position.z),
-                    originPosition = authoring.transform.position,
-                    distanceMin = authoring.alertSettings.distanceMin,
-                    distanceMax = authoring.alertSettings.distanceMax,
-                    random = new Unity.Mathematics.Random((uint)entity.Index),
                 });
 
                 AddComponent(entity, new WalkStateData() {
@@ -53,12 +55,23 @@ namespace WHTTW.ZombieStateMachine {
                     MaxSpeed = authoring.walkSettings.MaxSpeed,
                 });
 
+                AddComponent(entity, new SoundEventListener {
+                    HearingRange = authoring.soundEventSettings.hearingRange,
+                    HearingSensitivity = authoring.soundEventSettings.hearingSensitivity,
+                });
+
                 AddComponent<IdleStateTag>(entity);
                 AddComponent<WalkStateTag>(entity);
                 AddComponent<AlertStateTag>(entity);
                 SetComponentEnabled<IdleStateTag>(entity, authoring.startingState == ZombieStateType.Idle);
                 SetComponentEnabled<WalkStateTag>(entity, authoring.startingState == ZombieStateType.Walk);
                 SetComponentEnabled<AlertStateTag>(entity, authoring.startingState == ZombieStateType.Alert);
+            }
+        }
+
+        void Start() {
+            if (SoundEventsManager.Instance == null) {
+                Debug.LogError("No SoundEventsManager is active in the scene!");
             }
         }
     }
@@ -75,6 +88,7 @@ namespace WHTTW.ZombieStateMachine {
         public int BoredAnimationIndex;
 
         // set by the Authoring
+        public float MaxIdleTime;
         public float timeUntilIdleAnimationChange;
         public int numberOfIdleAnimations;
     }
@@ -98,19 +112,27 @@ namespace WHTTW.ZombieStateMachine {
         public bool IsTriggered;
         public float AlertIntensity; // 0.0 to 1.0
         public float AlertDuration;
-
-        // temp
-        public Unity.Mathematics.Random random;
-        public float distanceMin;
-        public float distanceMax;
-        public float3 targetPosition;
-        public float3 originPosition;
+        public bool HasTarget;
+        public float3 TargetPosition;
+        public bool HasReachedTarget;
 
         // set by the Authoring
         public float IntensityDecayRate;
         public float MaxAlertDuration;
         public float MaxSpeed;
     }
+
+    /// <summary>
+    /// The parameters of the unit's sensitivity to sound events.
+    /// </summary>
+    public struct SoundEventListener : IComponentData {
+        public float HearingRange;
+        public float HearingSensitivity; // 0.0 to 1.0
+    }
+
+    /// <summary>
+    /// Package of data used to send around in the event when a sound is made.
+    /// </summary>
     public struct SoundEvent {
         public float3 Position;
         public float Radius;
@@ -118,11 +140,13 @@ namespace WHTTW.ZombieStateMachine {
         public float Timestamp;
     }
 
-
     [System.Serializable]
     public class IdleStateSettings {
+        [Tooltip("The maximum time in [s] this unit will stay in this state.")]
+        public float maxIdleTime = 10f;
+
         [Tooltip("The time in [s] until the default animation changes to another idle animation.")]
-        public float timeUntilIdleAnimationChange = 2f;
+        public float timeUntilIdleAnimationChange = 4f;
 
         [Tooltip("The amount of extra idle animations there are in the blend tree.")]
         public int numberOfIdleAnimations = 6;
@@ -139,12 +163,16 @@ namespace WHTTW.ZombieStateMachine {
 
         [Tooltip("The maximum speed of the zombie in alert state.")]
         public float MaxSpeed = 2.5f;
+    }
 
-        [Tooltip("The minimum bounding box of new alert wandering position.")]
-        public float distanceMin = 2;
+    [System.Serializable]
+    public class SoundEventListenerSettings {
+        [Tooltip("The range in which this unit can hear sound events.")]
+        public float hearingRange = 15f;
 
-        [Tooltip("The maximum bounding box of new alert wandering position.")]
-        public float distanceMax = 5;
+        [Tooltip("The sensitivy of this to sound events, will be a factor in the increase of alertness.")]
+        [Range(0f, 1f)]
+        public float hearingSensitivity = 0.7f;
     }
 
     [System.Serializable]

@@ -10,9 +10,9 @@ namespace WHTTW.ZombieStateMachine {
         [WithAll(typeof(IdleStateTag))]
         private partial struct IdleStateJob : IJobEntity {
 
-            public void Execute(ref ZombieStateData agentState) {
+            public void Execute(ref IdleStateData idle) {
 
-                // idle logic here
+                // noop, only the rukhanka animation is happening here.
             }
         }
 

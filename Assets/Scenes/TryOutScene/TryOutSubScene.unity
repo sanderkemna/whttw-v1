@@ -337,6 +337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _Base_NPC_character_v3-FSM
       objectReference: {fileID: 0}
+    - target: {fileID: 2725856960103166971, guid: 2548531b3a545fb47a2d7a535a790dd0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
