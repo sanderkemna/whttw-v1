@@ -1,3 +1,4 @@
+
 namespace WHTTW.Player {
 
     using Opsive.UltimateCharacterController.Character;
@@ -5,6 +6,7 @@ namespace WHTTW.Player {
     using System;
     using UnityEditor;
     using UnityEngine;
+    using WHTTW.SoundEventsManager;
 
     /// <summary>
     /// Overrides the Opsive CharacterFootEffects to add a global event on each footstep.
@@ -31,8 +33,7 @@ namespace WHTTW.Player {
             float finalIntensity = CalculateNoiseIntensity(hitSurface);
 
             // Emit global event - any system can listen to this
-            PlayerSoundEventsManager.EmitFootstep(foot.position, finalRadius, finalIntensity);
-            Debug.Log("sending!");
+            SoundEventsManager.EmitSound(foot.position, finalRadius, finalIntensity);
         }
 
         private float CalculateNoiseRadius(bool hitSurface) {

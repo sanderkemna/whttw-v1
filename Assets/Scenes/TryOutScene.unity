@@ -65571,10 +65571,9 @@ MonoBehaviour:
   m_RequireAlternatingFeet: 1
   m_FixedInterval: 0.3
   m_MinBobInterval: 0.2
-  m_Settings:
-    m_noiseRadius: 0
-    m_noiseIntensity: 0
-    m_runningNoiseMultiplier: 0
+  noiseRadius: 10
+  noiseIntensity: 0.8
+  runningNoiseMultiplier: 1.5
 --- !u!1001 &2095926459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66214,6 +66213,7 @@ GameObject:
   - component: {fileID: 2113591141}
   - component: {fileID: 2113591144}
   - component: {fileID: 2113591143}
+  - component: {fileID: 2113591145}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -66440,6 +66440,21 @@ MonoBehaviour:
   m_SaveMetaDataFileExtension: metadata
   m_InventorySystemManagerItemSaver: {fileID: 0}
   m_DebugJsonCopy: 0
+--- !u!114 &2113591145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113591129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf696afce7966a44afba5758284bca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEventsPerFrame: 10
+  enableDebugLogs: 0
+  showQueueInfo: 1
 --- !u!1001 &2118272822
 PrefabInstance:
   m_ObjectHideFlags: 0

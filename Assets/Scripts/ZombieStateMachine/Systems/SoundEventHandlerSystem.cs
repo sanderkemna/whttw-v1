@@ -1,38 +1,49 @@
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
-using WHTTW.Player;
+using WHTTW.SoundEventsManager;
 using WHTTW.ZombieStateMachine;
 
+/// <summary>
+/// System that listens to sound events happening globaly. If a zombie is close by it will 
+/// trigger the alert state.
+/// </summary>
 [UpdateInGroup(typeof(SimulationSystemGroup), OrderFirst = true)]
-public partial class FootstepEventSystem : SystemBase {
-    private NativeList<FootstepEvent> pendingEvents;
-    private NativeList<FootstepEvent> currentFrameEvents;
+public partial class SoundEventHandlerSystem : SystemBase {
+    private NativeList<SoundEvent> pendingEvents;
+    private NativeList<SoundEvent> currentFrameEvents;
 
     protected override void OnCreate() {
-        pendingEvents = new NativeList<FootstepEvent>(16, Allocator.Persistent);
-        currentFrameEvents = new NativeList<FootstepEvent>(16, Allocator.Persistent);
+        pendingEvents = new NativeList<SoundEvent>(16, Allocator.Persistent);
+        currentFrameEvents = new NativeList<SoundEvent>(16, Allocator.Persistent);
 
+        SubscribeToManagerIfNotAlready();
+    }
+
+    private void SubscribeToManagerIfNotAlready() {
         // Subscribe to global footstep events
-        PlayerSoundEventsManager.OnFootstepMade.AddListener(OnGlobalFootstepReceived);
+        if (SoundEventsManager.Instance != null) {
+            SoundEventsManager.Instance.OnSoundMade.AddListener(OnSoundMadeReceived);
+        }
     }
 
     protected override void OnDestroy() {
         // Unsubscribe from global events
-        PlayerSoundEventsManager.OnFootstepMade.RemoveListener(OnGlobalFootstepReceived);
-
+        SoundEventsManager.Instance.OnSoundMade.RemoveListener(OnSoundMadeReceived);
         if (pendingEvents.IsCreated) pendingEvents.Dispose();
         if (currentFrameEvents.IsCreated) currentFrameEvents.Dispose();
     }
 
     // Called by global event system
-    private void OnGlobalFootstepReceived(PlayerSoundEventsManager.FootstepEventData eventData) {
+    private void OnSoundMadeReceived(SoundEventData eventData) {
         if (pendingEvents.IsCreated) {
             pendingEvents.Add(eventData.ToDOTSEvent());
         }
     }
 
     protected override void OnUpdate() {
+        SubscribeToManagerIfNotAlready();
+
         currentFrameEvents.Clear();
         currentFrameEvents.AddRange(pendingEvents.AsArray());
         pendingEvents.Clear();
@@ -40,7 +51,7 @@ public partial class FootstepEventSystem : SystemBase {
         if (currentFrameEvents.Length == 0) return;
 
         var footstepDetectionJob = new FootstepDetectionJob {
-            FootstepEvents = currentFrameEvents.AsArray(),
+            SoundEvents = currentFrameEvents.AsArray(),
             CurrentTime = (float)SystemAPI.Time.ElapsedTime
         };
 
@@ -50,7 +61,7 @@ public partial class FootstepEventSystem : SystemBase {
 
 [BurstCompile]
 public partial struct FootstepDetectionJob : IJobEntity {
-    [ReadOnly] public NativeArray<FootstepEvent> FootstepEvents;
+    [ReadOnly] public NativeArray<SoundEvent> SoundEvents;
     [ReadOnly] public float CurrentTime;
 
     [BurstCompile]
